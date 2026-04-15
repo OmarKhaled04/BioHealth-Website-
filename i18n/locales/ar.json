@@ -1,0 +1,61 @@
+{
+  "nav": {
+    "home": "",
+    "about": "",
+    "products": "",
+    "certifications": "",
+    "contact": ""
+  },
+  "home": {
+    "hero": {
+      "title": "",
+      "subtitle": "",
+      "cta": ""
+    },
+    "featured": {
+      "title": "",
+      "subtitle": ""
+    },
+    "promo": {
+      "title": "",
+      "description": ""
+    }
+  },
+  "products": {
+    "title": "",
+    "filterAll": "",
+    "filterFormula": "",
+    "filterBabyFood": "",
+    "viewDetails": "",
+    "lactonicGold1": { "name": "", "description": "" },
+    "lactonicGold2": { "name": "", "description": "" },
+    "lactolacGold3": { "name": "", "description": "" },
+    "easeToGo1": { "name": "", "description": "" },
+    "easeToGo2": { "name": "", "description": "" },
+    "easeToGo3": { "name": "", "description": "" },
+    "lactonicAC": { "name": "", "description": "" },
+    "lactonicAR": { "name": "", "description": "" },
+    "lactonicHA1": { "name": "", "description": "" },
+    "lactonicHA2": { "name": "", "description": "" },
+    "lactonicHA3": { "name": "", "description": "" },
+    "lactonicLF": { "name": "", "description": "" },
+    "lactonic3Fruits": { "name": "", "description": "" },
+    "lactonic4FruitsCookie": { "name": "", "description": "" },
+    "lactonicBabyKabsah": { "name": "", "description": "" },
+    "lactonicFruitCereals": { "name": "", "description": "" },
+    "lactonicVegetableBeef": { "name": "", "description": "" }
+  },
+  "certifications": {
+    "title": "",
+    "subtitle": ""
+  },
+  "contact": {
+    "title": "",
+    "subtitle": "",
+    "emailLabel": ""
+  },
+  "footer": {
+    "rights": "",
+    "company": ""
+  }
+}

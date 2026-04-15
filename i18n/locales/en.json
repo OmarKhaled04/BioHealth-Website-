@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "certifications": "Certifications",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Pure Nutrition for Your Little One",
+      "subtitle": "Scientifically formulated baby nutrition trusted by parents worldwide.",
+      "cta": "Explore Products"
+    },
+    "featured": {
+      "title": "Featured Products",
+      "subtitle": "Carefully crafted for every stage of growth"
+    },
+    "promo": {
+      "title": "See How We Care",
+      "description": "Watch our story and learn about our commitment to quality."
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "filterAll": "All",
+    "filterFormula": "Formula",
+    "filterBabyFood": "Baby Food",
+    "viewDetails": "View Details",
+    "lactonicGold1": {
+      "name": "Lactonic Gold 1",
+      "description": "A premium starter infant formula based on cow's milk, enriched with DHA to support brain development from birth to 6 months."
+    },
+    "lactonicGold2": {
+      "name": "Lactonic Gold 2",
+      "description": "A follow-on formula enriched with iron and essential nutrients to support your baby's continued growth from 6 to 12 months."
+    },
+    "lactolacGold3": {
+      "name": "Lactolac Gold 3",
+      "description": "A growing-up formula fortified with calcium and key vitamins to support the development of active toddlers from 1 to 3 years."
+    },
+    "easeToGo1": {
+      "name": "Ease to Go 1",
+      "description": "An easy-to-prepare infant formula based on cow's milk, designed to meet the nutritional needs of babies from birth to 6 months."
+    },
+    "easeToGo2": {
+      "name": "Ease to Go 2",
+      "description": "A convenient follow-on formula that supports healthy growth and development for babies from 6 to 12 months."
+    },
+    "easeToGo3": {
+      "name": "Ease 2 Go 3",
+      "description": "A growing-up formula that is easy to prepare and provides balanced nutrition for toddlers from 1 to 3 years."
+    },
+    "lactonicAC": {
+      "name": "Lactonic AC Gold",
+      "description": "An anti-colic formula specially designed to reduce gas and discomfort, helping your baby feed comfortably."
+    },
+    "lactonicAR": {
+      "name": "Lactonic AR Gold",
+      "description": "A thickened anti-regurgitation formula that helps reduce spitting up and keeps your baby comfortable after feeding."
+    },
+    "lactonicHA1": {
+      "name": "Lactonic HA Plus 1",
+      "description": "A hypoallergenic infant formula for babies from birth to 6 months who are at risk of allergy, used under medical supervision."
+    },
+    "lactonicHA2": {
+      "name": "Lactonic HA Plus 2",
+      "description": "A hypoallergenic follow-on formula for babies from 6 to 12 months with cow's milk protein sensitivity, used under medical supervision."
+    },
+    "lactonicHA3": {
+      "name": "Lactonic HA Plus 3",
+      "description": "A hypoallergenic growing-up formula for toddlers from 1 to 3 years with cow's milk protein sensitivity, used under medical supervision."
+    },
+    "lactonicLF": {
+      "name": "Lactonic LF",
+      "description": "A lactose-free infant formula formulated for babies with lactose intolerance or galactosaemia, for use under medical supervision."
+    },
+    "lactonic3Fruits": {
+      "name": "3 Fruits",
+      "description": "A smooth fruit puree blending three natural fruits, gluten-free with no added sugar, ideal for babies from 4 months."
+    },
+    "lactonic4FruitsCookie": {
+      "name": "4 Fruits with Cookie",
+      "description": "A tasty blend of four fruits with soft cookie pieces, rich in fibre and Vitamin C, suitable for babies from 6 months."
+    },
+    "lactonicBabyKabsah": {
+      "name": "Baby Kabsah",
+      "description": "A savoury steamed meal inspired by classic Kabsah, low in fat and salt with a good source of protein, for babies from 6 months."
+    },
+    "lactonicFruitCereals": {
+      "name": "Fruit and Cereals",
+      "description": "A wholesome blend of fruit and cereals with no added sugar, gluten-free and enriched with Vitamin C, for babies from 6 months."
+    },
+    "lactonicVegetableBeef": {
+      "name": "Vegetables with Beef",
+      "description": "A nutritious steamed meal combining tender beef with fresh vegetables, gluten-free and low in fat, for babies from 6 months."
+    }
+  },
+  "certifications": {
+    "title": "Our Certifications",
+    "subtitle": "Quality and safety you can trust"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "We'd love to hear from you",
+    "emailLabel": "Email Address"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "company": "BioHealth Baby Nutrition"
+  }
+}

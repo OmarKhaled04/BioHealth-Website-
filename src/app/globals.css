@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Product flip card ────────────────────────────────────────────────────── */
+
+.product-card-wrap {
+  display: block;
+}
+
+/* Hover shadow on the wrapper */
+.product-card-wrap:hover {
+  filter: drop-shadow(0 8px 24px rgba(124, 58, 237, 0.18));
+}
+
+/* Flip on hover */
+.product-card-wrap:hover .product-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Mobile tap support */
+@media (hover: none) {
+  .product-card-wrap:active .product-card-inner {
+    transform: rotateY(180deg);
+  }
+}
