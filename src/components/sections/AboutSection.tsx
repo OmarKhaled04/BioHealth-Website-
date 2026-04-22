@@ -304,35 +304,37 @@ function VisionMission() {
   };
 
   return (
-    <section className="bg-white py-24">
-      <div className="mx-auto grid max-w-6xl gap-16 px-6 lg:grid-cols-2 lg:items-center">
+    <section className="relative overflow-hidden bg-violet-700 py-24">
+      <WaveMotif className="absolute inset-0 h-full w-full opacity-40" />
+
+      <div className="relative z-10 mx-auto grid max-w-6xl gap-16 px-6 lg:grid-cols-2 lg:items-center">
         <motion.div variants={fadeLeft} initial="hidden" whileInView="visible" viewport={VIEWPORT}>
           <div className="mb-4 flex items-center gap-3">
             <span className="h-px w-8 bg-amber-400" />
-            <span className="text-xs font-semibold uppercase tracking-widest text-amber-500">
+            <span className="text-xs font-semibold uppercase tracking-widest text-amber-300">
               {t("eyebrow")}
             </span>
           </div>
-          <h2 className="mb-8 text-4xl font-bold text-slate-900">{t("heading")}</h2>
+          <h2 className="mb-8 text-4xl font-bold text-white">{t("heading")}</h2>
 
-          <div className="mb-8 flex w-fit rounded-xl border border-slate-200 bg-slate-100 p-1">
+          <div className="mb-8 flex w-fit rounded-xl border border-white/20 bg-white/10 p-1 backdrop-blur-sm">
             {(["vision", "mission"] as const).map((currentTab) => (
               <button
                 key={currentTab}
                 onClick={() => setTab(currentTab)}
-                className="relative px-8 py-2.5 text-sm font-semibold"
+                className="relative px-8 py-2.5 text-sm font-semibold capitalize"
               >
                 {tab === currentTab && (
                   <motion.span
                     layoutId="tab-pill"
-                    className="absolute inset-0 rounded-lg bg-violet-700 shadow"
+                    className="absolute inset-0 rounded-lg bg-white shadow"
                     initial={false}
                     transition={{ type: "spring", stiffness: 400, damping: 34 }}
                   />
                 )}
                 <span
                   className={`relative z-10 transition-colors duration-200 ${
-                    tab === currentTab ? "text-white" : "text-slate-500"
+                    tab === currentTab ? "text-violet-700" : "text-white/70"
                   }`}
                 >
                   {currentTab === "vision" ? t("visionTab") : t("missionTab")}
@@ -349,10 +351,10 @@ function VisionMission() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.35, ease: EASE }}
             >
-              <p className="text-xs font-bold uppercase tracking-widest text-violet-700">
+              <p className="text-xs font-bold uppercase tracking-widest text-amber-300">
                 {content[tab].label}
               </p>
-              <p className="mt-3 text-lg leading-relaxed text-slate-700">{content[tab].text}</p>
+              <p className="mt-3 text-lg leading-relaxed text-violet-100">{content[tab].text}</p>
             </motion.div>
           </AnimatePresence>
         </motion.div>
@@ -395,10 +397,10 @@ function VisionMission() {
               </div>
             </div>
           </div>
-          <div className="absolute bottom-0 left-0 rounded-xl bg-slate-900 px-5 py-4 shadow-2xl">
-            <p className="text-xs text-slate-400">{t("partnerLabel")}</p>
+          <div className="absolute bottom-0 left-0 rounded-xl border border-white/20 bg-violet-900/80 px-5 py-4 shadow-2xl backdrop-blur-sm">
+            <p className="text-xs text-violet-300">{t("partnerLabel")}</p>
             <p className="mt-1 font-semibold text-white">{t("partnerName")}</p>
-            <p className="text-xs text-slate-500">{t("partnerSub")}</p>
+            <p className="text-xs text-violet-300">{t("partnerSub")}</p>
           </div>
         </motion.div>
       </div>
@@ -519,8 +521,10 @@ function GlobalPresence() {
   const partners = t.raw("partners") as PartnerItem[];
 
   return (
-    <section className="bg-white py-24">
-      <div className="mx-auto max-w-6xl px-6">
+    <section className="relative overflow-hidden bg-violet-700 py-24">
+      <WaveMotif className="absolute inset-0 h-full w-full opacity-40" />
+
+      <div className="relative z-10 mx-auto max-w-6xl px-6">
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -530,17 +534,17 @@ function GlobalPresence() {
         >
           <div className="mb-3 flex items-center justify-center gap-3">
             <span className="h-px w-8 bg-amber-400" />
-            <span className="text-xs font-semibold uppercase tracking-widest text-amber-500">
+            <span className="text-xs font-semibold uppercase tracking-widest text-amber-300">
               {t("eyebrow")}
             </span>
             <span className="h-px w-8 bg-amber-400" />
           </div>
-          <h2 className="text-4xl font-bold text-slate-900">{t("heading")}</h2>
+          <h2 className="text-4xl font-bold text-white">{t("heading")}</h2>
         </motion.div>
 
         <div className="grid gap-12 lg:grid-cols-2">
           <motion.div variants={fadeLeft} initial="hidden" whileInView="visible" viewport={VIEWPORT}>
-            <h3 className="mb-5 text-xs font-bold uppercase tracking-widest text-slate-500">
+            <h3 className="mb-5 text-xs font-bold uppercase tracking-widest text-white/60">
               {t("partnersLabel")}
             </h3>
             <div className="space-y-3">
@@ -551,18 +555,16 @@ function GlobalPresence() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={VIEWPORT}
                   transition={{ delay: i * 0.1, duration: 0.5, ease: EASE }}
-                  className="group flex items-center gap-4 rounded-xl bg-slate-50 px-5 py-4 transition-all duration-300 hover:bg-slate-900"
+                  className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/10 px-5 py-4 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/25 hover:shadow-xl"
                 >
                   <span className="text-2xl">{PARTNER_FLAGS[i] ?? "•"}</span>
                   <div>
-                    <p className="font-semibold text-slate-900 transition-colors duration-300 group-hover:text-white">
-                      {partner.country}
-                    </p>
-                    <p className="text-xs text-slate-500 transition-colors duration-300 group-hover:text-slate-400">
+                    <p className="font-semibold text-white">{partner.country}</p>
+                    <p className="text-xs text-violet-200 transition-colors duration-300 group-hover:text-white/80">
                       {partner.note}
                     </p>
                   </div>
-                  <span className="ml-auto text-slate-300 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-violet-400">
+                  <span className="ml-auto text-white/40 transition-all duration-300 group-hover:translate-x-1 group-hover:text-amber-300">
                     →
                   </span>
                 </motion.div>
@@ -570,13 +572,8 @@ function GlobalPresence() {
             </div>
           </motion.div>
 
-          <motion.div
-            variants={fadeRight}
-            initial="hidden"
-            whileInView="visible"
-            viewport={VIEWPORT}
-          >
-            <h3 className="mb-5 text-xs font-bold uppercase tracking-widest text-slate-500">
+          <motion.div variants={fadeRight} initial="hidden" whileInView="visible" viewport={VIEWPORT}>
+            <h3 className="mb-5 text-xs font-bold uppercase tracking-widest text-white/60">
               {t("certsLabel")}
             </h3>
             <div className="grid grid-cols-2 gap-3">
@@ -587,22 +584,22 @@ function GlobalPresence() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={VIEWPORT}
                   transition={{ delay: i * 0.08, duration: 0.45, ease: EASE }}
-                  className="group flex items-center gap-2 rounded-xl border border-slate-200 px-4 py-3 transition-all duration-300 hover:translate-x-1 hover:border-violet-300 hover:bg-violet-50"
+                  className="group flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-4 py-3 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-white/40 hover:bg-white/25 hover:shadow-lg"
                 >
-                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-violet-500" />
-                  <span className="text-sm font-medium text-slate-700 transition-colors duration-300 group-hover:text-violet-700">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-amber-400 transition-colors duration-300 group-hover:bg-white" />
+                  <span className="text-sm font-medium text-violet-100 transition-colors duration-300 group-hover:text-white">
                     {cert}
                   </span>
                 </motion.div>
               ))}
             </div>
 
-            <div className="mt-8 rounded-xl border border-slate-100 bg-slate-50 p-5">
-              <p className="text-xs font-bold uppercase tracking-widest text-slate-400">
+            <div className="mt-8 rounded-xl border border-white/20 bg-white/10 p-5 backdrop-blur-sm">
+              <p className="text-xs font-bold uppercase tracking-widest text-white/60">
                 {t("manufacturedByLabel")}
               </p>
-              <p className="mt-2 font-semibold text-slate-900">{visionT("partnerName")}</p>
-              <p className="text-sm text-slate-500">{t("manufacturerSub")}</p>
+              <p className="mt-2 font-semibold text-white">{visionT("partnerName")}</p>
+              <p className="text-sm text-violet-200">{t("manufacturerSub")}</p>
             </div>
           </motion.div>
         </div>
