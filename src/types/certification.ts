@@ -1,8 +1,12 @@
-// Certification type definition for quality and safety certifications
+export type CertCategory = 'food-safety' | 'quality' | 'halal';
+
 export interface Certification {
   id: string;
   name: string;
   issuer: string;
+  certNumber: string;
+  validUntil: string;
   imageUrl: string;
-  year: number;
+  pdfUrl: string;
+  category: CertCategory;
 }
