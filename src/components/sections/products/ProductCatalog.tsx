@@ -37,7 +37,7 @@ export function ProductCatalog() {
 
       {/* Product count */}
       <p className="mb-6 text-sm text-gray-500">
-        {filtered.length} product{filtered.length !== 1 ? 's' : ''}
+        {t('products.itemCount', { count: filtered.length })}
       </p>
 
       {/* Grid — 4 cols desktop, 3 tablet, 2 small, 1 mobile */}

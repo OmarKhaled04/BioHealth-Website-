@@ -4,7 +4,10 @@ import { ProductCatalog } from '@/components/sections/products/ProductCatalog';
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('products');
-  return { title: t('title') };
+  return {
+    title: t('title'),
+    description: t('subtitle'),
+  };
 }
 
 export default async function ProductsPage() {
@@ -16,9 +19,7 @@ export default async function ProductsPage() {
         <h1 className="mb-2 text-4xl font-extrabold tracking-tight text-gray-900">
           {t('title')}
         </h1>
-        <p className="mb-10 text-gray-500">
-          Discover our full range of infant formulas and baby food products.
-        </p>
+        <p className="mb-10 text-gray-500">{t('subtitle')}</p>
         <ProductCatalog />
       </div>
     </main>

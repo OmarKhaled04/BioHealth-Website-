@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 /* ── Floating particle ─────────────────────────────────────────────────────── */
 const particles = [
@@ -15,6 +16,8 @@ const particles = [
 const badges = ['FSSC 22000', 'ISO 9001', 'IFS Food', 'Halal Certified'];
 
 export function CertHero() {
+  const t = useTranslations('certifications.hero');
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-primary-950 via-primary-900 to-violet-900 py-28 text-center text-white">
 
@@ -79,9 +82,9 @@ export function CertHero() {
           transition={{ duration: 0.8, delay: 0.15, ease: 'easeOut' }}
           className="text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl"
         >
-          Our{' '}
+          {t('titlePrefix')}{' '}
           <span className="bg-gradient-to-r from-primary-300 via-violet-300 to-primary-200 bg-clip-text text-transparent">
-            Certifications
+            {t('titleHighlight')}
           </span>
         </motion.h1>
 
@@ -91,9 +94,9 @@ export function CertHero() {
           transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
           className="mx-auto mt-5 max-w-2xl text-lg text-white/60"
         >
-          Every standard met. Every audit passed. Every batch tested.
+          {t('bodyLine1')}
           <br className="hidden sm:block" />
-          Trusted by parents and regulators worldwide.
+          {t('bodyLine2')}
         </motion.p>
 
         {/* Trust badges */}

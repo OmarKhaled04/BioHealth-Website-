@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import type { Product } from '@/types/product';
 
@@ -9,17 +10,15 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product }: ProductCardProps) {
+  const t = useTranslations();
+  const displayName = t(product.nameKey);
+  const unitLabel = t(`products.${product.ageRange.unit}`);
   const ageLabel = product.ageRange.max
-    ? `${product.ageRange.min}–${product.ageRange.max} ${product.ageRange.unit}`
-    : `${product.ageRange.min}+ ${product.ageRange.unit}`;
-
-  const displayName = product.name ?? product.id;
+    ? `${product.ageRange.min}-${product.ageRange.max} ${unitLabel}`
+    : `${product.ageRange.min}+ ${unitLabel}`;
 
   return (
-    <div
-      className="product-card-wrap"
-      style={{ perspective: '1000px' }}
-    >
+    <div className="product-card-wrap" style={{ perspective: '1000px' }}>
       <div
         className="product-card-inner"
         style={{
@@ -29,8 +28,6 @@ export function ProductCard({ product }: ProductCardProps) {
           transition: 'transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)',
         }}
       >
-
-        {/* ── FRONT ── */}
         <div
           style={{
             backfaceVisibility: 'hidden',
@@ -44,7 +41,6 @@ export function ProductCard({ product }: ProductCardProps) {
             alignItems: 'center',
           }}
         >
-          {/* Image — natural portrait ratio, contained */}
           <div
             style={{
               padding: '24px 24px 0',
@@ -62,7 +58,6 @@ export function ProductCard({ product }: ProductCardProps) {
             />
           </div>
 
-          {/* Age badge + product name */}
           <div
             style={{
               padding: '14px 16px 20px',
@@ -98,7 +93,6 @@ export function ProductCard({ product }: ProductCardProps) {
           </div>
         </div>
 
-        {/* ── BACK ── */}
         <div
           style={{
             position: 'absolute',
@@ -183,10 +177,9 @@ export function ProductCard({ product }: ProductCardProps) {
               flexShrink: 0,
             }}
           >
-            View Details →
+            {t('products.viewDetails')} →
           </Link>
         </div>
-
       </div>
     </div>
   );

@@ -98,20 +98,20 @@ export const certifications: Certification[] = [
   },
 ];
 
-export const certCategories: { id: CertCategory; label: string; description: string }[] = [
+export const certCategories: { id: CertCategory; labelKey: string; descriptionKey: string }[] = [
   {
     id: 'food-safety',
-    label: 'Food Safety',
-    description: 'Internationally recognised food safety management certifications.',
+    labelKey: 'certifications.categories.foodSafety.label',
+    descriptionKey: 'certifications.categories.foodSafety.description',
   },
   {
     id: 'quality',
-    label: 'Quality Management',
-    description: 'ISO quality management system standards.',
+    labelKey: 'certifications.categories.quality.label',
+    descriptionKey: 'certifications.categories.quality.description',
   },
   {
     id: 'halal',
-    label: 'Halal & Compliance',
-    description: 'Halal certification and official regulatory compliance documents.',
+    labelKey: 'certifications.categories.halal.label',
+    descriptionKey: 'certifications.categories.halal.description',
   },
 ];

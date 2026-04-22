@@ -1,11 +1,15 @@
-import type { Metadata } from "next";
-import { AboutSection } from "@/components/sections/AboutSection";
+import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+import { AboutSection } from '@/components/sections/AboutSection';
 
-export const metadata: Metadata = {
-  title: "About Us",
-  description:
-    "BioHealth Prodentia (BHP) — Canadian multinational delivering scientifically advanced infant nutrition. Leap to the future of infant nutrition.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('about');
+
+  return {
+    title: t('meta.title'),
+    description: t('meta.description'),
+  };
+}
 
 export default function AboutPage() {
   return <AboutSection />;

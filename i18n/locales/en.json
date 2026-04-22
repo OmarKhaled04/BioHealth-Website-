@@ -23,10 +23,14 @@
   },
   "products": {
     "title": "Our Products",
+    "subtitle": "Discover our full range of infant formulas and baby food products.",
     "filterAll": "All",
     "filterFormula": "Formula",
     "filterBabyFood": "Baby Food",
     "viewDetails": "View Details",
+    "itemCount": "{count, plural, one {# product} other {# products}}",
+    "months": "months",
+    "years": "years",
     "lactonicGold1": {
       "name": "Lactonic Gold 1",
       "description": "A premium starter infant formula based on cow's milk, enriched with DHA to support brain development from birth to 6 months."
@@ -96,9 +100,131 @@
       "description": "A nutritious steamed meal combining tender beef with fresh vegetables, gluten-free and low in fat, for babies from 6 months."
     }
   },
+  "about": {
+    "meta": {
+      "title": "About Us",
+      "description": "BioHealth Prodentia (BHP) is a Canadian multinational delivering scientifically advanced infant nutrition and healthcare solutions."
+    },
+    "hero": {
+      "line1": "Leap to the",
+      "line2": "Future of",
+      "line3": "Infant Nutrition",
+      "body": "A Canadian multinational delivering scientifically advanced infant nutrition and healthcare solutions. We combine molecular innovation with GMP/EU-compliant manufacturing to set new standards in neonatal care.",
+      "badge": "Simply Sophisticated"
+    },
+    "stats": {
+      "atAGlance": "At a glance",
+      "nutrientsLabel": "Nutrients Per Formula",
+      "marketsLabel": "Global Markets",
+      "productLinesLabel": "Lactonic Product Lines",
+      "certificationsLabel": "International Certifications"
+    },
+    "visionMission": {
+      "eyebrow": "Who We Are",
+      "heading": "Guided by Purpose",
+      "visionTab": "Vision",
+      "missionTab": "Mission",
+      "visionLabel": "Our Vision",
+      "visionText": "To provide communities with exceptional products through manufacturing excellence and GMP/EU-compliant innovation.",
+      "missionLabel": "Our Mission",
+      "missionText": "To maximize user outcomes by offering high-quality, reliable infant nutrition in partnership with global health professionals.",
+      "videoQuote": "Leap to the Future of Infant Nutrition",
+      "videoSubtext": "Canadian innovation · Global reach",
+      "partnerLabel": "Manufacturing Partner",
+      "partnerName": "Reny Picot, Spain",
+      "partnerSub": "Industrias Lácteas Asturianas S.A. — advanced nutritional R&D facility"
+    },
+    "coreValues": {
+      "eyebrow": "What Drives Us",
+      "heading": "Core Values",
+      "items": [
+        { "title": "Customer Focus", "body": "We deeply value our customers and strive to meet their needs through exceptional quality and service." },
+        { "title": "Teamwork", "body": "We invest in top talent and continuously develop our team to stay aligned with evolving market needs." },
+        { "title": "Innovation", "body": "Innovation in molecules, hi-tech products, and digital systems is the cornerstone of our business." },
+        { "title": "Leadership", "body": "Combining tech leadership with research and rapid development, we continuously shape the future of our industry." }
+      ]
+    },
+    "pillars": {
+      "eyebrow": "How We Operate",
+      "heading": "Strategic Pillars",
+      "items": [
+        { "title": "Research & Development", "body": "Innovating specialty products for the Middle East through hi-tech and molecular research." },
+        { "title": "Human Capital", "body": "Continuous development programs for marketing and sales excellence." },
+        { "title": "Production & QA", "body": "All products are made under strict QA, including GLP, GSP, and validated protocols." },
+        { "title": "Distribution Expansion", "body": "Focused on expanding agency and distribution partnerships across new regions." },
+        { "title": "Digital Integration", "body": "Adopting automation and digital integration across production, sales, and distribution." }
+      ]
+    },
+    "globalPresence": {
+      "eyebrow": "Our Reach",
+      "heading": "Global Presence & Certifications",
+      "partnersLabel": "Distribution Partners",
+      "certsLabel": "Quality Certifications",
+      "manufacturedByLabel": "Manufactured by",
+      "manufacturerSub": "Industrias Lácteas Asturianas S.A. — advanced nutritional R&D facility",
+      "partners": [
+        { "country": "Canada", "note": "Headquarters" },
+        { "country": "Saudi Arabia", "note": "Dallah Pharma" },
+        { "country": "Egypt", "note": "Seucal Pharma" },
+        { "country": "Kuwait", "note": "Boushahri Group" }
+      ]
+    },
+    "cta": {
+      "heading": "Simply Sophisticated",
+      "body": "Leap to the future of infant nutrition — where science meets care.",
+      "button": "Get in Touch"
+    }
+  },
   "certifications": {
     "title": "Our Certifications",
-    "subtitle": "Quality and safety you can trust"
+    "subtitle": "Quality and safety you can trust",
+    "meta": {
+      "title": "Certifications",
+      "description": "BioHealth quality and safety certifications including FSSC 22000, IFS, ISO 9001, and Halal."
+    },
+    "hero": {
+      "titlePrefix": "Our",
+      "titleHighlight": "Certifications",
+      "bodyLine1": "Every standard met. Every audit passed. Every batch tested.",
+      "bodyLine2": "Trusted by parents and regulators worldwide."
+    },
+    "atAGlance": {
+      "heading": "Certifications at a Glance",
+      "stats": {
+        "totalCertifications": "Total Certifications",
+        "certifiedSince": "Certified Since",
+        "internationalStandards": "Int'l Standards",
+        "auditPassRate": "Audit Pass Rate"
+      },
+      "badges": {
+        "fssc": "FSSC 22000",
+        "iso": "ISO 9001",
+        "ifs": "IFS",
+        "halal": "Halal"
+      }
+    },
+    "categories": {
+      "foodSafety": {
+        "label": "Food Safety",
+        "description": "Internationally recognised food safety management certifications."
+      },
+      "quality": {
+        "label": "Quality Management",
+        "description": "ISO quality management system standards."
+      },
+      "halal": {
+        "label": "Halal & Compliance",
+        "description": "Halal certification and official regulatory compliance documents."
+      }
+    },
+    "card": {
+      "downloadPdf": "Download PDF",
+      "validUntil": "Until {date}"
+    },
+    "footer": {
+      "line1": "All certifications are issued by internationally accredited bodies",
+      "line2": "Subject to annual audits and continuous quality monitoring"
+    }
   },
   "contact": {
     "title": "Get in Touch",

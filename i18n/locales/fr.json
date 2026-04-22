@@ -1,61 +1,238 @@
 {
   "nav": {
-    "home": "",
-    "about": "",
-    "products": "",
-    "certifications": "",
-    "contact": ""
+    "home": "Accueil",
+    "about": "À propos",
+    "products": "Produits",
+    "certifications": "Certifications",
+    "contact": "Contact"
   },
   "home": {
     "hero": {
-      "title": "",
-      "subtitle": "",
-      "cta": ""
+      "title": "Une nutrition pure pour votre tout-petit",
+      "subtitle": "Une alimentation fondée sur la science pour les bébés, approuvée par les parents du monde entier.",
+      "cta": "Découvrir les produits"
     },
     "featured": {
-      "title": "",
-      "subtitle": ""
+      "title": "Produits phares",
+      "subtitle": "Élaborés avec soin pour chaque étape de la croissance"
     },
     "promo": {
-      "title": "",
-      "description": ""
+      "title": "Découvrez notre engagement",
+      "description": "Regardez notre histoire et apprenez-en plus sur notre engagement envers la qualité."
     }
   },
   "products": {
-    "title": "",
-    "filterAll": "",
-    "filterFormula": "",
-    "filterBabyFood": "",
-    "viewDetails": "",
-    "lactonicGold1": { "name": "", "description": "" },
-    "lactonicGold2": { "name": "", "description": "" },
-    "lactolacGold3": { "name": "", "description": "" },
-    "easeToGo1": { "name": "", "description": "" },
-    "easeToGo2": { "name": "", "description": "" },
-    "easeToGo3": { "name": "", "description": "" },
-    "lactonicAC": { "name": "", "description": "" },
-    "lactonicAR": { "name": "", "description": "" },
-    "lactonicHA1": { "name": "", "description": "" },
-    "lactonicHA2": { "name": "", "description": "" },
-    "lactonicHA3": { "name": "", "description": "" },
-    "lactonicLF": { "name": "", "description": "" },
-    "lactonic3Fruits": { "name": "", "description": "" },
-    "lactonic4FruitsCookie": { "name": "", "description": "" },
-    "lactonicBabyKabsah": { "name": "", "description": "" },
-    "lactonicFruitCereals": { "name": "", "description": "" },
-    "lactonicVegetableBeef": { "name": "", "description": "" }
+    "title": "Nos produits",
+    "subtitle": "Découvrez toute notre gamme de laits infantiles et de produits d'alimentation pour bébés.",
+    "filterAll": "Tous",
+    "filterFormula": "Lait infantile",
+    "filterBabyFood": "Alimentation bébé",
+    "viewDetails": "Voir les détails",
+    "itemCount": "{count, plural, one {# produit} other {# produits}}",
+    "months": "mois",
+    "years": "ans",
+    "lactonicGold1": {
+      "name": "Lactonic Gold 1",
+      "description": "Lait infantile premium à base de lait de vache, enrichi en DHA pour soutenir le développement cérébral, de la naissance à 6 mois."
+    },
+    "lactonicGold2": {
+      "name": "Lactonic Gold 2",
+      "description": "Lait de suite enrichi en fer et en nutriments essentiels pour accompagner la croissance de votre bébé de 6 à 12 mois."
+    },
+    "lactolacGold3": {
+      "name": "Lactolac Gold 3",
+      "description": "Lait de croissance enrichi en calcium et en vitamines essentielles pour soutenir le développement des tout-petits actifs de 1 à 3 ans."
+    },
+    "easeToGo1": {
+      "name": "Ease to Go 1",
+      "description": "Lait infantile facile à préparer à base de lait de vache, conçu pour répondre aux besoins nutritionnels des nourrissons de la naissance à 6 mois."
+    },
+    "easeToGo2": {
+      "name": "Ease to Go 2",
+      "description": "Lait de suite pratique soutenant une croissance saine des nourrissons de 6 à 12 mois."
+    },
+    "easeToGo3": {
+      "name": "Ease to Go 3",
+      "description": "Lait de croissance facile à préparer, offrant une nutrition équilibrée aux enfants de 1 à 3 ans."
+    },
+    "lactonicAC": {
+      "name": "Lactonic AC Gold",
+      "description": "Lait anti-coliques spécialement formulé pour réduire les gaz et l'inconfort, aidant votre bébé à se nourrir confortablement."
+    },
+    "lactonicAR": {
+      "name": "Lactonic AR Gold",
+      "description": "Lait épaissi anti-régurgitations qui aide à réduire les renvois et maintient votre bébé à l'aise après les tétées."
+    },
+    "lactonicHA1": {
+      "name": "Lactonic HA Plus 1",
+      "description": "Lait hypoallergénique pour nourrissons à risque allergique de la naissance à 6 mois, à utiliser sous supervision médicale."
+    },
+    "lactonicHA2": {
+      "name": "Lactonic HA Plus 2",
+      "description": "Lait de suite hypoallergénique pour nourrissons de 6 à 12 mois allergiques aux protéines de lait de vache, à utiliser sous supervision médicale."
+    },
+    "lactonicHA3": {
+      "name": "Lactonic HA Plus 3",
+      "description": "Lait de croissance hypoallergénique pour enfants de 1 à 3 ans allergiques aux protéines de lait de vache, à utiliser sous supervision médicale."
+    },
+    "lactonicLF": {
+      "name": "Lactonic LF",
+      "description": "Lait sans lactose pour nourrissons souffrant d'intolérance au lactose ou de galactosémie, à utiliser sous supervision médicale."
+    },
+    "lactonic3Fruits": {
+      "name": "3 Fruits",
+      "description": "Purée de fruits douce mélangeant trois fruits naturels, sans gluten et sans sucre ajouté, idéale pour les bébés dès 4 mois."
+    },
+    "lactonic4FruitsCookie": {
+      "name": "4 Fruits avec biscuit",
+      "description": "Délicieux mélange de quatre fruits avec de tendres morceaux de biscuit, riche en fibres et en vitamine C, pour les bébés dès 6 mois."
+    },
+    "lactonicBabyKabsah": {
+      "name": "Baby Kabsah",
+      "description": "Repas cuit à la vapeur inspiré du kabsah traditionnel, pauvre en graisses et en sel, riche en protéines, pour les bébés dès 6 mois."
+    },
+    "lactonicFruitCereals": {
+      "name": "Fruits et céréales",
+      "description": "Mélange sain de fruits et céréales sans sucre ajouté, sans gluten, enrichi en vitamine C, pour les bébés dès 6 mois."
+    },
+    "lactonicVegetableBeef": {
+      "name": "Légumes et bœuf",
+      "description": "Repas cuit à la vapeur alliant du bœuf tendre et des légumes frais, sans gluten et pauvre en graisses, pour les bébés dès 6 mois."
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "À propos",
+      "description": "BioHealth Prodentia (BHP) est une multinationale canadienne proposant des solutions scientifiquement avancées en nutrition infantile et en santé."
+    },
+    "hero": {
+      "line1": "Un bond vers",
+      "line2": "l'avenir de la",
+      "line3": "nutrition infantile",
+      "body": "Une multinationale canadienne qui fournit des solutions de nutrition infantile et de soins de santé scientifiquement avancées. Nous combinons l'innovation moléculaire avec une fabrication conforme aux normes GMP/UE pour établir de nouveaux standards en soins néonatals.",
+      "badge": "Simplement sophistiqué"
+    },
+    "stats": {
+      "atAGlance": "En un coup d'œil",
+      "nutrientsLabel": "Nutriments par formule",
+      "marketsLabel": "Marchés mondiaux",
+      "productLinesLabel": "Gammes Lactonic",
+      "certificationsLabel": "Certifications internationales"
+    },
+    "visionMission": {
+      "eyebrow": "Qui nous sommes",
+      "heading": "Guidés par un but",
+      "visionTab": "Vision",
+      "missionTab": "Mission",
+      "visionLabel": "Notre vision",
+      "visionText": "Fournir aux communautés des produits exceptionnels grâce à l'excellence de la fabrication et à l'innovation conforme aux normes GMP/UE.",
+      "missionLabel": "Notre mission",
+      "missionText": "Maximiser les résultats pour les utilisateurs en offrant une nutrition infantile fiable et de haute qualité en partenariat avec des professionnels de santé mondiaux.",
+      "videoQuote": "Un bond vers l'avenir de la nutrition infantile",
+      "videoSubtext": "Innovation canadienne · Portée mondiale",
+      "partnerLabel": "Partenaire de fabrication",
+      "partnerName": "Reny Picot, Espagne",
+      "partnerSub": "Industrias Lácteas Asturianas S.A. — installation avancée de R&D nutritionnelle"
+    },
+    "coreValues": {
+      "eyebrow": "Ce qui nous anime",
+      "heading": "Nos valeurs fondamentales",
+      "items": [
+        { "title": "Orientation client", "body": "Nous valorisons profondément nos clients et nous efforçons de répondre à leurs besoins grâce à une qualité et un service exceptionnels." },
+        { "title": "Travail d'équipe", "body": "Nous investissons dans les meilleurs talents et développons continuellement notre équipe pour rester alignés sur les besoins évolutifs du marché." },
+        { "title": "Innovation", "body": "L'innovation dans les molécules, les produits de haute technologie et les systèmes numériques est la pierre angulaire de notre activité." },
+        { "title": "Leadership", "body": "En combinant leadership technologique et développement rapide, nous façonnons continuellement l'avenir de notre industrie." }
+      ]
+    },
+    "pillars": {
+      "eyebrow": "Notre mode de fonctionnement",
+      "heading": "Piliers stratégiques",
+      "items": [
+        { "title": "Recherche & Développement", "body": "Innover des produits spécialisés pour le Moyen-Orient grâce à la recherche moléculaire et high-tech." },
+        { "title": "Capital humain", "body": "Programmes de développement continu pour l'excellence en marketing et en ventes." },
+        { "title": "Production & Assurance qualité", "body": "Tous les produits sont fabriqués sous contrôle qualité strict, incluant GLP, GSP et protocoles validés." },
+        { "title": "Expansion de la distribution", "body": "Axé sur l'expansion des partenariats d'agence et de distribution dans de nouvelles régions." },
+        { "title": "Intégration numérique", "body": "Adoption de l'automatisation et de l'intégration numérique dans la production, les ventes et la distribution." }
+      ]
+    },
+    "globalPresence": {
+      "eyebrow": "Notre portée",
+      "heading": "Présence mondiale & certifications",
+      "partnersLabel": "Partenaires de distribution",
+      "certsLabel": "Certifications qualité",
+      "manufacturedByLabel": "Fabriqué par",
+      "manufacturerSub": "Industrias Lácteas Asturianas S.A. — installation avancée de R&D nutritionnelle",
+      "partners": [
+        { "country": "Canada", "note": "Siège social" },
+        { "country": "Arabie saoudite", "note": "Dallah Pharma" },
+        { "country": "Égypte", "note": "Seucal Pharma" },
+        { "country": "Koweït", "note": "Boushahri Group" }
+      ]
+    },
+    "cta": {
+      "heading": "Simplement sophistiqué",
+      "body": "Un bond vers l'avenir de la nutrition infantile — là où la science rencontre le soin.",
+      "button": "Nous contacter"
+    }
   },
   "certifications": {
-    "title": "",
-    "subtitle": ""
+    "title": "Nos certifications",
+    "subtitle": "Qualité et sécurité en qui vous pouvez avoir confiance",
+    "meta": {
+      "title": "Certifications",
+      "description": "Les certifications qualité et sécurité de BioHealth, y compris FSSC 22000, IFS, ISO 9001 et Halal."
+    },
+    "hero": {
+      "titlePrefix": "Nos",
+      "titleHighlight": "Certifications",
+      "bodyLine1": "Chaque norme respectée. Chaque audit réussi. Chaque lot testé.",
+      "bodyLine2": "Approuvées par les parents et les autorités réglementaires dans le monde entier."
+    },
+    "atAGlance": {
+      "heading": "Les certifications en un coup d'œil",
+      "stats": {
+        "totalCertifications": "Total des certifications",
+        "certifiedSince": "Certifié depuis",
+        "internationalStandards": "Normes internationales",
+        "auditPassRate": "Taux de réussite aux audits"
+      },
+      "badges": {
+        "fssc": "FSSC 22000",
+        "iso": "ISO 9001",
+        "ifs": "IFS",
+        "halal": "Halal"
+      }
+    },
+    "categories": {
+      "foodSafety": {
+        "label": "Sécurité alimentaire",
+        "description": "Certifications de gestion de la sécurité alimentaire reconnues à l'international."
+      },
+      "quality": {
+        "label": "Management de la qualité",
+        "description": "Normes ISO des systèmes de management de la qualité."
+      },
+      "halal": {
+        "label": "Halal et conformité",
+        "description": "Certifications Halal et documents officiels de conformité réglementaire."
+      }
+    },
+    "card": {
+      "downloadPdf": "Télécharger le PDF",
+      "validUntil": "Valide jusqu'au {date}"
+    },
+    "footer": {
+      "line1": "Toutes les certifications sont délivrées par des organismes internationalement accrédités",
+      "line2": "Soumises à des audits annuels et à un suivi continu de la qualité"
+    }
   },
   "contact": {
-    "title": "",
-    "subtitle": "",
-    "emailLabel": ""
+    "title": "Contactez-nous",
+    "subtitle": "Nous serions ravis de vous entendre",
+    "emailLabel": "Adresse e-mail"
   },
   "footer": {
-    "rights": "",
-    "company": ""
+    "rights": "Tous droits réservés.",
+    "company": "BioHealth Nutrition"
   }
 }
