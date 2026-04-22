@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
+import { motion } from 'framer-motion';
 import type { Product } from '@/types/product';
 
 interface ProductCardProps {
@@ -14,173 +15,74 @@ export function ProductCard({ product }: ProductCardProps) {
   const displayName = t(product.nameKey);
   const unitLabel = t(`products.${product.ageRange.unit}`);
   const ageLabel = product.ageRange.max
-    ? `${product.ageRange.min}-${product.ageRange.max} ${unitLabel}`
+    ? `${product.ageRange.min}–${product.ageRange.max} ${unitLabel}`
     : `${product.ageRange.min}+ ${unitLabel}`;
 
   return (
-    <div className="product-card-wrap" style={{ perspective: '1000px' }}>
-      <div
-        className="product-card-inner"
-        style={{
-          position: 'relative',
-          width: '100%',
-          transformStyle: 'preserve-3d',
-          transition: 'transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)',
-        }}
+    <Link href={`/products/${product.slug}`} className="block h-full">
+      <motion.div
+        whileHover={{ y: -8, scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
+        transition={{ type: 'spring', stiffness: 300, damping: 22 }}
+        className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/15 bg-white/10 backdrop-blur-sm transition-shadow duration-300 hover:border-white/30 hover:shadow-2xl hover:shadow-violet-900/40"
       >
-        <div
-          style={{
-            backfaceVisibility: 'hidden',
-            WebkitBackfaceVisibility: 'hidden',
-            background: '#ffffff',
-            border: '1px solid #ede9fe',
-            borderRadius: '16px',
-            overflow: 'hidden',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-        >
-          <div
-            style={{
-              padding: '24px 24px 0',
-              width: '100%',
-              display: 'flex',
-              justifyContent: 'center',
-            }}
+        {/* Badge */}
+        <div className="absolute left-3 top-3 z-10 max-w-[calc(100%-1.5rem)] truncate rounded-full border border-amber-400/30 bg-amber-400/20 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-amber-300">
+          {product.badge}
+        </div>
+
+        {/* Fixed-height image area */}
+        <div className="relative h-52 flex-shrink-0">
+          <motion.div
+            animate={{ y: [0, -6, 0] }}
+            transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
+            className="absolute inset-0 flex items-center justify-center px-8 pt-12 pb-2"
           >
             <Image
               src={product.imagePath}
               alt={displayName}
               width={140}
               height={185}
-              style={{ objectFit: 'contain', width: '100%', height: 'auto', maxWidth: '140px' }}
+              className="h-full w-auto max-h-36 object-contain drop-shadow-2xl"
             />
-          </div>
-
-          <div
-            style={{
-              padding: '14px 16px 20px',
-              textAlign: 'center',
-              width: '100%',
-            }}
-          >
-            <div
-              style={{
-                display: 'inline-block',
-                padding: '3px 10px',
-                borderRadius: '50px',
-                background: '#ede9fe',
-                color: '#6d28d9',
-                fontSize: '11px',
-                fontWeight: 600,
-                marginBottom: '8px',
-              }}
-            >
-              {ageLabel}
-            </div>
-
-            <div
-              style={{
-                fontSize: '15px',
-                fontWeight: 600,
-                color: '#1e1b4b',
-                lineHeight: 1.3,
-              }}
-            >
-              {displayName}
-            </div>
-          </div>
+          </motion.div>
+          {/* Glow under image */}
+          <div className="pointer-events-none absolute bottom-2 left-1/2 h-10 w-24 -translate-x-1/2 rounded-full bg-white/10 blur-xl transition-all duration-300 group-hover:bg-violet-300/20" />
         </div>
 
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            backfaceVisibility: 'hidden',
-            WebkitBackfaceVisibility: 'hidden',
-            transform: 'rotateY(180deg)',
-            background: 'linear-gradient(135deg, #7c3aed, #4c1d95)',
-            borderRadius: '16px',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '28px 24px',
-            gap: '8px',
-            textAlign: 'center',
-          }}
-        >
-          <div
-            style={{
-              fontSize: '1.1rem',
-              fontWeight: 800,
-              color: '#ffffff',
-              lineHeight: 1.2,
-              marginBottom: '2px',
-            }}
-          >
-            {displayName}
-          </div>
-
-          <div
-            style={{
-              fontSize: '0.75rem',
-              color: 'rgba(255,255,255,0.65)',
-              marginBottom: '10px',
-            }}
-          >
+        {/* Info — grows to fill remaining height */}
+        <div className="flex flex-1 flex-col p-5 pt-3">
+          {/* Age pill */}
+          <span className="mb-2 self-start rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold text-white/80">
             {ageLabel}
-          </div>
+          </span>
 
-          <ul style={{ listStyle: 'none', padding: 0, width: '100%', textAlign: 'left' }}>
-            {product.features.slice(0, 4).map((feature, i) => (
-              <li
-                key={i}
-                style={{
-                  padding: '7px 0',
-                  fontSize: '0.76rem',
-                  color: 'rgba(255,255,255,0.9)',
-                  display: 'flex',
-                  gap: '8px',
-                  alignItems: 'flex-start',
-                  borderBottom: '1px solid rgba(255,255,255,0.1)',
-                }}
-              >
-                <span
-                  style={{
-                    color: '#c4b5fd',
-                    fontWeight: 700,
-                    flexShrink: 0,
-                    marginTop: '1px',
-                  }}
-                >
-                  ✓
-                </span>
-                {feature}
+          <p className="text-base font-bold leading-snug text-white">{displayName}</p>
+
+          {/* Features preview — flex-1 pushes CTA to bottom */}
+          <ul className="mt-3 flex-1 space-y-1.5">
+            {product.features.slice(0, 3).map((f, i) => (
+              <li key={i} className="flex items-start gap-2 text-xs text-violet-200">
+                <span className="mt-0.5 flex-shrink-0 text-amber-400">✓</span>
+                {f}
               </li>
             ))}
           </ul>
 
-          <Link
-            href={`/products/${product.slug}`}
-            style={{
-              marginTop: '14px',
-              padding: '9px 24px',
-              borderRadius: '50px',
-              background: '#ffffff',
-              color: '#4c1d95',
-              fontWeight: 700,
-              fontSize: '0.8rem',
-              textDecoration: 'none',
-              letterSpacing: '0.3px',
-              flexShrink: 0,
-            }}
-          >
-            {t('products.viewDetails')} →
-          </Link>
+          {/* CTA row */}
+          <div className="mt-4 flex items-center justify-between border-t border-white/10 pt-4">
+            <span className="text-xs font-semibold text-white/60 transition-colors duration-200 group-hover:text-white">
+              {t('products.viewDetails')}
+            </span>
+            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/15 text-sm text-white transition-colors duration-200 group-hover:bg-amber-400 group-hover:text-violet-900">
+              →
+            </span>
+          </div>
         </div>
-      </div>
-    </div>
+
+        {/* Hover shimmer */}
+        <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-white/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+      </motion.div>
+    </Link>
   );
 }

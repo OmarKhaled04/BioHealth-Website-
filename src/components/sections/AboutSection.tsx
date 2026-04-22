@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { Link } from "@/navigation";
 import {
   AnimatePresence,
   motion,
@@ -661,12 +662,12 @@ function ClosingCTA() {
         </motion.p>
 
         <motion.div variants={scaleUp} className="mt-10">
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="inline-block rounded-full border-2 border-white px-10 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-white hover:text-violet-700"
           >
             {t("button")}
-          </a>
+          </Link>
         </motion.div>
       </motion.div>
     </section>
