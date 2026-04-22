@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { routing } from '@i18n/routing';
-import { fontSans, fontArabic } from '@/lib/fonts';
+import { fontSans, fontArabic, fontPoppins } from '@/lib/fonts';
 import { Navbar } from '@/components/shared/Navbar';
 import { Footer } from '@/components/shared/Footer';
 import { HtmlAttributes } from '@/components/shared/HtmlAttributes';
@@ -37,7 +37,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   const messages = await getMessages();
   const isRTL = locale === 'ar';
-  const fontClassNames = `${fontSans.variable} ${fontArabic.variable}`;
+  const fontClassNames = `${fontSans.variable} ${fontArabic.variable} ${fontPoppins.variable}`;
 
   return (
     <NextIntlClientProvider messages={messages}>
