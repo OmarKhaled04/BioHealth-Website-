@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/navigation";
 import {
   AnimatePresence,
+  animate,
   motion,
   useInView,
   useMotionValue,
@@ -516,94 +517,305 @@ function StrategicPillars() {
   );
 }
 
+// ─── Digital Globe ────────────────────────────────────────────────────────────
+
+const GR = 148;  // radius
+const GCX = 168; // center x
+const GCY = 168; // center y
+
+const PARTNER_COORDS = [
+  { lon: -96, lat: 56  }, // Canada
+  { lon: 45,  lat: 24  }, // Saudi Arabia
+  { lon: 30,  lat: 27  }, // Egypt
+  { lon: 47,  lat: 29  }, // Kuwait
+];
+
+// Simplified continent outlines as [lon, lat] pairs
+const CONTINENTS: number[][][] = [
+  [[-170,60],[-130,55],[-90,50],[-70,45],[-55,47],[-55,42],[-70,40],[-80,25],[-90,15],[-85,10],[-80,8],[-78,8],[-85,10],[-90,15],[-105,20],[-115,32],[-125,38],[-130,55],[-170,60]], // N America
+  [[-80,10],[-60,10],[-50,0],[-48,-5],[-48,-15],[-50,-25],[-60,-40],[-65,-55],[-75,-52],[-70,-35],[-75,-15],[-80,0],[-80,10]], // S America
+  [[-10,36],[-5,36],[5,43],[10,44],[15,45],[30,45],[28,37],[20,37],[10,36],[-10,36]], // Europe
+  [[-17,15],[0,15],[15,15],[30,15],[35,5],[40,-5],[38,-18],[35,-28],[25,-35],[15,-35],[0,-35],[-15,-30],[-17,-20],[-17,0],[-17,15]], // Africa
+  [[25,45],[35,45],[45,38],[55,30],[65,22],[80,8],[95,5],[105,10],[115,5],[120,20],[130,35],[140,38],[145,38],[150,45],[140,60],[120,60],[100,65],[75,60],[60,55],[50,52],[40,58],[30,55],[25,50],[25,45]], // Asia
+  [[65,23],[80,8],[90,22],[75,35],[68,27],[65,23]], // India
+  [[115,-25],[120,-20],[130,-12],[140,-15],[148,-28],[150,-38],[148,-42],[143,-40],[130,-40],[120,-35],[115,-32],[115,-25]], // Australia
+  [[-55,60],[-30,60],[-25,70],[-40,80],[-55,80],[-60,70],[-55,60]], // Greenland
+];
+
+function projectGlobe(lon: number, lat: number, rotDeg: number) {
+  const lonRad = ((lon + rotDeg) * Math.PI) / 180;
+  const latRad = (lat * Math.PI) / 180;
+  const z = Math.cos(latRad) * Math.cos(lonRad);
+  return {
+    x: GCX + GR * Math.cos(latRad) * Math.sin(lonRad),
+    y: GCY - GR * Math.sin(latRad),
+    visible: z > 0,
+  };
+}
+
+function toSvgPath(coords: number[][], rotDeg: number) {
+  let d = ""; let inSeg = false;
+  for (const [lon, lat] of coords) {
+    const p = projectGlobe(lon, lat, rotDeg);
+    if (p.visible) {
+      d += inSeg ? `L${p.x.toFixed(1)},${p.y.toFixed(1)} ` : `M${p.x.toFixed(1)},${p.y.toFixed(1)} `;
+      inSeg = true;
+    } else inSeg = false;
+  }
+  return d;
+}
+
+function buildGrid(rotDeg: number) {
+  const paths: string[] = [];
+  for (const lat of [-60, -30, 0, 30, 60]) {
+    let d = ""; let inSeg = false;
+    for (let lon = -180; lon <= 180; lon += 4) {
+      const p = projectGlobe(lon, lat, rotDeg);
+      if (p.visible) { d += inSeg ? `L${p.x.toFixed(1)},${p.y.toFixed(1)} ` : `M${p.x.toFixed(1)},${p.y.toFixed(1)} `; inSeg = true; }
+      else inSeg = false;
+    }
+    paths.push(d);
+  }
+  for (const lon of [-150,-120,-90,-60,-30,0,30,60,90,120,150,180]) {
+    let d = ""; let inSeg = false;
+    for (let lat = -90; lat <= 90; lat += 4) {
+      const p = projectGlobe(lon, lat, rotDeg);
+      if (p.visible) { d += inSeg ? `L${p.x.toFixed(1)},${p.y.toFixed(1)} ` : `M${p.x.toFixed(1)},${p.y.toFixed(1)} `; inSeg = true; }
+      else inSeg = false;
+    }
+    paths.push(d);
+  }
+  return paths;
+}
+
+function DigitalGlobe({ selectedIdx }: { selectedIdx: number | null }) {
+  const rotRef = useRef(20);
+  const [rot, setRot] = useState(20);
+  const rafRef = useRef<number>(0);
+  const animCtrl = useRef<{ stop: () => void } | null>(null);
+
+  // Auto-rotate when idle
+  useEffect(() => {
+    if (selectedIdx !== null) return;
+    let last = performance.now();
+    const tick = (now: number) => {
+      rotRef.current = (rotRef.current + ((now - last) / 1000) * 12) % 360;
+      last = now;
+      setRot(rotRef.current);
+      rafRef.current = requestAnimationFrame(tick);
+    };
+    rafRef.current = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(rafRef.current);
+  }, [selectedIdx]);
+
+  // Snap to selected country
+  useEffect(() => {
+    if (selectedIdx === null) return;
+    animCtrl.current?.stop();
+    const target = -PARTNER_COORDS[selectedIdx].lon;
+    const diff = ((target - rotRef.current) % 360 + 540) % 360 - 180;
+    const to = rotRef.current + diff;
+    animCtrl.current = animate(rotRef.current, to, {
+      type: "spring", stiffness: 55, damping: 16,
+      onUpdate: (v) => { rotRef.current = v; setRot(v); },
+    });
+    return () => animCtrl.current?.stop();
+  }, [selectedIdx]);
+
+  const gridPaths = useMemo(() => buildGrid(rot), [rot]);
+  const contPaths = useMemo(() => CONTINENTS.map((c) => toSvgPath(c, rot)), [rot]);
+  const pins = PARTNER_COORDS.map((p, i) => ({ ...projectGlobe(p.lon, p.lat, rot), i }));
+
+  return (
+    <svg viewBox="0 0 336 336" className="mx-auto h-72 w-72 drop-shadow-2xl lg:h-80 lg:w-80">
+      <defs>
+        <radialGradient id="gBg" cx="38%" cy="32%" r="65%">
+          <stop offset="0%" stopColor="#5b21b6" />
+          <stop offset="100%" stopColor="#1e0a44" />
+        </radialGradient>
+        <radialGradient id="gRim" cx="50%" cy="50%" r="50%">
+          <stop offset="65%" stopColor="transparent" />
+          <stop offset="100%" stopColor="rgba(139,92,246,0.45)" />
+        </radialGradient>
+        <clipPath id="gClip"><circle cx={GCX} cy={GCY} r={GR} /></clipPath>
+        <filter id="pinGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="3" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      {/* Base sphere */}
+      <circle cx={GCX} cy={GCY} r={GR} fill="url(#gBg)" />
+
+      {/* Grid + continents */}
+      <g clipPath="url(#gClip)">
+        {gridPaths.map((d, i) => <path key={`g${i}`} d={d} stroke="rgba(167,139,250,0.18)" strokeWidth="0.6" fill="none" />)}
+        {contPaths.map((d, i) => <path key={`c${i}`} d={d} stroke="rgba(167,139,250,0.75)" strokeWidth="1.1" fill="rgba(109,40,217,0.2)" />)}
+      </g>
+
+      {/* Rim */}
+      <circle cx={GCX} cy={GCY} r={GR} fill="url(#gRim)" stroke="rgba(167,139,250,0.35)" strokeWidth="1.5" />
+
+      {/* Pins */}
+      {pins.filter((p) => p.visible).map((p) => (
+        <g key={p.i} filter={p.i === selectedIdx ? "url(#pinGlow)" : undefined}>
+          {p.i === selectedIdx && (
+            <>
+              <motion.circle cx={p.x} cy={p.y} r={8} fill="rgba(251,191,36,0.2)"
+                animate={{ r: [6, 22, 6], opacity: [0.9, 0, 0.9] }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: "easeOut" }} />
+              <motion.circle cx={p.x} cy={p.y} r={5} fill="rgba(251,191,36,0.3)"
+                animate={{ r: [4, 14, 4], opacity: [0.7, 0, 0.7] }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: "easeOut", delay: 0.25 }} />
+            </>
+          )}
+          <circle cx={p.x} cy={p.y}
+            r={p.i === selectedIdx ? 5 : 3.5}
+            fill={p.i === selectedIdx ? "#fbbf24" : "rgba(255,255,255,0.65)"}
+            stroke={p.i === selectedIdx ? "rgba(251,191,36,0.6)" : "rgba(255,255,255,0.25)"}
+            strokeWidth="1.5"
+          />
+        </g>
+      ))}
+    </svg>
+  );
+}
+
+// ─── Global presence ───────────────────────────────────────────────────────────
+
 function GlobalPresence() {
   const t = useTranslations("about.globalPresence");
   const visionT = useTranslations("about.visionMission");
   const partners = t.raw("partners") as PartnerItem[];
+
+  const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
 
   return (
     <section className="relative overflow-hidden bg-violet-700 py-24">
       <WaveMotif className="absolute inset-0 h-full w-full opacity-40" />
 
       <div className="relative z-10 mx-auto max-w-6xl px-6">
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={VIEWPORT}
-          className="mb-14 text-center"
-        >
+
+        {/* Header */}
+        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={VIEWPORT} className="mb-14 text-center">
           <div className="mb-3 flex items-center justify-center gap-3">
             <span className="h-px w-8 bg-amber-400" />
-            <span className="text-xs font-semibold uppercase tracking-widest text-amber-300">
-              {t("eyebrow")}
-            </span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-amber-300">{t("eyebrow")}</span>
             <span className="h-px w-8 bg-amber-400" />
           </div>
           <h2 className="text-4xl font-bold text-white">{t("heading")}</h2>
         </motion.div>
 
-        <div className="grid gap-12 lg:grid-cols-2">
+        {/* Partners + Globe */}
+        <div className="grid items-center gap-12 lg:grid-cols-2">
+
+          {/* Partner cards — clicking rotates the globe */}
           <motion.div variants={fadeLeft} initial="hidden" whileInView="visible" viewport={VIEWPORT}>
-            <h3 className="mb-5 text-xs font-bold uppercase tracking-widest text-white/60">
-              {t("partnersLabel")}
-            </h3>
+            <h3 className="mb-5 text-xs font-bold uppercase tracking-widest text-white/60">{t("partnersLabel")}</h3>
             <div className="space-y-3">
               {partners.map((partner, i) => (
-                <motion.div
+                <motion.button
                   key={partner.country}
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={VIEWPORT}
                   transition={{ delay: i * 0.1, duration: 0.5, ease: EASE }}
-                  className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/10 px-5 py-4 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/25 hover:shadow-xl"
+                  whileHover={{ x: 4 }}
+                  onClick={() => setSelectedIdx(selectedIdx === i ? null : i)}
+                  className={`group flex w-full items-center gap-4 rounded-xl border px-5 py-4 backdrop-blur-sm transition-all duration-300 hover:shadow-xl ${
+                    selectedIdx === i
+                      ? "border-amber-400/50 bg-amber-400/15 shadow-lg"
+                      : "border-white/10 bg-white/10 hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/20"
+                  }`}
                 >
                   <span className="text-2xl">{PARTNER_FLAGS[i] ?? "•"}</span>
-                  <div>
-                    <p className="font-semibold text-white">{partner.country}</p>
-                    <p className="text-xs text-violet-200 transition-colors duration-300 group-hover:text-white/80">
-                      {partner.note}
+                  <div className="text-left">
+                    <p className={`font-semibold transition-colors duration-200 ${selectedIdx === i ? "text-amber-300" : "text-white"}`}>
+                      {partner.country}
                     </p>
+                    <p className="text-xs text-violet-200 transition-colors duration-300 group-hover:text-white/80">{partner.note}</p>
                   </div>
-                  <span className="ml-auto text-white/40 transition-all duration-300 group-hover:translate-x-1 group-hover:text-amber-300">
-                    →
+                  <span className={`ml-auto transition-all duration-300 ${selectedIdx === i ? "text-amber-400" : "text-white/40 group-hover:translate-x-1 group-hover:text-amber-300"}`}>
+                    {selectedIdx === i ? "●" : "→"}
                   </span>
-                </motion.div>
+                </motion.button>
               ))}
             </div>
+            {selectedIdx !== null && (
+              <motion.p
+                initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
+                className="mt-4 text-center text-xs text-amber-300/70"
+              >
+                Click again to deselect
+              </motion.p>
+            )}
           </motion.div>
 
-          <motion.div variants={fadeRight} initial="hidden" whileInView="visible" viewport={VIEWPORT}>
-            <h3 className="mb-5 text-xs font-bold uppercase tracking-widest text-white/60">
-              {t("certsLabel")}
-            </h3>
-            <div className="grid grid-cols-2 gap-3">
-              {CERTS.map((cert, i) => (
+          {/* Digital Globe */}
+          <motion.div variants={fadeRight} initial="hidden" whileInView="visible" viewport={VIEWPORT} className="flex flex-col items-center gap-4">
+            <DigitalGlobe selectedIdx={selectedIdx} />
+            <AnimatePresence mode="wait">
+              {selectedIdx !== null ? (
                 <motion.div
-                  key={cert}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={VIEWPORT}
-                  transition={{ delay: i * 0.08, duration: 0.45, ease: EASE }}
-                  className="group flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-4 py-3 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-white/40 hover:bg-white/25 hover:shadow-lg"
+                  key={selectedIdx}
+                  initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3 }}
+                  className="text-center"
                 >
-                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-amber-400 transition-colors duration-300 group-hover:bg-white" />
-                  <span className="text-sm font-medium text-violet-100 transition-colors duration-300 group-hover:text-white">
-                    {cert}
-                  </span>
+                  <p className="text-lg font-bold text-amber-300">{partners[selectedIdx]?.country}</p>
+                  <p className="text-sm text-violet-200">{partners[selectedIdx]?.note}</p>
                 </motion.div>
-              ))}
-            </div>
-
-            <div className="mt-8 rounded-xl border border-white/20 bg-white/10 p-5 backdrop-blur-sm">
-              <p className="text-xs font-bold uppercase tracking-widest text-white/60">
-                {t("manufacturedByLabel")}
-              </p>
-              <p className="mt-2 font-semibold text-white">{visionT("partnerName")}</p>
-              <p className="text-sm text-violet-200">{t("manufacturerSub")}</p>
-            </div>
+              ) : (
+                <motion.p key="idle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+                  className="text-xs text-white/40">
+                  Select a partner to locate on the globe
+                </motion.p>
+              )}
+            </AnimatePresence>
           </motion.div>
         </div>
+
+        {/* Quality Certifications — slide up from below */}
+        <div className="mt-16">
+          <motion.h3
+            initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+            viewport={VIEWPORT} transition={{ duration: 0.5, ease: EASE }}
+            className="mb-6 text-center text-xs font-bold uppercase tracking-widest text-white/60"
+          >
+            {t("certsLabel")}
+          </motion.h3>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+            {CERTS.map((cert, i) => (
+              <motion.div
+                key={cert}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={VIEWPORT}
+                transition={{ delay: i * 0.1, duration: 0.55, ease: [0.34, 1.56, 0.64, 1] }}
+                className="group flex flex-col items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-4 py-4 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-amber-400/40 hover:bg-white/20 hover:shadow-lg"
+              >
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-amber-400/20 text-sm font-bold text-amber-400 transition-colors duration-300 group-hover:bg-amber-400 group-hover:text-violet-900">
+                  ✓
+                </span>
+                <span className="text-center text-xs font-semibold leading-tight text-violet-100 transition-colors duration-300 group-hover:text-white">
+                  {cert}
+                </span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Manufactured by */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+          viewport={VIEWPORT} transition={{ duration: 0.6, delay: 0.3, ease: EASE }}
+          className="mt-8 rounded-xl border border-white/20 bg-white/10 p-5 text-center backdrop-blur-sm"
+        >
+          <p className="text-xs font-bold uppercase tracking-widest text-white/60">{t("manufacturedByLabel")}</p>
+          <p className="mt-2 font-semibold text-white">{visionT("partnerName")}</p>
+          <p className="text-sm text-violet-200">{t("manufacturerSub")}</p>
+        </motion.div>
+
       </div>
     </section>
   );
