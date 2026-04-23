@@ -227,9 +227,45 @@
     }
   },
   "contact": {
-    "title": "Get in Touch",
-    "subtitle": "We'd love to hear from you",
-    "emailLabel": "Email Address"
+    "meta": {
+      "title": "Contact Us",
+      "description": "Get in touch with BioHealth BHP — we'd love to hear from you."
+    },
+    "hero": {
+      "eyebrow": "We'd Love to Hear From You",
+      "title": "Get in Touch",
+      "subtitle": "Have a question, a partnership inquiry, or just want to say hello? Reach out — our team is here."
+    },
+    "info": {
+      "heading": "Contact Information",
+      "body": "Send us an email and we'll get back to you as soon as possible.",
+      "email": { "label": "Email Us", "value": "Info@lactonic.org" }
+    },
+    "form": {
+      "heading": "Send Us a Message",
+      "nameLabel": "Full Name",
+      "namePlaceholder": "Your full name",
+      "emailLabel": "Your Email",
+      "emailPlaceholder": "you@example.com",
+      "subjectLabel": "Subject",
+      "subjectPlaceholder": "Select a subject",
+      "subjects": {
+        "general": "General Inquiry",
+        "partnership": "Partnership",
+        "support": "Technical Support",
+        "other": "Other"
+      },
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell us how we can help…",
+      "hint": "Choose your email client — we'll pre-fill everything for you.",
+      "openGmail": "Open in Gmail",
+      "openOutlook": "Open in Outlook"
+    },
+    "cta": {
+      "heading": "Ready to Partner with Us?",
+      "body": "Join a global network of healthcare professionals and distributors delivering the best in infant nutrition.",
+      "button": "Explore Products"
+    }
   },
   "footer": {
     "rights": "All rights reserved.",

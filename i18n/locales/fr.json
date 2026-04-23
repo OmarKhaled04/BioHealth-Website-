@@ -227,9 +227,45 @@
     }
   },
   "contact": {
-    "title": "Contactez-nous",
-    "subtitle": "Nous serions ravis de vous entendre",
-    "emailLabel": "Adresse e-mail"
+    "meta": {
+      "title": "Contactez-nous",
+      "description": "Prenez contact avec BioHealth BHP — nous serions ravis de vous entendre."
+    },
+    "hero": {
+      "eyebrow": "Nous serions ravis de vous entendre",
+      "title": "Prenez Contact",
+      "subtitle": "Une question, une demande de partenariat, ou simplement envie de dire bonjour ? Écrivez-nous — notre équipe est là pour vous."
+    },
+    "info": {
+      "heading": "Coordonnées",
+      "body": "Envoyez-nous un e-mail et nous vous répondrons dans les plus brefs délais.",
+      "email": { "label": "Envoyez-nous un e-mail", "value": "Info@lactonic.org" }
+    },
+    "form": {
+      "heading": "Envoyez-nous un message",
+      "nameLabel": "Nom complet",
+      "namePlaceholder": "Votre nom complet",
+      "emailLabel": "Votre e-mail",
+      "emailPlaceholder": "vous@exemple.com",
+      "subjectLabel": "Sujet",
+      "subjectPlaceholder": "Sélectionnez un sujet",
+      "subjects": {
+        "general": "Renseignement général",
+        "partnership": "Partenariat",
+        "support": "Support technique",
+        "other": "Autre"
+      },
+      "messageLabel": "Message",
+      "messagePlaceholder": "Dites-nous comment nous pouvons vous aider…",
+      "hint": "Choisissez votre client e-mail — nous pré-remplirons tout pour vous.",
+      "openGmail": "Ouvrir dans Gmail",
+      "openOutlook": "Ouvrir dans Outlook"
+    },
+    "cta": {
+      "heading": "Prêt à nous rejoindre ?",
+      "body": "Rejoignez un réseau mondial de professionnels de santé et de distributeurs proposant le meilleur en nutrition infantile.",
+      "button": "Explorer les produits"
+    }
   },
   "footer": {
     "rights": "Tous droits réservés.",

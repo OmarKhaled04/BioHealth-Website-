@@ -1,15 +1,15 @@
-// Contact page stub
 import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+import { ContactSection } from '@/components/sections/contact/ContactSection';
 
-export const metadata: Metadata = {
-  title: 'Contact',
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('contact');
+  return {
+    title: t('meta.title'),
+    description: t('meta.description'),
+  };
+}
 
 export default function ContactPage() {
-  return (
-    <main className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-primary-700">Contact Us</h1>
-      <p className="mt-4 text-gray-600">Contact form — coming soon.</p>
-    </main>
-  );
+  return <ContactSection />;
 }
