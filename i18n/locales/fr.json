@@ -4,7 +4,8 @@
     "about": "À propos",
     "products": "Produits",
     "certifications": "Certifications",
-    "contact": "Contact"
+    "contact": "Contact",
+    "quiz": "Trouver un produit"
   },
   "home": {
     "hero": {
@@ -265,6 +266,52 @@
       "heading": "Prêt à nous rejoindre ?",
       "body": "Rejoignez un réseau mondial de professionnels de santé et de distributeurs proposant le meilleur en nutrition infantile.",
       "button": "Explorer les produits"
+    }
+  },
+  "quiz": {
+    "meta": {
+      "title": "Trouvez le produit idéal pour votre bébé",
+      "description": "Répondez à quelques questions rapides et nous vous recommanderons le produit BioHealth idéal."
+    },
+    "eyebrow": "Conseiller produit",
+    "title": "Trouvez le produit idéal pour votre bébé",
+    "subtitle": "Répondez à 4 questions rapides et nous trouverons la formule ou l'aliment parfait pour votre bébé.",
+    "stepOf": "Question {current} sur {total}",
+    "q1": {
+      "question": "Quel âge a votre enfant ?",
+      "opt1": { "label": "0 – 6 mois",  "sub": "Nouveau-né & petite enfance" },
+      "opt2": { "label": "6 – 12 mois", "sub": "Bébé explorateur" },
+      "opt3": { "label": "1 – 3 ans",   "sub": "Tout-petit en pleine croissance" }
+    },
+    "q2": {
+      "question": "Que recherchez-vous ?",
+      "opt1": { "label": "Lait infantile", "sub": "Nutrition complète à chaque biberon" },
+      "opt2": { "label": "Alimentation bébé", "sub": "Repas sains & purées", "sub0": "Purées de fruits douces (4m+)" }
+    },
+    "q3": {
+      "question": "Votre bébé a-t-il des besoins alimentaires particuliers ?",
+      "opt1": { "label": "Aucun besoin particulier",          "sub": "En bonne santé et heureux" },
+      "opt2": { "label": "Coliques & gaz",                   "sub": "Inconfort ou pleurs après les repas" },
+      "opt3": { "label": "Régurgitations fréquentes",        "sub": "Renvois après les repas" },
+      "opt4": { "label": "Sensibilité aux protéines du lait","sub": "Allergie possible au lait de vache" },
+      "opt5": { "label": "Intolérance au lactose",           "sub": "Difficulté à digérer le lactose" }
+    },
+    "q4": {
+      "question": "Qu'est-ce qui compte le plus pour vous ?",
+      "opt1": { "label": "Nutrition scientifique premium", "sub": "Formule avancée aux nutriments enrichis" },
+      "opt2": { "label": "Facile & pratique",             "sub": "Préparation simple, même excellente nutrition" }
+    },
+    "q5": {
+      "question": "Quel type d'aliment votre bébé préfère-t-il ?",
+      "opt1": { "label": "Fruité & sucré",    "sub": "Délicieuses purées de fruits naturels" },
+      "opt2": { "label": "Repas salés",       "sub": "Aliments riches en protéines" },
+      "opt3": { "label": "Céréales & mixte",  "sub": "Mélange équilibré fruits & céréales" }
+    },
+    "result": {
+      "eyebrow": "Votre correspondance parfaite",
+      "viewDetails": "Voir tous les détails",
+      "retake": "Recommencer",
+      "medicalNote": "Cette formule est recommandée sous surveillance médicale. Veuillez consulter votre pédiatre."
     }
   },
   "footer": {

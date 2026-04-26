@@ -42,6 +42,15 @@ export function Navbar() {
               {t('contact')}
             </Link>
           </li>
+          <li>
+            <Link
+              href="/quiz"
+              className="inline-flex items-center gap-1.5 rounded-full bg-violet-700 px-4 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-violet-800"
+            >
+              <span>✨</span>
+              {t('quiz')}
+            </Link>
+          </li>
         </ul>
         <LanguageSwitcher />
       </nav>
