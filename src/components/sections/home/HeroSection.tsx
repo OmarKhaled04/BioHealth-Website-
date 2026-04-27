@@ -26,12 +26,12 @@ export function HeroSection() {
       </div>
 
       {/* ── Gradient overlays ── */}
-      {/* Left: heavy purple for text readability */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-violet-950/95 via-violet-900/80 to-violet-800/30 lg:to-transparent" />
-      {/* Mobile: full tint so text is always readable */}
-      <div className="absolute inset-0 z-[1] bg-violet-950/50 lg:hidden" />
-      {/* Bottom depth */}
-      <div className="absolute inset-x-0 bottom-0 h-40 z-[1] bg-gradient-to-t from-violet-950/70 to-transparent" />
+      {/* Left: readable purple, clears out by 55% so the photo shows naturally */}
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-violet-950/90 via-violet-900/40 to-transparent" />
+      {/* Mobile: lighter full tint */}
+      <div className="absolute inset-0 z-[1] bg-violet-950/30 lg:hidden" />
+      {/* Bottom depth — subtle grounding */}
+      <div className="absolute inset-x-0 bottom-0 h-32 z-[1] bg-gradient-to-t from-violet-950/50 to-transparent" />
 
       {/* ── Subtle animated wave motif on the left overlay ── */}
       <svg
@@ -141,9 +141,9 @@ export function HeroSection() {
                 className="mx-auto mt-14 grid max-w-xs grid-cols-3 divide-x divide-white/10 lg:mx-0"
               >
                 {[
-                  { value: '17',   label: 'Products' },
-                  { value: '3',    label: 'Locales'  },
-                  { value: '100%', label: 'Halal'    },
+                  { value: '17',   label: 'Products'   },
+                  { value: '12',   label: 'Countries'  },
+                  { value: '100%', label: 'Halal'      },
                 ].map(({ value, label }) => (
                   <div key={label} className="px-4 text-center first:pl-0 last:pr-0">
                     <p className="text-3xl font-extrabold text-white">{value}</p>

@@ -89,9 +89,9 @@ function Hero() {
       </div>
 
       {/* Gradient overlays — mirrors home page style */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-violet-950/95 via-violet-900/80 to-violet-800/30 lg:to-transparent" />
-      <div className="absolute inset-0 z-[1] bg-violet-950/50 lg:hidden" />
-      <div className="absolute inset-x-0 bottom-0 h-40 z-[1] bg-gradient-to-t from-violet-950/70 to-transparent" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-violet-950/90 via-violet-900/40 to-transparent" />
+      <div className="absolute inset-0 z-[1] bg-violet-950/30 lg:hidden" />
+      <div className="absolute inset-x-0 bottom-0 h-32 z-[1] bg-gradient-to-t from-violet-950/50 to-transparent" />
 
       {/* Subtle wave motif on the left overlay */}
       <svg

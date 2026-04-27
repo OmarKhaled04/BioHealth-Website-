@@ -32,8 +32,7 @@ const CERTS = [
   "OGS Trademark",
   "GLP & GSP",
 ];
-
-const PARTNER_FLAGS = ["🍁", "🇸🇦", "🇪🇬", "🇰🇼"];
+const PARTNER_FLAGS = ["🍁", "🇪🇸", "🇨🇴", "🇲🇽", "🇻🇪", "🇵🇭", "🇸🇦", "🇨🇳", "🇪🇬", "🇵🇰", "🇰🇼", "🇮🇶"];
 const VIDEO_CERTS = ["GMP / EU", "ISO 9001", "HALAL"];
 
 const EASE = [0, 0, 0.2, 1] as const;
@@ -148,9 +147,9 @@ function Hero() {
 
   const stats = [
     { value: 40, suffix: "+", label: statsT("nutrientsLabel") },
-    { value: 4, suffix: "", label: statsT("marketsLabel") },
+    { value: 12, suffix: "", label: statsT("marketsLabel") },
     { value: 8, suffix: "+", label: statsT("productLinesLabel") },
-    { value: 5, suffix: "", label: statsT("certificationsLabel") },
+    { value: 9, suffix: "", label: statsT("certificationsLabel") },
   ];
 
   function onMove(e: React.MouseEvent<HTMLDivElement>) {
@@ -524,10 +523,18 @@ const GCX = 168; // center x
 const GCY = 168; // center y
 
 const PARTNER_COORDS = [
-  { lon: -96, lat: 56  }, // Canada
-  { lon: 45,  lat: 24  }, // Saudi Arabia
-  { lon: 30,  lat: 27  }, // Egypt
-  { lon: 47,  lat: 29  }, // Kuwait
+  { lon: -96,  lat: 56 }, // Canada
+  { lon: 30,   lat: 27 }, // Egypt
+  { lon: 45,   lat: 24 }, // Saudi Arabia
+  { lon: 47,   lat: 29 }, // Kuwait
+  { lon: -4,   lat: 40 }, // Spain
+  { lon: -74,  lat: 4  }, // Colombia
+  { lon: -102, lat: 24 }, // Mexico
+  { lon: -66,  lat: 8  }, // Venezuela
+  { lon: 122,  lat: 12 }, // Philippines
+  { lon: 105,  lat: 35 }, // China
+  { lon: 69,   lat: 30 }, // Pakistan
+  { lon: 44,   lat: 33 }, // Iraq
 ];
 
 // Simplified continent outlines as [lon, lat] pairs

@@ -117,7 +117,7 @@
     "stats": {
       "atAGlance": "نظرة عامة",
       "nutrientsLabel": "عناصر غذائية لكل تركيبة",
-      "marketsLabel": "أسواق عالمية",
+      "marketsLabel": "دولة",
       "productLinesLabel": "خطوط منتجات لاكتونيك",
       "certificationsLabel": "شهادات دولية"
     },
@@ -166,9 +166,17 @@
       "manufacturerSub": "Industrias Lácteas Asturianas S.A. — مرفق متقدم للبحث والتطوير الغذائي",
       "partners": [
         { "country": "كندا", "note": "المقر الرئيسي" },
-        { "country": "المملكة العربية السعودية", "note": "دالة فارما" },
         { "country": "مصر", "note": "سيوكال فارما" },
-        { "country": "الكويت", "note": "مجموعة بوشهري" }
+        { "country": "المملكة العربية السعودية", "note": "دالة فارما" },
+        { "country": "الكويت", "note": "مجموعة بوشهري" },
+        { "country": "إسبانيا", "note": "شريك التصنيع" },
+        { "country": "كولومبيا", "note": "شريك توزيع" },
+        { "country": "المكسيك", "note": "شريك توزيع" },
+        { "country": "فنزويلا", "note": "شريك توزيع" },
+        { "country": "الفلبين", "note": "شريك توزيع" },
+        { "country": "الصين", "note": "شريك توزيع" },
+        { "country": "باكستان", "note": "شريك توزيع" },
+        { "country": "العراق", "note": "شريك توزيع" }
       ]
     },
     "cta": {

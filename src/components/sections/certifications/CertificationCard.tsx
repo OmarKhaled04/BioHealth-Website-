@@ -23,6 +23,12 @@ const categoryConfig: Record<string, { labelKey: string; gradient: string; glow:
   },
 };
 
+function isStillValid(dateStr: string): boolean {
+  if (dateStr === '—') return false;
+  const date = new Date(dateStr);
+  return !isNaN(date.getTime()) && date > new Date();
+}
+
 interface Props {
   certification: Certification;
   index?: number;
@@ -62,7 +68,13 @@ export function CertificationCard({ certification, index = 0 }: Props) {
         }}
       />
 
-      <div className="relative overflow-hidden bg-gradient-to-b from-gray-50 to-white" style={{ aspectRatio: '3 / 4' }}>
+      <a
+        href={certification.imageUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative block overflow-hidden bg-gradient-to-b from-gray-50 to-white"
+        style={{ aspectRatio: '3 / 4' }}
+      >
         <div className="absolute inset-3 overflow-hidden rounded-lg shadow-inner ring-1 ring-gray-200/60">
           <Image
             src={certification.imageUrl}
@@ -83,27 +95,23 @@ export function CertificationCard({ certification, index = 0 }: Props) {
           {t(cfg.labelKey)}
         </motion.span>
 
+        {/* View overlay on hover */}
         <motion.div
-          className="absolute inset-x-0 bottom-0 z-10 flex items-center justify-center gap-3 bg-gradient-to-t from-gray-950/90 via-gray-900/75 to-transparent py-6 pt-12"
+          className="absolute inset-x-0 bottom-0 z-10 flex items-center justify-center bg-gradient-to-t from-gray-950/85 via-gray-900/60 to-transparent py-6 pt-12"
           variants={{
             rest: { y: '100%' },
             hover: { y: 0, transition: { duration: 0.35, ease: [0.21, 0.45, 0.27, 0.9] } },
           }}
         >
-          <a
-            href={certification.pdfUrl}
-            download
-            onClick={(e) => e.stopPropagation()}
-            className="flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-gray-900 shadow-xl transition-colors hover:bg-primary-50"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 text-primary-600">
-              <path d="M10.75 2.75a.75.75 0 0 0-1.5 0v8.614L6.295 8.235a.75.75 0 1 0-1.09 1.03l4.25 4.5a.75.75 0 0 0 1.09 0l4.25-4.5a.75.75 0 0 0-1.09-1.03l-2.955 3.129V2.75Z" />
-              <path d="M3.5 12.75a.75.75 0 0 0-1.5 0v2.5A2.75 2.75 0 0 0 4.75 18h10.5A2.75 2.75 0 0 0 18 15.25v-2.5a.75.75 0 0 0-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5Z" />
+          <span className="flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-gray-900 shadow-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 text-violet-600">
+              <path d="M10 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+              <path fillRule="evenodd" d="M.664 10.59a1.651 1.651 0 0 1 0-1.186A10.004 10.004 0 0 1 10 3c4.257 0 7.893 2.66 9.336 6.41.147.381.146.804 0 1.186A10.004 10.004 0 0 1 10 17c-4.257 0-7.893-2.66-9.336-6.41ZM14 10a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" clipRule="evenodd" />
             </svg>
-            {t('certifications.card.downloadPdf')}
-          </a>
+            View Certificate
+          </span>
         </motion.div>
-      </div>
+      </a>
 
       <div className="flex flex-col gap-1 px-5 py-4">
         <div className={`mb-3 h-[2px] w-10 rounded-full bg-gradient-to-r ${cfg.gradient}`} />
@@ -113,7 +121,7 @@ export function CertificationCard({ certification, index = 0 }: Props) {
 
         <div className="mt-3 flex items-center justify-between gap-2">
           <span className="truncate text-xs text-gray-400">{certification.certNumber}</span>
-          {certification.validUntil !== '—' && (
+          {isStillValid(certification.validUntil) && (
             <span className="shrink-0 rounded-full bg-primary-50 px-2.5 py-0.5 text-[11px] font-semibold text-primary-700 ring-1 ring-primary-100">
               {t('certifications.card.validUntil', { date: certification.validUntil })}
             </span>

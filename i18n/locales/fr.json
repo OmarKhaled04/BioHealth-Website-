@@ -117,7 +117,7 @@
     "stats": {
       "atAGlance": "En un coup d'œil",
       "nutrientsLabel": "Nutriments par formule",
-      "marketsLabel": "Marchés mondiaux",
+      "marketsLabel": "Pays",
       "productLinesLabel": "Gammes Lactonic",
       "certificationsLabel": "Certifications internationales"
     },
@@ -166,9 +166,17 @@
       "manufacturerSub": "Industrias Lácteas Asturianas S.A. — installation avancée de R&D nutritionnelle",
       "partners": [
         { "country": "Canada", "note": "Siège social" },
-        { "country": "Arabie saoudite", "note": "Dallah Pharma" },
         { "country": "Égypte", "note": "Seucal Pharma" },
-        { "country": "Koweït", "note": "Boushahri Group" }
+        { "country": "Arabie saoudite", "note": "Dallah Pharma" },
+        { "country": "Koweït", "note": "Boushahri Group" },
+        { "country": "Espagne", "note": "Partenaire de fabrication" },
+        { "country": "Colombie", "note": "Partenaire de distribution" },
+        { "country": "Mexique", "note": "Partenaire de distribution" },
+        { "country": "Venezuela", "note": "Partenaire de distribution" },
+        { "country": "Philippines", "note": "Partenaire de distribution" },
+        { "country": "Chine", "note": "Partenaire de distribution" },
+        { "country": "Pakistan", "note": "Partenaire de distribution" },
+        { "country": "Irak", "note": "Partenaire de distribution" }
       ]
     },
     "cta": {

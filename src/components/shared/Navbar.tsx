@@ -10,16 +10,24 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-gray-100">
       <nav className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2.5 text-xl font-bold text-violet-700">
+        <Link href="/" className="flex items-center gap-3 group">
           <Image
             src="/logo/dolphine.png"
             alt="BioHealth Prodentia logo"
-            width={38}
-            height={38}
-            className="object-contain"
+            width={40}
+            height={40}
+            className="object-contain transition-transform duration-300 group-hover:scale-110"
             priority
           />
-          Bio Health Prodentia
+          <span className="h-8 w-px bg-violet-200" />
+          <div className="flex flex-col leading-none">
+            <span className="text-[15px] font-extrabold tracking-tight text-violet-900">
+              Bio Health
+            </span>
+            <span className="mt-[3px] text-[9.5px] font-semibold uppercase tracking-[0.22em] text-violet-400">
+              Prodentia
+            </span>
+          </div>
         </Link>
         <ul className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
           <li>
