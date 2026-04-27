@@ -60,33 +60,6 @@ function WaveMotif({ className = '' }: { className?: string }) {
   );
 }
 
-/** Amber eyebrow — same as About/Certs sections */
-function Eyebrow({ text, center = false }: { text: string; center?: boolean }) {
-  return (
-    <div className={`mb-4 flex items-center gap-3 ${center ? 'justify-center' : ''}`}>
-      <motion.span
-        className="block h-px bg-amber-400"
-        initial={{ width: 0 }}
-        whileInView={{ width: 36 }}
-        viewport={VIEWPORT}
-        transition={{ duration: 0.8, ease: EASE }}
-      />
-      <span className="text-xs font-semibold uppercase tracking-widest text-amber-400">
-        {text}
-      </span>
-      {center && (
-        <motion.span
-          className="block h-px bg-amber-400"
-          initial={{ width: 0 }}
-          whileInView={{ width: 36 }}
-          viewport={VIEWPORT}
-          transition={{ duration: 0.8, ease: EASE }}
-        />
-      )}
-    </div>
-  );
-}
-
 // ── Icons ──────────────────────────────────────────────────────────────────
 
 function MailIconSolid() {
@@ -130,7 +103,7 @@ function Hero() {
   useEffect(() => { setMounted(true); }, []);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary-950 via-primary-900 to-violet-900 py-32 text-center text-white">
+    <section className="relative overflow-hidden bg-gradient-to-br from-violet-600 via-violet-500 to-purple-600 py-32 text-center text-white">
 
       {/* Floating particles */}
       {PARTICLES.map((p, i) => (
@@ -234,46 +207,56 @@ function EmailBand() {
   const t = useTranslations('contact');
 
   return (
-    <section className="relative overflow-hidden bg-slate-900 py-24">
-      <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-violet-700/25 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-24 left-0 h-72 w-72 rounded-full bg-primary-900/30 blur-3xl" />
+    <section className="relative overflow-hidden bg-gradient-to-br from-violet-50 via-white to-purple-50 py-24">
+      <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-violet-200/40 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 left-0 h-72 w-72 rounded-full bg-purple-100/50 blur-3xl" />
 
       <div className="relative mx-auto max-w-5xl px-6">
 
         {/* Eyebrow */}
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={VIEWPORT} className="mb-14">
-          <Eyebrow text={t('info.heading')} />
-          <h2 className="text-4xl font-bold text-white">{t('info.body')}</h2>
+          <div className="mb-4 flex items-center gap-3">
+            <motion.span
+              className="block h-px bg-amber-400"
+              initial={{ width: 0 }} whileInView={{ width: 36 }}
+              viewport={VIEWPORT}
+              transition={{ duration: 0.8, ease: EASE }}
+            />
+            <span className="text-xs font-semibold uppercase tracking-widest text-amber-500">
+              {t('info.heading')}
+            </span>
+          </div>
+          <h2 className="text-4xl font-bold text-violet-900">{t('info.body')}</h2>
         </motion.div>
 
-        {/* Email card (GlobalPresence partner-card pattern) */}
+        {/* Email card */}
         <motion.a
           href="mailto:Info@lactonic.org"
           variants={scaleUp} initial="hidden" whileInView="visible" viewport={VIEWPORT}
-          className="group mb-12 flex items-center gap-5 rounded-2xl border border-white/10 bg-white/5 px-7 py-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/15 hover:shadow-2xl"
+          className="group mb-12 flex items-center gap-5 rounded-2xl border border-violet-200 bg-white px-7 py-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-violet-400 hover:shadow-xl hover:shadow-violet-100"
         >
           <div className="relative shrink-0">
             <motion.span
-              className="absolute inset-0 rounded-xl bg-primary-500/30"
+              className="absolute inset-0 rounded-xl bg-violet-400/20"
               animate={{ scale: [1, 1.6, 1], opacity: [0.6, 0, 0.6] }}
               transition={{ duration: 2.3, repeat: Infinity, ease: 'easeOut' }}
             />
-            <div className="relative flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500 to-violet-600 shadow-lg">
+            <div className="relative flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 shadow-lg">
               <MailIconSolid />
             </div>
           </div>
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-violet-300">{t('info.email.label')}</p>
-            <p className="mt-1 text-xl font-bold text-white transition-colors duration-300 group-hover:text-violet-200">
+            <p className="text-xs font-bold uppercase tracking-widest text-violet-500">{t('info.email.label')}</p>
+            <p className="mt-1 text-xl font-bold text-violet-900 transition-colors duration-300 group-hover:text-violet-700">
               {t('info.email.value')}
             </p>
           </div>
-          <span className="ml-auto text-2xl text-white/30 transition-all duration-300 group-hover:translate-x-2 group-hover:text-amber-300">
+          <span className="ml-auto text-2xl text-violet-300 transition-all duration-300 group-hover:translate-x-2 group-hover:text-amber-400">
             →
           </span>
         </motion.a>
 
-        {/* Why contact items (StrategicPillars pattern) */}
+        {/* Why contact items */}
         <div className="space-y-0">
           {WHY_ITEMS.map((item, i) => (
             <motion.div
@@ -283,17 +266,17 @@ function EmailBand() {
               whileInView="visible"
               viewport={VIEWPORT}
               transition={{ delay: i * 0.1 }}
-              className="group flex items-start gap-6 border-b border-white/10 py-6 last:border-0"
+              className="group flex items-start gap-6 border-b border-violet-100 py-6 last:border-0"
             >
-              <span className="mt-1 flex h-2.5 w-2.5 shrink-0 rounded-full bg-violet-500 ring-4 ring-violet-500/20 transition-all duration-300 group-hover:ring-violet-500/50" />
-              <span className="w-8 shrink-0 text-sm font-bold text-violet-500">
+              <span className="mt-1 flex h-2.5 w-2.5 shrink-0 rounded-full bg-violet-500 ring-4 ring-violet-200 transition-all duration-300 group-hover:ring-violet-300" />
+              <span className="w-8 shrink-0 text-sm font-bold text-violet-400">
                 {String(i + 1).padStart(2, '0')}
               </span>
               <div>
-                <h3 className="font-semibold text-white transition-colors duration-200 group-hover:text-violet-300">
+                <h3 className="font-semibold text-violet-900 transition-colors duration-200 group-hover:text-violet-600">
                   {item.title}
                 </h3>
-                <p className="mt-1 text-sm leading-relaxed text-slate-400">{item.body}</p>
+                <p className="mt-1 text-sm leading-relaxed text-violet-600/70">{item.body}</p>
               </div>
             </motion.div>
           ))}

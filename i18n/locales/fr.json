@@ -5,6 +5,7 @@
     "products": "Produits",
     "certifications": "Certifications",
     "contact": "Contact",
+    "partnership": "Partenariat",
     "quiz": "Trouver un produit"
   },
   "home": {
@@ -312,6 +313,54 @@
       "viewDetails": "Voir tous les détails",
       "retake": "Recommencer",
       "medicalNote": "Cette formule est recommandée sous surveillance médicale. Veuillez consulter votre pédiatre."
+    }
+  },
+  "partnership": {
+    "meta": {
+      "title": "Partenariat avec BioHealth Prodentia",
+      "description": "Rejoignez le réseau mondial de BioHealth Prodentia couvrant 12 pays sur 4 continents. Distribuez les formules Lactonic Gold fabriquées en UE et certifiées Halal sur votre marché."
+    },
+    "hero": {
+      "eyebrow": "Simplement Sophistiqué",
+      "title": "Partenariat Réussi",
+      "subtitle": "Rejoignez le réseau mondial de confiance de BioHealth Prodentia et contribuez à apporter la nutrition infantile Lactonic Gold, fabriquée en UE, aux familles sur 4 continents."
+    },
+    "intro": {
+      "eyebrow": "À Propos de BioHealth Prodentia",
+      "heading": "Une Multinationale Canadienne Fondée sur la Science et la Confiance",
+      "body": "BioHealth Prodentia (BHP) est une multinationale canadienne qui fournit des solutions de nutrition infantile et de soins de santé de haute qualité. Fondée en 2013 et basée à Toronto, Ontario, nous nous concentrons sur l'innovation, la technologie et les partenariats pour promouvoir le développement précoce et le bien-être. Nos produits Lactonic Gold sont fabriqués par Industrias Lácteas Asturianas S.A. (Reny Picot) à Navia, Espagne — en pleine conformité GMP/UE, avec 138 tests bactériologiques et organoleptiques par lot.",
+      "imageAlt": "Partenariat commercial BioHealth Prodentia"
+    },
+    "opportunities": {
+      "eyebrow": "Comment Nous Collaborons",
+      "heading": "Opportunités de Partenariat",
+      "items": [
+        { "title": "Distribution Exclusive", "body": "Devenez distributeur régional exclusif de la gamme Lactonic Gold. Nous avons déjà des partenaires éprouvés — Dallah Pharma (Arabie Saoudite), Seucal Pharma (Égypte) et Boushahri Group (Koweït) — et nous nous développons vers la Jordanie, les EAU, le Pakistan, le Mexique et la Chine." },
+        { "title": "Pharmacies & Détaillants", "body": "Proposez les formules Lactonic Gold dans votre pharmacie ou point de vente. Notre gamme de 12 produits couvre chaque étape de croissance de 0 à 36 mois, soutenue par 5 certifications internationales dont FSSC 22000, ISO 9001 et le certificat Halal." },
+        { "title": "Cliniques & Professionnels de Santé", "body": "Recommandez nos formules cliniquement validées — enrichies de 40+ nutriments dont le DHA — à vos patients en toute confiance. Les produits sont fabriqués sous protocoles GLP/GSP avec 138 tests bactériologiques et organoleptiques." },
+        { "title": "Import Régional & Entrée sur le Marché", "body": "Représentez BioHealth Prodentia en tant qu'importateur agréé dans votre pays. Nous fournissons des dossiers réglementaires complets, un support d'étiquetage et d'autorisation de mise sur le marché. Délai : 90–120 jours de la commande à la livraison." },
+        { "title": "Co-branding & Croissance Stratégique", "body": "Explorez des coentreprises et des partenariats d'entrée stratégique. Notre feuille de route 2026–2029 cible une croissance de 40% du volume — avec les nouveaux produits Lactonic Gold COMFORT et PLUS DHA+ — créant des opportunités exceptionnelles." }
+      ]
+    },
+    "why": {
+      "eyebrow": "Notre Promesse aux Partenaires",
+      "heading": "Pourquoi Choisir BioHealth Prodentia",
+      "items": [
+        { "icon": "🏆", "title": "5 Certifications Internationales", "body": "FSSC 22000, ISO 9001:2015, IFS Food v7 (Score : 99.15%), Certificat Halal et Marque OGS — des certifications qui ouvrent des portes sur les marchés réglementés de MENA, d'Afrique et au-delà." },
+        { "icon": "🌍", "title": "4 Continents, 12 Pays", "body": "Actif au Canada, en Arabie Saoudite, en Égypte, au Koweït et plus — avec des marchés en développement au Moyen-Orient, en Afrique, en Asie et en Amérique latine. Le marché mondial est valorisé à 80 milliards USD+ et devrait dépasser 110 milliards d'ici 2030." },
+        { "icon": "🔬", "title": "Excellence de Fabrication Européenne", "body": "Tous les produits Lactonic Gold sont fabriqués par Reny Picot à Navia, Asturies, Espagne — enrichis de 40+ nutriments dont le DHA, vitamines et minéraux pour le développement cérébral et le soutien immunitaire." },
+        { "icon": "🤝", "title": "Accompagnement Complet", "body": "Nous fournissons des dossiers réglementaires, des supports marketing et le soutien de 200+ agents de terrain dans toute la région MENA — complétés par des équipes dédiées aux Affaires Réglementaires, QA, Ventes & Marketing et Opérations." }
+      ]
+    },
+    "cta": {
+      "eyebrow": "BioHealth Prodentia",
+      "heading": "Prêt à Devenir Partenaire ?",
+      "body": "Envoyez-nous un message et notre équipe de développement commercial vous répondra dans les 48 heures.",
+      "hint": "Choisissez votre client e-mail — nous pré-remplirons tout pour vous.",
+      "openGmail": "Ouvrir dans Gmail",
+      "openOutlook": "Ouvrir dans Outlook",
+      "emailLabel": "Demandes de Partenariat",
+      "emailValue": "Info@lactonic.org"
     }
   },
   "footer": {

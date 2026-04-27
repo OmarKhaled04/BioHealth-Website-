@@ -19,7 +19,7 @@ export function Navbar() {
             className="object-contain"
             priority
           />
-          BioHealth
+          Bio Health Prodentia
         </Link>
         <ul className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
           <li>
@@ -40,6 +40,11 @@ export function Navbar() {
           <li>
             <Link href="/contact" className="hover:text-primary-700 transition-colors">
               {t('contact')}
+            </Link>
+          </li>
+          <li>
+            <Link href="/partnership" className="hover:text-primary-700 transition-colors">
+              {t('partnership')}
             </Link>
           </li>
           <li>

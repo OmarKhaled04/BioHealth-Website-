@@ -32,18 +32,18 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
 
         {/* Fixed-height image area */}
-        <div className="relative h-52 flex-shrink-0">
+        <div className="relative h-64 flex-shrink-0">
           <motion.div
             animate={{ y: [0, -6, 0] }}
             transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
-            className="absolute inset-0 flex items-center justify-center px-8 pt-12 pb-2"
+            className="absolute inset-0 flex items-center justify-center px-1 pt-1 pb-2"
           >
             <Image
               src={product.imagePath}
               alt={displayName}
-              width={140}
-              height={185}
-              className="h-full w-auto max-h-36 object-contain drop-shadow-2xl"
+              width={200}
+              height={240}
+              className="h-full w-auto max-h-52 object-contain drop-shadow-2xl"
             />
           </motion.div>
           {/* Glow under image */}

@@ -5,6 +5,7 @@
     "products": "Products",
     "certifications": "Certifications",
     "contact": "Contact",
+    "partnership": "Partnership",
     "quiz": "Find Your Product"
   },
   "home": {
@@ -312,6 +313,52 @@
       "viewDetails": "View Full Details",
       "retake": "Try Again",
       "medicalNote": "This formula is recommended for use under medical supervision. Please consult your paediatrician."
+    }
+  },
+  "partnership": {
+    "meta": {
+      "title": "Partner with BioHealth Prodentia",
+      "description": "Join BioHealth Prodentia's global network spanning 12 countries across 4 continents. Distribute EU-manufactured, Halal-certified Lactonic Gold infant formulas in your market."
+    },
+    "hero": {
+      "eyebrow": "Simply Sophisticated",
+      "title": "Successful Partnership",
+      "subtitle": "Join BioHealth Prodentia's trusted global network and help bring EU-manufactured, scientifically formulated Lactonic Gold infant nutrition to families across 4 continents."
+    },
+    "intro": {
+      "eyebrow": "About BioHealth Prodentia",
+      "heading": "A Canadian Multinational Built on Science & Trust",
+      "body": "BioHealth Prodentia (BHP) is a Canadian multinational company delivering high-quality infant nutrition and healthcare solutions. Founded in 2013 and headquartered in Toronto, Ontario, we focus on innovation, technology, and partnerships to promote early-stage development and wellness. Our Lactonic Gold products are manufactured by Industrias Lácteas Asturianas S.A. (Reny Picot) in Navia, Spain — under full GMP/EU compliance, with 138 Bacteriological and Organoleptic Tests per batch.",
+      "imageAlt": "BioHealth Prodentia business partnership"
+    },
+    "opportunities": {
+      "eyebrow": "Distribution Model",
+      "heading": "How We Work with Partners",
+      "items": [
+        { "title": "Exclusive Distribution", "body": "BHP operates through exclusive regional distributors with defined territorial scope, roles, and commercialization responsibilities — following the proven model of Dallah Pharma (Saudi Arabia), Seucal Pharma (Egypt), and Boushahri Group (Kuwait)." },
+        { "title": "New Market Entry", "body": "Pioneer Lactonic Gold in our active pipeline markets: Jordan, UAE, Pakistan, Mexico, and China. BHP provides regulatory dossiers, product registration support, warehousing and logistics capability confirmation, and proven commercial frameworks." },
+        { "title": "Agency Partnership", "body": "As part of our Distribution Expansion strategic pillar, BHP actively seeks agency partners to deepen market penetration across MENA, Africa, and Latin America — the primary growth corridors for our 2026–2029 roadmap." }
+      ]
+    },
+    "why": {
+      "eyebrow": "What to Expect from BHP",
+      "heading": "What Partners Receive",
+      "items": [
+        { "icon": "📦", "title": "Diverse Product Portfolio", "body": "12 specialized infant formula products covering 0–36 months, powered by the latest EU manufacturing technologies with 40+ nutrients including DHA — manufactured by Reny Picot in Navia, Asturias, Spain." },
+        { "icon": "📋", "title": "Efficient Regulatory Affairs", "body": "A dedicated regulatory affairs lead oversees product registration, labeling compliance, and market authorization in every active country. Full regulatory dossiers and technical datasheets are available upon request." },
+        { "icon": "📣", "title": "Skilled Marketing Team", "body": "Our marketing team drives effective planning, promotion, and distribution — supplemented by a partner network of 200+ field personnel across MENA and a dedicated Sales & Marketing department." },
+        { "icon": "🤝", "title": "Strong Industry Relationships", "body": "BHP maintains strong relationships with principals, key clients, and institutional stakeholders — built on an active commercial track record since 2018 across Saudi Arabia, Kuwait, Canada, and Egypt." }
+      ]
+    },
+    "cta": {
+      "eyebrow": "BioHealth Prodentia",
+      "heading": "Ready to Partner with Us?",
+      "body": "Send us a message and our Business Development team will get back to you within 48 hours.",
+      "hint": "Choose your email client — we'll pre-fill everything for you.",
+      "openGmail": "Open in Gmail",
+      "openOutlook": "Open in Outlook",
+      "emailLabel": "Partnership Inquiries",
+      "emailValue": "Info@lactonic.org"
     }
   },
   "footer": {

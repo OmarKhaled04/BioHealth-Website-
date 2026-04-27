@@ -246,7 +246,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
             className="flex justify-center"
           >
             <div className="relative flex items-center justify-center">
-              <div className="absolute h-72 w-72 rounded-full bg-white/10 blur-2xl" />
+              <div className="absolute h-96 w-96 rounded-full bg-white/10 blur-2xl" />
               <motion.div
                 animate={{ y: [0, -14, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
@@ -255,9 +255,9 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 <Image
                   src={product.imagePath}
                   alt={displayName}
-                  width={320}
-                  height={420}
-                  className="h-auto max-h-[420px] w-auto max-w-[300px] object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.4)]"
+                  width={440}
+                  height={560}
+                  className="h-auto max-h-[560px] w-auto max-w-[420px] object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.4)]"
                   priority
                 />
               </motion.div>

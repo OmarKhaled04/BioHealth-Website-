@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ProductCard } from './ProductCard';
@@ -81,6 +82,26 @@ export function ProductCatalog() {
           <motion.p variants={fadeUp} className="mt-4 text-lg text-violet-200">
             {t('products.subtitle')}
           </motion.p>
+        </motion.div>
+
+        {/* Lifestyle image strip */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.65, delay: 0.25, ease: EASE }}
+          className="mb-12 overflow-hidden rounded-2xl"
+        >
+          <div className="relative aspect-[21/7] overflow-hidden rounded-2xl">
+            <Image
+              src="/images/testIMG/kid.png"
+              alt="Happy healthy child"
+              fill
+              className="object-cover transition-transform duration-500 hover:scale-105"
+              sizes="(max-width: 640px) 100vw, 1200px"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-violet-900/40 to-transparent" />
+          </div>
         </motion.div>
 
         {/* Filter pills */}

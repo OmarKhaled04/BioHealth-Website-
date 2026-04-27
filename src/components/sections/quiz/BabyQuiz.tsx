@@ -261,7 +261,7 @@ function ResultScreen({
       {/* Product image */}
       <motion.div
         className="relative mx-auto mb-4"
-        style={{ width: 180, height: 180 }}
+        style={{ width: 260, height: 260 }}
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.12, duration: 0.5, ease: EASE }}
@@ -273,8 +273,8 @@ function ResultScreen({
           <Image
             src={product.imagePath}
             alt={displayName}
-            width={180}
-            height={180}
+            width={260}
+            height={260}
             className="mx-auto object-contain drop-shadow-2xl"
           />
         </motion.div>
