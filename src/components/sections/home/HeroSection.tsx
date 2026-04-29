@@ -73,7 +73,7 @@ export function HeroSection() {
                   transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
                 />
                 <span className="text-xs font-semibold uppercase tracking-widest text-amber-300">
-                  BioHealth Prodentia
+                  {t('eyebrow')}
                 </span>
                 <motion.span
                   className="block h-px bg-amber-400"
@@ -128,7 +128,7 @@ export function HeroSection() {
                     href="/about"
                     className="inline-block rounded-full border border-white/25 bg-white/10 px-8 py-3.5 text-sm font-bold text-white/80 backdrop-blur-sm transition-colors hover:bg-white/20 hover:text-white"
                   >
-                    Learn More
+                    {t('learnMore')}
                   </Link>
                 </motion.div>
               </motion.div>
@@ -141,9 +141,9 @@ export function HeroSection() {
                 className="mx-auto mt-14 grid max-w-xs grid-cols-3 divide-x divide-white/10 lg:mx-0"
               >
                 {[
-                  { value: '17',   label: 'Products'   },
-                  { value: '12',   label: 'Countries'  },
-                  { value: '100%', label: 'Halal'      },
+                  { value: '17',   label: t('stats.products')  },
+                  { value: '12',   label: t('stats.countries') },
+                  { value: '100%', label: t('stats.halal')     },
                 ].map(({ value, label }) => (
                   <div key={label} className="px-4 text-center first:pl-0 last:pr-0">
                     <p className="text-3xl font-extrabold text-white">{value}</p>

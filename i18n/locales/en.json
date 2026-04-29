@@ -10,17 +10,68 @@
   },
   "home": {
     "hero": {
+      "eyebrow": "BioHealth Prodentia",
       "title": "Pure Nutrition for Your Little One",
       "subtitle": "Scientifically formulated baby nutrition trusted by parents worldwide.",
-      "cta": "Explore Products"
+      "cta": "Explore Products",
+      "learnMore": "Learn More",
+      "stats": {
+        "products": "Products",
+        "countries": "Countries",
+        "halal": "Halal"
+      }
+    },
+    "why": {
+      "eyebrow": "Our Promise",
+      "title": "Why Lactonic?",
+      "subtitle": "Every product we make is built on four uncompromising commitments.",
+      "items": [
+        {
+          "title": "Scientifically Formulated",
+          "body": "Developed with molecular precision by our Canadian R&D team, combining the latest advances in neonatal nutrition science."
+        },
+        {
+          "title": "Halal Certified",
+          "body": "Every product in the Lactonic range holds internationally recognised Halal certification, trusted by families across the globe."
+        },
+        {
+          "title": "GMP / EU Manufactured",
+          "body": "Produced at Reny Picot, Spain — Industrias Lácteas Asturianas S.A. — under strict EU-grade Good Manufacturing Practice protocols."
+        },
+        {
+          "title": "Globally Trusted",
+          "body": "Distributed across Canada, Saudi Arabia, Egypt, Kuwait and expanding — partnering with healthcare professionals in every market."
+        }
+      ]
     },
     "featured": {
+      "eyebrow": "Catalogue",
       "title": "Featured Products",
-      "subtitle": "Carefully crafted for every stage of growth"
+      "subtitle": "Carefully crafted for every stage of growth",
+      "cta": "View All Products"
     },
     "promo": {
+      "eyebrow": "Our Story",
       "title": "See How We Care",
-      "description": "Watch our story and learn about our commitment to quality."
+      "description": "Watch our story and learn about our commitment to quality.",
+      "placeholder": "Video coming soon"
+    },
+    "banner": {
+      "eyebrow": "Our Promise",
+      "title": "Pure Nutrition,",
+      "titleHighlight": "Trusted by Families",
+      "body": "From birth to toddlerhood, Lactonic formulas are crafted with molecular precision to support your child's growth at every stage.",
+      "stats": {
+        "markets": "Global Markets",
+        "products": "Products",
+        "halal": "Halal Certified",
+        "eu": "EU Manufactured"
+      },
+      "cta": "Explore All Products",
+      "trustedBadge": "Trusted by parents worldwide",
+      "certsBadge": "FSSC 22000 · ISO 9001 · Halal Certified",
+      "floatingLine1": "Scientifically",
+      "floatingLine2": "Formulated"
     }
   },
   "products": {
@@ -100,7 +151,55 @@
     "lactonicVegetableBeef": {
       "name": "Vegetables with Beef",
       "description": "A nutritious steamed meal combining tender beef with fresh vegetables, gluten-free and low in fat, for babies from 6 months."
-    }
+    },
+    "badges": {
+      "closestToBreastMilk": "Closest to Breast Milk",
+      "followOnFormula": "Follow-on Formula",
+      "growingUpFormula": "Growing Up Formula",
+      "starterFormula": "Starter Formula",
+      "antiColic": "Anti-Colic",
+      "antiRegurgitation": "Anti-Regurgitation",
+      "hypoallergenic": "Hypoallergenic",
+      "lactoseFree": "Lactose Free",
+      "glutenFree": "Gluten Free",
+      "proteinSource": "Protein Source",
+      "noAddedSugar": "No Added Sugar",
+      "plus6Months": "+6 Months"
+    },
+    "features": {
+      "infantFormulaCowMilk": "Infant formula based on cow's milk",
+      "followOnFormulaCowMilk": "Follow-on formula based on cow's milk",
+      "growingUpFormulaCowMilk": "Growing up formula based on cow's milk",
+      "dhaEnriched": "DHA enriched",
+      "ironEnriched": "Iron enriched",
+      "calciumEnriched": "Calcium enriched",
+      "halalCertified": "Halal certified",
+      "easyToPrepare": "Easy to prepare",
+      "antiColicFormula": "Anti-colic formula",
+      "antiRegurgitationFormula": "Anti-regurgitation formula",
+      "reducesGas": "Reduces gas and discomfort",
+      "availableStages": "Available in stages 1–3",
+      "thickenedFormula": "Thickened formula",
+      "hypoallergenicFormula": "Hypoallergenic infant milk formula",
+      "locustBeanGum": "Based on cow's milk with locust bean gum",
+      "medicalSupervision": "Used under medical supervision",
+      "hypoallergenicFollowOn": "Hypoallergenic follow-on formula",
+      "hypoallergenicGrowingUp": "Hypoallergenic growing-up formula",
+      "lactoseIntolerance": "For infants with lactose intolerance",
+      "medicalPurposes": "Used for medical purposes",
+      "lactoseFreeFormula": "Lactose-free infant formula",
+      "glutenFree": "Gluten free",
+      "vitaminC": "Contains Vitamin C",
+      "noAddedSugar": "No added sugar",
+      "containsFibres": "Contains fibres",
+      "lowFat": "Low fat",
+      "lowSaturatedFats": "Low in saturated fats",
+      "lowSalt": "Low salt",
+      "proteinSource": "Protein source",
+      "steamedCooking": "Steamed cooking"
+    },
+    "keyFeatures": "Key Features",
+    "relatedProducts": "Related Products"
   },
   "about": {
     "meta": {
@@ -164,6 +263,9 @@
       "certsLabel": "Quality Certifications",
       "manufacturedByLabel": "Manufactured by",
       "manufacturerSub": "Industrias Lácteas Asturianas S.A. — advanced nutritional R&D facility",
+      "hqBadge": "HQ",
+      "deselect": "Click again to deselect",
+      "selectPrompt": "Select a partner to locate on the globe",
       "partners": [
         { "country": "Canada", "note": "Headquarters" },
         { "country": "Egypt", "note": "Seucal Pharma" },
@@ -246,10 +348,22 @@
       "title": "Get in Touch",
       "subtitle": "Have a question, a partnership inquiry, or just want to say hello? Reach out — our team is here."
     },
+    "subjects": {
+      "job": "Seeking a Job / Apply",
+      "product": "Product Information",
+      "wholesale": "Wholesale Order",
+      "partnership": "Distribution Partnership",
+      "general": "General Inquiry"
+    },
     "info": {
       "heading": "Contact Information",
       "body": "Send us an email and we'll get back to you as soon as possible.",
-      "email": { "label": "Email Us", "value": "Info@lactonic.org" }
+      "email": { "label": "Email Us", "value": "Info@lactonic.org" },
+      "items": [
+        { "title": "Partnership Inquiries", "body": "Explore distribution and co-branding opportunities across global markets." },
+        { "title": "Product Questions", "body": "Ask our team anything about formulas, ingredients, or suitability." },
+        { "title": "Orders & Logistics", "body": "Get help with bulk orders, shipping timelines, or certifications." }
+      ]
     },
     "form": {
       "heading": "Send Us a Message",
@@ -269,7 +383,20 @@
       "messagePlaceholder": "Tell us how we can help…",
       "hint": "Choose your email client — we'll pre-fill everything for you.",
       "openGmail": "Open in Gmail",
-      "openOutlook": "Open in Outlook"
+      "openOutlook": "Open in Outlook",
+      "subject": "Subject",
+      "message": "Message",
+      "attachCV": "Attach your CV",
+      "attachCVHint": "PDF, DOC or DOCX · max 10 MB",
+      "chooseFile": "Choose file...",
+      "jobOption": "Seeking a Job / Apply",
+      "subjectCustomPlaceholder": "Or type your own subject...",
+      "cv": {
+        "label": "Attach your CV",
+        "labelNote": "(PDF or Word)",
+        "chooseFile": "Choose file…",
+        "fileHint": "PDF, DOC or DOCX · max 10 MB"
+      }
     },
     "cta": {
       "heading": "Ready to Partner with Us?",
@@ -331,13 +458,15 @@
     "hero": {
       "eyebrow": "Simply Sophisticated",
       "title": "Successful Partnership",
-      "subtitle": "Join BioHealth Prodentia's trusted global network and help bring EU-manufactured, scientifically formulated Lactonic Gold infant nutrition to families across 4 continents."
+      "subtitle": "Join BioHealth Prodentia's trusted global network and help bring EU-manufactured, scientifically formulated Lactonic Gold infant nutrition to families across 4 continents.",
+      "badges": ["Exclusive Distributors", "Regional Importers", "Agency Partners", "New Markets"]
     },
     "intro": {
       "eyebrow": "About BioHealth Prodentia",
       "heading": "A Canadian Multinational Built on Science & Trust",
       "body": "BioHealth Prodentia (BHP) is a Canadian multinational company delivering high-quality infant nutrition and healthcare solutions. Founded in 2013 and headquartered in Toronto, Ontario, we focus on innovation, technology, and partnerships to promote early-stage development and wellness. Our Lactonic Gold products are manufactured by Industrias Lácteas Asturianas S.A. (Reny Picot) in Navia, Spain — under full GMP/EU compliance, with 138 Bacteriological and Organoleptic Tests per batch.",
-      "imageAlt": "BioHealth Prodentia business partnership"
+      "imageAlt": "BioHealth Prodentia business partnership",
+      "statLabels": ["Continents", "Countries", "Certifications", "Nutrients"]
     },
     "opportunities": {
       "eyebrow": "Distribution Model",
@@ -366,7 +495,17 @@
       "openGmail": "Open in Gmail",
       "openOutlook": "Open in Outlook",
       "emailLabel": "Partnership Inquiries",
-      "emailValue": "Info@lactonic.org"
+      "emailValue": "Info@lactonic.org",
+      "subjectLabel": "Subject",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell us about your organisation and the market you represent…",
+      "partnerTypes": ["Exclusive Distributors", "Regional Importers", "New Market Partners", "Agency Partners"],
+      "subjects": {
+        "distribution": "Distribution Partnership",
+        "newMarket": "New Market Entry",
+        "agency": "Agency Partnership",
+        "general": "General Inquiry"
+      }
     }
   },
   "footer": {

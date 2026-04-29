@@ -62,7 +62,7 @@ function RelatedCard({ product }: { product: Product }) {
       >
         {/* Badge */}
         <div className="absolute left-3 top-3 z-10 truncate rounded-full border border-amber-400/30 bg-amber-400/20 px-2.5 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-amber-300">
-          {product.badge}
+          {t(product.badgeKey)}
         </div>
 
         {/* Image */}
@@ -128,7 +128,7 @@ function RelatedCarousel({ related }: { related: Product[] }) {
       >
         <div className="flex items-center gap-3">
           <span className="h-px w-8 bg-amber-400" />
-          <h2 className="text-2xl font-bold text-white">Related Products</h2>
+          <h2 className="text-2xl font-bold text-white">{t('products.relatedProducts')}</h2>
         </div>
 
         {/* Nav buttons */}
@@ -280,7 +280,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
             <motion.div variants={fadeUp} className="mb-6 flex flex-wrap gap-2">
               <span className="rounded-full border border-amber-400/40 bg-amber-400/20 px-4 py-1.5 text-sm font-semibold text-amber-300">
-                {product.badge}
+                {t(product.badgeKey)}
               </span>
               <span className="rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-semibold text-white/80">
                 {ageLabel}
@@ -298,10 +298,10 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
             <motion.div variants={fadeUp} className="rounded-2xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm">
               <p className="mb-4 text-xs font-bold uppercase tracking-widest text-white/60">
-                Key Features
+                {t('products.keyFeatures')}
               </p>
               <ul className="space-y-3">
-                {product.features.map((feature, i) => (
+                {product.featureKeys.map((key, i) => (
                   <motion.li
                     key={i}
                     initial={{ opacity: 0, x: -20 }}
@@ -312,7 +312,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-amber-400/20 text-xs font-bold text-amber-300">
                       ✓
                     </span>
-                    {feature}
+                    {t(key)}
                   </motion.li>
                 ))}
               </ul>

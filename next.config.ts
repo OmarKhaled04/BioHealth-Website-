@@ -14,6 +14,12 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 31536000,
   },
+  experimental: {
+    optimizePackageImports: ['framer-motion'],
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
 };
 
 export default withNextIntl(nextConfig);
