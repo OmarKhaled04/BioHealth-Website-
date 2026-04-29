@@ -294,26 +294,38 @@ const inputCls =
 
 function FormSection() {
   const t = useTranslations('contact');
-  const [values, setValues] = useState({ subject: '', message: '' });
+  const [values, setValues] = useState({ subject: '', message: '', name: '' });
+  const [cvFile, setCvFile] = useState<File | null>(null);
 
-  function handleChange(e: ChangeEvent<HTMLTextAreaElement | HTMLSelectElement>) {
+  const isCareers = values.subject === 'Apply to Work';
+
+  function handleChange(e: ChangeEvent<HTMLTextAreaElement | HTMLSelectElement | HTMLInputElement>) {
     setValues(v => ({ ...v, [e.target.name]: e.target.value }));
   }
 
+  function handleFile(e: ChangeEvent<HTMLInputElement>) {
+    setCvFile(e.target.files?.[0] ?? null);
+  }
+
   function buildUrl(provider: 'gmail' | 'outlook') {
+    const subject = isCareers ? `Job Application — ${values.name}` : values.subject;
+    const body = isCareers
+      ? `Name: ${values.name}\n\n${values.message}\n\n[Please attach your CV to this email]`
+      : values.message;
+
     if (provider === 'gmail') {
       return (
         'https://mail.google.com/mail/?view=cm' +
         `&to=Info@lactonic.org` +
-        `&su=${encodeURIComponent(values.subject)}` +
-        `&body=${encodeURIComponent(values.message)}`
+        `&su=${encodeURIComponent(subject)}` +
+        `&body=${encodeURIComponent(body)}`
       );
     }
     return (
       'https://outlook.live.com/mail/0/deeplink/compose' +
       `?to=Info@lactonic.org` +
-      `&subject=${encodeURIComponent(values.subject)}` +
-      `&body=${encodeURIComponent(values.message)}`
+      `&subject=${encodeURIComponent(subject)}` +
+      `&body=${encodeURIComponent(body)}`
     );
   }
 
@@ -453,11 +465,78 @@ function FormSection() {
                   >
                     <option value="" disabled className="bg-violet-900">{t('form.subjectPlaceholder')}</option>
                     <option value="General Inquiry"   className="bg-violet-900">{t('form.subjects.general')}</option>
-                    <option value="Partnership"       className="bg-violet-900">{t('form.subjects.partnership')}</option>
                     <option value="Technical Support" className="bg-violet-900">{t('form.subjects.support')}</option>
+                    <option value="Apply to Work"     className="bg-violet-900">Apply to Work</option>
                     <option value="Other"             className="bg-violet-900">{t('form.subjects.other')}</option>
                   </select>
                 </motion.div>
+
+                {/* Career extra fields — animated in/out */}
+                <AnimatePresence>
+                  {isCareers && (
+                    <motion.div
+                      key="career-fields"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.35, ease: EASE }}
+                      className="overflow-hidden space-y-5"
+                    >
+                      {/* Full Name */}
+                      <div>
+                        <label className="mb-2 block text-sm font-semibold text-violet-200">
+                          Full Name
+                        </label>
+                        <input
+                          type="text"
+                          name="name"
+                          required
+                          value={values.name}
+                          onChange={handleChange}
+                          placeholder="Your full name"
+                          className={inputCls}
+                        />
+                      </div>
+
+                      {/* CV Upload */}
+                      <div>
+                        <label className="mb-2 block text-sm font-semibold text-violet-200">
+                          Attach CV
+                        </label>
+                        <label className="group flex cursor-pointer items-center gap-4 rounded-xl border border-dashed border-white/30 bg-white/5 px-5 py-4 transition-all duration-200 hover:border-amber-400/60 hover:bg-white/10">
+                          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-amber-400/15 text-amber-400 transition-colors duration-200 group-hover:bg-amber-400/25">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
+                              <path fillRule="evenodd" d="M15.621 4.379a3 3 0 0 0-4.242 0l-7 7a3 3 0 0 0 4.241 4.243h.001l.497-.5a.75.75 0 0 1 1.064 1.057l-.498.501-.002.002a4.5 4.5 0 0 1-6.364-6.364l7-7a4.5 4.5 0 0 1 6.368 6.36l-3.455 3.553A2.625 2.625 0 1 1 9.52 9.52l3.45-3.451a.75.75 0 1 1 1.061 1.06l-3.45 3.451a1.125 1.125 0 0 0 1.587 1.595l3.454-3.553a3 3 0 0 0 0-4.242Z" clipRule="evenodd" />
+                            </svg>
+                          </span>
+                          <div className="min-w-0 flex-1">
+                            <p className="truncate text-sm font-medium text-white">
+                              {cvFile ? cvFile.name : 'Click to upload CV'}
+                            </p>
+                            <p className="text-xs text-white/40">PDF, DOC or DOCX — max 10 MB</p>
+                          </div>
+                          {cvFile && (
+                            <span className="shrink-0 rounded-full bg-amber-400/20 px-2 py-0.5 text-[11px] font-semibold text-amber-300">
+                              Ready
+                            </span>
+                          )}
+                          <input
+                            type="file"
+                            accept=".pdf,.doc,.docx"
+                            onChange={handleFile}
+                            className="sr-only"
+                          />
+                        </label>
+                        <p className="mt-2 flex items-center gap-1.5 text-xs text-white/40">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="h-3.5 w-3.5 shrink-0 text-amber-400/70">
+                            <path fillRule="evenodd" d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0Zm-6 3.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM7.293 5.293a1 1 0 1 1 1.414 1.414L8 7.414V9.5a.5.5 0 0 0 1 0V8l.707-.707A1 1 0 0 1 9 5.5H7a1 1 0 0 0-.707 1.793Z" clipRule="evenodd"/>
+                          </svg>
+                          After clicking Open in Gmail / Outlook, please attach your CV file manually
+                        </p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
 
                 {/* Message */}
                 <motion.div
@@ -465,13 +544,13 @@ function FormSection() {
                   transition={{ delay: 0.14 }}
                 >
                   <label className="mb-2 block text-sm font-semibold text-violet-200">
-                    {t('form.messageLabel')}
+                    {isCareers ? 'Cover Letter / Message' : t('form.messageLabel')}
                   </label>
                   <textarea
                     name="message" required rows={6}
                     value={values.message}
                     onChange={handleChange}
-                    placeholder={t('form.messagePlaceholder')}
+                    placeholder={isCareers ? 'Tell us about yourself and why you\'d like to join BioHealth Prodentia…' : t('form.messagePlaceholder')}
                     className={`${inputCls} resize-none`}
                   />
                 </motion.div>
