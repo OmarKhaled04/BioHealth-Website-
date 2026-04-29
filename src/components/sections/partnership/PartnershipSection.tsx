@@ -547,9 +547,9 @@ export function PartnershipSection() {
     <main style={{ fontFamily: 'var(--font-poppins), sans-serif' }}>
       <Hero />
       <IntroSection />
-      <CTASection />
       <OpportunitiesSection />
       <WhySection />
+      <CTASection />
     </main>
   );
 }

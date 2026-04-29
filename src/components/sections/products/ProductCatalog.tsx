@@ -138,7 +138,7 @@ export function ProductCatalog() {
                       onClick={() => catalogRef.current?.scrollIntoView({ behavior: 'smooth' })}
                       className="inline-block rounded-full bg-white px-8 py-3.5 text-sm font-bold text-violet-700 shadow-lg transition-shadow hover:shadow-white/20"
                     >
-                      Explore Products ↓
+                      {t('home.hero.cta')} ↓
                     </button>
                   </motion.div>
                   <motion.div
@@ -149,7 +149,7 @@ export function ProductCatalog() {
                       href="/quiz"
                       className="inline-block rounded-full border border-white/25 bg-white/10 px-8 py-3.5 text-sm font-bold text-white/80 backdrop-blur-sm transition-colors hover:bg-white/20 hover:text-white"
                     >
-                      Find Your Product
+                      {t('nav.quiz')}
                     </Link>
                   </motion.div>
                 </motion.div>
@@ -162,9 +162,9 @@ export function ProductCatalog() {
                   className="mx-auto mt-14 grid max-w-xs grid-cols-3 divide-x divide-white/10 lg:mx-0"
                 >
                   {[
-                    { value: '17',   label: 'Products'  },
-                    { value: '12',   label: 'Countries' },
-                    { value: '100%', label: 'Halal'     },
+                    { value: '17',   label: t('home.hero.stats.products')  },
+                    { value: '12',   label: t('home.hero.stats.countries') },
+                    { value: '100%', label: t('home.hero.stats.halal')     },
                   ].map(({ value, label }) => (
                     <div key={label} className="px-4 text-center first:pl-0 last:pr-0">
                       <p className="text-3xl font-extrabold text-white">{value}</p>

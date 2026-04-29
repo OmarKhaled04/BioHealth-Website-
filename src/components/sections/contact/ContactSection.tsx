@@ -290,30 +290,45 @@ const JOB_VALUE = 'job';
 
 function FormSection() {
   const t = useTranslations('contact');
-  const [values, setValues] = useState({ subject: '', message: '' });
+  const [dropdownSubject, setDropdownSubject] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [applicantName, setApplicantName] = useState('');
+  const [cvFile, setCvFile] = useState<File | null>(null);
 
-  function handleChange(e: ChangeEvent<HTMLTextAreaElement | HTMLSelectElement>) {
-    setValues(v => ({ ...v, [e.target.name]: e.target.value }));
+  const isJob = dropdownSubject === JOB_VALUE;
+
+  function handleSelectChange(e: ChangeEvent<HTMLSelectElement>) {
+    const val = e.target.value;
+    setDropdownSubject(val);
+    setSubject(val === JOB_VALUE ? 'Job Application' : val);
   }
 
-  function handleFile(e: ChangeEvent<HTMLInputElement>) {
-    setCvFile(e.target.files?.[0] ?? null);
+  function handleSubjectInput(e: ChangeEvent<HTMLInputElement>) {
+    setSubject(e.target.value);
   }
 
   function buildUrl(provider: 'gmail' | 'outlook') {
+    const emailSubject = isJob && applicantName
+      ? `Job Application – ${applicantName}`
+      : subject;
+    const emailBody = isJob
+      ? `Applicant Name: ${applicantName}\n\n${message}\n\n[Please remember to attach your CV to this email]`
+      : message;
+
     if (provider === 'gmail') {
       return (
         'https://mail.google.com/mail/?view=cm' +
         `&to=Info@lactonic.org` +
-        `&su=${encodeURIComponent(subject)}` +
-        `&body=${encodeURIComponent(body)}`
+        `&su=${encodeURIComponent(emailSubject)}` +
+        `&body=${encodeURIComponent(emailBody)}`
       );
     }
     return (
       'https://outlook.live.com/mail/0/deeplink/compose' +
       `?to=Info@lactonic.org` +
-      `&subject=${encodeURIComponent(subject)}` +
-      `&body=${encodeURIComponent(body)}`
+      `&subject=${encodeURIComponent(emailSubject)}` +
+      `&body=${encodeURIComponent(emailBody)}`
     );
   }
 
@@ -451,7 +466,7 @@ function FormSection() {
                   >
                     <option value="" disabled className="bg-violet-900">{t('form.subjectPlaceholder')}</option>
                     <option value="General Inquiry"   className="bg-violet-900">{t('form.subjects.general')}</option>
-                    <option value="Partnership"       className="bg-violet-900">{t('form.subjects.partnership')}</option>
+                    <option value={JOB_VALUE}         className="bg-violet-900">{t('form.subjects.apply')}</option>
                     <option value="Technical Support" className="bg-violet-900">{t('form.subjects.support')}</option>
                     <option value="Other"             className="bg-violet-900">{t('form.subjects.other')}</option>
                   </select>
@@ -464,6 +479,59 @@ function FormSection() {
                   />
                 </motion.div>
 
+                {/* Job-only fields: name + CV */}
+                <AnimatePresence>
+                  {isJob && (
+                    <motion.div
+                      key="job-fields"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.35, ease: EASE }}
+                      className="overflow-hidden"
+                    >
+                      <div className="space-y-4 rounded-xl border border-amber-400/30 bg-amber-400/5 p-4">
+                        {/* Name */}
+                        <div>
+                          <label className="mb-2 block text-sm font-semibold text-violet-200">
+                            {t('form.nameLabel')}
+                          </label>
+                          <input
+                            type="text"
+                            value={applicantName}
+                            onChange={e => setApplicantName(e.target.value)}
+                            placeholder={t('form.namePlaceholder')}
+                            className={inputCls}
+                          />
+                        </div>
+
+                        {/* CV upload */}
+                        <div>
+                          <label className="mb-2 block text-sm font-semibold text-violet-200">
+                            {t('form.cv.label')}
+                            <span className="ml-1 font-normal text-violet-300/60">{t('form.cv.labelNote')}</span>
+                          </label>
+                          <label className="flex cursor-pointer items-center gap-3 rounded-xl border border-white/20 bg-white/10 px-5 py-3.5 text-sm text-white/70 backdrop-blur-sm transition-all duration-200 hover:border-white/40 hover:bg-white/20">
+                            <svg viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5 shrink-0 text-amber-300">
+                              <path fillRule="evenodd" d="M15.621 4.379a3 3 0 0 0-4.242 0l-7 7a3 3 0 0 0 4.241 4.243h.001l.497-.5a.75.75 0 0 1 1.064 1.057l-.498.501-.002.002a4.5 4.5 0 0 1-6.364-6.364l7-7a4.5 4.5 0 0 1 6.368 6.36l-3.455 3.553A2.625 2.625 0 1 1 9.52 9.52l3.45-3.451a.75.75 0 1 1 1.061 1.06l-3.45 3.451a1.125 1.125 0 0 0 1.587 1.595l3.454-3.553a3 3 0 0 0 0-4.243Z" clipRule="evenodd" />
+                            </svg>
+                            <span className="flex-1 truncate">
+                              {cvFile ? cvFile.name : t('form.cv.chooseFile')}
+                            </span>
+                            <input
+                              type="file"
+                              accept=".pdf,.doc,.docx"
+                              className="sr-only"
+                              onChange={e => setCvFile(e.target.files?.[0] ?? null)}
+                            />
+                          </label>
+                          <p className="mt-1.5 text-xs text-white/40">{t('form.cv.fileHint')}</p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
                 {/* Message */}
                 <motion.div
                   variants={fadeUp} initial="hidden" whileInView="visible" viewport={VIEWPORT}
@@ -474,8 +542,8 @@ function FormSection() {
                   </label>
                   <textarea
                     name="message" required rows={6}
-                    value={values.message}
-                    onChange={handleChange}
+                    value={message}
+                    onChange={e => setMessage(e.target.value)}
                     placeholder={t('form.messagePlaceholder')}
                     className={`${inputCls} resize-none`}
                   />

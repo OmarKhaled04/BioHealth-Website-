@@ -375,7 +375,7 @@
       "subjectPlaceholder": "Select a subject",
       "subjects": {
         "general": "General Inquiry",
-        "partnership": "Partnership",
+        "apply": "Apply to Work",
         "support": "Technical Support",
         "other": "Other"
       },
