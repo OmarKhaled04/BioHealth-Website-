@@ -288,7 +288,7 @@ function ResultScreen({
         transition={{ delay: 0.22 }}
         className="inline-block rounded-full bg-violet-600/50 px-3 py-0.5 text-xs font-medium text-violet-100"
       >
-        {product.badge}
+        {tGlobal(product.badgeKey)}
       </motion.span>
 
       {/* Name */}
@@ -318,10 +318,10 @@ function ResultScreen({
         transition={{ delay: 0.42 }}
         className="mt-4 flex flex-col gap-1.5 text-left"
       >
-        {product.features.slice(0, 4).map((feat, i) => (
+        {product.featureKeys.slice(0, 4).map((key, i) => (
           <li key={i} className="flex items-center gap-2 text-sm text-violet-100">
             <span className="flex-shrink-0 text-amber-400">✓</span>
-            {feat}
+            {tGlobal(key)}
           </li>
         ))}
       </motion.ul>

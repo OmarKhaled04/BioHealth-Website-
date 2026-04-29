@@ -3,20 +3,24 @@
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 
 const EASE = [0, 0, 0.2, 1] as const;
 
-const STATS = [
-  { value: '4+',    label: 'Global Markets' },
-  { value: '17',   label: 'Products' },
-  { value: '100%', label: 'Halal Certified' },
-  { value: 'GMP',  label: 'EU Manufactured' },
-];
+const STAT_VALUES = ['4+', '17', '100%', 'GMP'] as const;
 
 export function FamilyBanner() {
+  const t = useTranslations('home.banner');
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: '-60px' });
+
+  const statLabels = [
+    t('stats.markets'),
+    t('stats.products'),
+    t('stats.halal'),
+    t('stats.eu'),
+  ] as const;
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-violet-50 via-white to-purple-50 py-20">
@@ -41,25 +45,24 @@ export function FamilyBanner() {
                 transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
               />
               <span className="text-xs font-semibold uppercase tracking-widest text-amber-500">
-                Our Promise
+                {t('eyebrow')}
               </span>
             </div>
 
             <h2 className="text-4xl font-extrabold leading-tight text-violet-900 sm:text-5xl">
-              Pure Nutrition,
+              {t('title')}
               <br />
-              <span className="text-violet-600">Trusted by Families</span>
+              <span className="text-violet-600">{t('titleHighlight')}</span>
             </h2>
             <p className="mt-5 max-w-lg text-lg leading-relaxed text-violet-700/70">
-              From birth to toddlerhood, Lactonic formulas are crafted with molecular
-              precision to support your child&apos;s growth at every stage.
+              {t('body')}
             </p>
 
             {/* Trust stats */}
             <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {STATS.map(({ value, label }) => (
+              {STAT_VALUES.map((value, i) => (
                 <motion.div
-                  key={label}
+                  key={i}
                   initial={{ opacity: 0, y: 16 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.3, ease: EASE }}
@@ -67,7 +70,7 @@ export function FamilyBanner() {
                 >
                   <p className="text-2xl font-extrabold text-violet-700">{value}</p>
                   <p className="mt-1 text-[11px] font-medium uppercase tracking-wide text-violet-500">
-                    {label}
+                    {statLabels[i]}
                   </p>
                 </motion.div>
               ))}
@@ -83,7 +86,7 @@ export function FamilyBanner() {
                 href="/products"
                 className="inline-block rounded-full bg-violet-600 px-8 py-3.5 text-sm font-bold text-white shadow-lg shadow-violet-200 transition-all duration-300 hover:scale-105 hover:bg-violet-700 hover:shadow-violet-300"
               >
-                Explore All Products →
+                {t('cta')} →
               </Link>
             </motion.div>
           </motion.div>
@@ -111,11 +114,11 @@ export function FamilyBanner() {
                     <span className="relative inline-flex h-3 w-3 rounded-full bg-amber-400" />
                   </span>
                   <p className="text-sm font-semibold text-violet-900">
-                    Trusted by parents worldwide
+                    {t('trustedBadge')}
                   </p>
                 </div>
                 <p className="mt-1 pl-6 text-xs text-violet-600/70">
-                  FSSC 22000 · ISO 9001 · Halal Certified
+                  {t('certsBadge')}
                 </p>
               </div>
             </div>
@@ -127,10 +130,10 @@ export function FamilyBanner() {
               className="absolute -right-3 -top-3 rounded-2xl bg-amber-400 px-4 py-2 shadow-lg shadow-amber-200"
             >
               <p className="text-[11px] font-bold uppercase tracking-wide text-amber-900">
-                Scientifically
+                {t('floatingLine1')}
               </p>
               <p className="text-[11px] font-bold uppercase tracking-wide text-amber-900">
-                Formulated
+                {t('floatingLine2')}
               </p>
             </motion.div>
           </motion.div>

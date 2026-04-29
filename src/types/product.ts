@@ -13,9 +13,9 @@ export interface Product {
     unit: AgeUnit;
   };
   imagePath: string;
-  badge: string;
+  badgeKey: string;
   nameKey: string;
   descriptionKey: string;
   netWeight?: string;
-  features: string[];
+  featureKeys: string[];
 }

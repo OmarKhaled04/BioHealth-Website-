@@ -15,12 +15,14 @@
     "next-intl": "^4.9.1",
     "nodemailer": "^8.0.5",
     "react": "^19",
-    "react-dom": "^19"
+    "react-dom": "^19",
+    "react-globe.gl": "^2.37.1"
   },
   "devDependencies": {
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/three": "^0.184.0",
     "autoprefixer": "^10",
     "eslint": "^9",
     "eslint-config-next": "15",

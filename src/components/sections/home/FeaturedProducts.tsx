@@ -33,7 +33,7 @@ export function FeaturedProducts() {
           <div className="mb-3 flex items-center justify-center gap-3">
             <span className="block h-px w-8 bg-amber-400" />
             <span className="text-xs font-semibold uppercase tracking-widest text-amber-300">
-              Catalogue
+              {t('eyebrow')}
             </span>
             <span className="block h-px w-8 bg-amber-400" />
           </div>
@@ -71,7 +71,7 @@ export function FeaturedProducts() {
             href="/products"
             className="inline-block rounded-full border border-white/25 bg-white/10 px-8 py-3 text-sm font-semibold text-white/80 backdrop-blur-sm transition-colors hover:bg-white/20 hover:text-white"
           >
-            View All Products →
+            {t('cta')} →
           </Link>
         </motion.div>
       </div>

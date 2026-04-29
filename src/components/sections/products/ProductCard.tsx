@@ -28,7 +28,7 @@ export function ProductCard({ product }: ProductCardProps) {
       >
         {/* Badge */}
         <div className="absolute left-3 top-3 z-10 max-w-[calc(100%-1.5rem)] truncate rounded-full border border-amber-400/30 bg-amber-400/20 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-amber-300">
-          {product.badge}
+          {t(product.badgeKey)}
         </div>
 
         {/* Fixed-height image area */}
@@ -61,10 +61,10 @@ export function ProductCard({ product }: ProductCardProps) {
 
           {/* Features preview — flex-1 pushes CTA to bottom */}
           <ul className="mt-3 flex-1 space-y-1.5">
-            {product.features.slice(0, 3).map((f, i) => (
+            {product.featureKeys.slice(0, 3).map((key, i) => (
               <li key={i} className="flex items-start gap-2 text-xs text-violet-200">
                 <span className="mt-0.5 flex-shrink-0 text-amber-400">✓</span>
-                {f}
+                {t(key)}
               </li>
             ))}
           </ul>

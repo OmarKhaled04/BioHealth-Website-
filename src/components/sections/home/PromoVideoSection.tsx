@@ -27,7 +27,7 @@ export function PromoVideoSection() {
           <div className="mb-3 flex items-center justify-center gap-3">
             <span className="block h-px w-8 bg-amber-400" />
             <span className="text-xs font-semibold uppercase tracking-widest text-amber-300">
-              Our Story
+              {t('eyebrow')}
             </span>
             <span className="block h-px w-8 bg-amber-400" />
           </div>
@@ -58,7 +58,7 @@ export function PromoVideoSection() {
                   <path d="M8 5v14l11-7z" />
                 </svg>
               </div>
-              <p className="text-sm text-white/40">Video coming soon</p>
+              <p className="text-sm text-white/40">{t('placeholder')}</p>
             </div>
           </div>
         </motion.div>

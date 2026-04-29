@@ -165,7 +165,7 @@ function Hero() {
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start"
               >
-                {['Exclusive Distributors', 'Regional Importers', 'Agency Partners', 'New Markets'].map((label, i) => (
+                {(t.raw('hero.badges') as string[]).map((label, i) => (
                   <motion.span
                     key={label}
                     initial={{ opacity: 0, scale: 0.85 }}
@@ -232,12 +232,9 @@ function IntroSection() {
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={VIEWPORT}
           className="grid grid-cols-2 gap-4 sm:grid-cols-4"
         >
-          {[
-            { value: '4',   label: 'Continents' },
-            { value: '12',  label: 'Countries' },
-            { value: '5',   label: 'Certifications' },
-            { value: '40+', label: 'Nutrients' },
-          ].map(({ value, label }) => (
+          {(['4', '12', '5', '40+'] as const).map((value, i) => {
+            const label = (t.raw('intro.statLabels') as string[])[i];
+            return (
             <motion.div
               key={label}
               variants={scaleUp}
@@ -246,7 +243,8 @@ function IntroSection() {
               <p className="text-2xl font-extrabold text-violet-700">{value}</p>
               <p className="mt-0.5 text-xs font-medium uppercase tracking-wide text-violet-500">{label}</p>
             </motion.div>
-          ))}
+            );
+          })}
         </motion.div>
       </div>
     </section>
@@ -350,7 +348,7 @@ function CTASection() {
                 {t('cta.hint')}
               </p>
               <div className="mt-6 space-y-2 text-sm text-violet-200/70">
-                {['Exclusive Distributors', 'Regional Importers', 'New Market Partners', 'Agency Partners'].map(l => (
+                {(t.raw('cta.partnerTypes') as string[]).map(l => (
                   <div key={l} className="flex items-center gap-2">
                     <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400" />
                     {l}
@@ -371,7 +369,7 @@ function CTASection() {
 
                 <div>
                   <label className="mb-2 block text-sm font-semibold text-violet-200">
-                    Subject
+                    {t('cta.subjectLabel')}
                   </label>
                   <select
                     name="subject"
@@ -379,23 +377,23 @@ function CTASection() {
                     onChange={handleChange}
                     className={inputCls}
                   >
-                    <option value="Distribution Partnership" className="bg-violet-900">Distribution Partnership</option>
-                    <option value="New Market Entry" className="bg-violet-900">New Market Entry</option>
-                    <option value="Agency Partnership" className="bg-violet-900">Agency Partnership</option>
-                    <option value="General Inquiry" className="bg-violet-900">General Inquiry</option>
+                    <option value="Distribution Partnership" className="bg-violet-900">{t('cta.subjects.distribution')}</option>
+                    <option value="New Market Entry" className="bg-violet-900">{t('cta.subjects.newMarket')}</option>
+                    <option value="Agency Partnership" className="bg-violet-900">{t('cta.subjects.agency')}</option>
+                    <option value="General Inquiry" className="bg-violet-900">{t('cta.subjects.general')}</option>
                   </select>
                 </div>
 
                 <div>
                   <label className="mb-2 block text-sm font-semibold text-violet-200">
-                    Message
+                    {t('cta.messageLabel')}
                   </label>
                   <textarea
                     name="message"
                     rows={5}
                     value={values.message}
                     onChange={handleChange}
-                    placeholder="Tell us about your organisation and the market you represent…"
+                    placeholder={t('cta.messagePlaceholder')}
                     className={`${inputCls} resize-none`}
                   />
                 </div>

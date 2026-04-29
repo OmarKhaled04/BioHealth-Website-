@@ -6,21 +6,72 @@
     "certifications": "Certifications",
     "contact": "Contact",
     "partnership": "Partenariat",
-    "quiz": "Trouver un produit"
+    "quiz": "Trouver votre produit"
   },
   "home": {
     "hero": {
+      "eyebrow": "BioHealth Prodentia",
       "title": "Une nutrition pure pour votre tout-petit",
       "subtitle": "Une alimentation fondée sur la science pour les bébés, approuvée par les parents du monde entier.",
-      "cta": "Découvrir les produits"
+      "cta": "Découvrir les produits",
+      "learnMore": "En savoir plus",
+      "stats": {
+        "products": "Produits",
+        "countries": "Pays",
+        "halal": "Halal"
+      }
+    },
+    "why": {
+      "eyebrow": "Notre promesse",
+      "title": "Pourquoi Lactonic ?",
+      "subtitle": "Chaque produit que nous fabriquons repose sur quatre engagements non négociables.",
+      "items": [
+        {
+          "title": "Scientifiquement formulé",
+          "body": "Développé avec une précision moléculaire par notre équipe canadienne de R&D, combinant les dernières avancées en science de la nutrition néonatale."
+        },
+        {
+          "title": "Certifié Halal",
+          "body": "Chaque produit de la gamme Lactonic détient la certification Halal reconnue internationalement, approuvé par les familles du monde entier."
+        },
+        {
+          "title": "Fabriqué selon GMP/UE",
+          "body": "Produit chez Reny Picot, Espagne — Industrias Lácteas Asturianas S.A. — sous des protocoles stricts de bonnes pratiques de fabrication."
+        },
+        {
+          "title": "Confiance mondiale",
+          "body": "Distribué au Canada, en Arabie Saoudite, en Égypte, au Koweït et en expansion — en partenariat avec des professionnels de santé dans chaque marché."
+        }
+      ]
     },
     "featured": {
+      "eyebrow": "Catalogue",
       "title": "Produits phares",
-      "subtitle": "Élaborés avec soin pour chaque étape de la croissance"
+      "subtitle": "Élaborés avec soin pour chaque étape de la croissance",
+      "cta": "Voir tous les produits"
     },
     "promo": {
+      "eyebrow": "Notre histoire",
       "title": "Découvrez notre engagement",
-      "description": "Regardez notre histoire et apprenez-en plus sur notre engagement envers la qualité."
+      "description": "Regardez notre histoire et apprenez-en plus sur notre engagement envers la qualité.",
+      "placeholder": "Vidéo bientôt disponible"
+    },
+    "banner": {
+      "eyebrow": "Notre promesse",
+      "title": "Nutrition pure,",
+      "titleHighlight": "Approuvée par les familles",
+      "body": "De la naissance à la petite enfance, les formules Lactonic sont élaborées avec une précision moléculaire pour soutenir la croissance de votre enfant à chaque étape.",
+      "stats": {
+        "markets": "Marchés mondiaux",
+        "products": "Produits",
+        "halal": "Certifié Halal",
+        "eu": "Fabriqué dans l'UE"
+      },
+      "cta": "Explorer tous les produits",
+      "trustedBadge": "Approuvé par les parents du monde entier",
+      "certsBadge": "FSSC 22000 · ISO 9001 · Certifié Halal",
+      "floatingLine1": "Scientifiquement",
+      "floatingLine2": "formulé"
     }
   },
   "products": {
@@ -100,7 +151,55 @@
     "lactonicVegetableBeef": {
       "name": "Légumes et bœuf",
       "description": "Repas cuit à la vapeur alliant du bœuf tendre et des légumes frais, sans gluten et pauvre en graisses, pour les bébés dès 6 mois."
-    }
+    },
+    "badges": {
+      "closestToBreastMilk": "Plus proche du lait maternel",
+      "followOnFormula": "Lait de suite",
+      "growingUpFormula": "Lait de croissance",
+      "starterFormula": "Lait 1er âge",
+      "antiColic": "Anti-colique",
+      "antiRegurgitation": "Anti-régurgitation",
+      "hypoallergenic": "Hypoallergénique",
+      "lactoseFree": "Sans lactose",
+      "glutenFree": "Sans gluten",
+      "proteinSource": "Source de protéines",
+      "noAddedSugar": "Sans sucre ajouté",
+      "plus6Months": "+6 mois"
+    },
+    "features": {
+      "infantFormulaCowMilk": "Lait infantile à base de lait de vache",
+      "followOnFormulaCowMilk": "Lait de suite à base de lait de vache",
+      "growingUpFormulaCowMilk": "Lait de croissance à base de lait de vache",
+      "dhaEnriched": "Enrichi en DHA",
+      "ironEnriched": "Enrichi en fer",
+      "calciumEnriched": "Enrichi en calcium",
+      "halalCertified": "Certifié Halal",
+      "easyToPrepare": "Facile à préparer",
+      "antiColicFormula": "Formule anti-coliques",
+      "antiRegurgitationFormula": "Formule anti-régurgitations",
+      "reducesGas": "Réduit les gaz et l'inconfort",
+      "availableStages": "Disponible en étapes 1 à 3",
+      "thickenedFormula": "Formule épaissie",
+      "hypoallergenicFormula": "Lait infantile hypoallergénique",
+      "locustBeanGum": "À base de lait de vache avec gomme de caroube",
+      "medicalSupervision": "Utilisé sous surveillance médicale",
+      "hypoallergenicFollowOn": "Lait de suite hypoallergénique",
+      "hypoallergenicGrowingUp": "Lait de croissance hypoallergénique",
+      "lactoseIntolerance": "Pour nourrissons intolérants au lactose",
+      "medicalPurposes": "Utilisé à des fins médicales",
+      "lactoseFreeFormula": "Lait infantile sans lactose",
+      "glutenFree": "Sans gluten",
+      "vitaminC": "Contient de la vitamine C",
+      "noAddedSugar": "Sans sucre ajouté",
+      "containsFibres": "Contient des fibres",
+      "lowFat": "Faible en matières grasses",
+      "lowSaturatedFats": "Faible en graisses saturées",
+      "lowSalt": "Faible en sel",
+      "proteinSource": "Source de protéines",
+      "steamedCooking": "Cuisson à la vapeur"
+    },
+    "keyFeatures": "Caractéristiques clés",
+    "relatedProducts": "Produits associés"
   },
   "about": {
     "meta": {
@@ -164,6 +263,9 @@
       "certsLabel": "Certifications qualité",
       "manufacturedByLabel": "Fabriqué par",
       "manufacturerSub": "Industrias Lácteas Asturianas S.A. — installation avancée de R&D nutritionnelle",
+      "hqBadge": "HQ",
+      "deselect": "Cliquez à nouveau pour désélectionner",
+      "selectPrompt": "Sélectionnez un partenaire pour le localiser sur le globe",
       "partners": [
         { "country": "Canada", "note": "Siège social" },
         { "country": "Égypte", "note": "Seucal Pharma" },
@@ -246,10 +348,22 @@
       "title": "Prenez Contact",
       "subtitle": "Une question, une demande de partenariat, ou simplement envie de dire bonjour ? Écrivez-nous — notre équipe est là pour vous."
     },
+    "subjects": {
+      "job": "Candidature / Recherche d'emploi",
+      "product": "Informations produit",
+      "wholesale": "Commande en gros",
+      "partnership": "Partenariat de distribution",
+      "general": "Demande générale"
+    },
     "info": {
       "heading": "Coordonnées",
       "body": "Envoyez-nous un e-mail et nous vous répondrons dans les plus brefs délais.",
-      "email": { "label": "Envoyez-nous un e-mail", "value": "Info@lactonic.org" }
+      "email": { "label": "Envoyez-nous un e-mail", "value": "Info@lactonic.org" },
+      "items": [
+        { "title": "Demandes de partenariat", "body": "Explorez les opportunités de distribution et de co-branding sur les marchés mondiaux." },
+        { "title": "Questions sur les produits", "body": "Posez toutes vos questions sur nos formules, ingrédients ou leur adéquation." },
+        { "title": "Commandes et logistique", "body": "Obtenez de l'aide pour les commandes en gros, les délais de livraison ou les certifications." }
+      ]
     },
     "form": {
       "heading": "Envoyez-nous un message",
@@ -269,7 +383,20 @@
       "messagePlaceholder": "Dites-nous comment nous pouvons vous aider…",
       "hint": "Choisissez votre client e-mail — nous pré-remplirons tout pour vous.",
       "openGmail": "Ouvrir dans Gmail",
-      "openOutlook": "Ouvrir dans Outlook"
+      "openOutlook": "Ouvrir dans Outlook",
+      "subject": "Sujet",
+      "message": "Message",
+      "attachCV": "Joindre votre CV",
+      "attachCVHint": "PDF, DOC ou DOCX · max 10 Mo",
+      "chooseFile": "Choisir un fichier...",
+      "jobOption": "Candidature spontanée / Emploi",
+      "subjectCustomPlaceholder": "Ou saisissez votre propre objet...",
+      "cv": {
+        "label": "Joindre votre CV",
+        "labelNote": "(PDF ou Word)",
+        "chooseFile": "Choisir un fichier...",
+        "fileHint": "PDF, DOC ou DOCX · max 10 Mo"
+      }
     },
     "cta": {
       "heading": "Prêt à nous rejoindre ?",
@@ -331,13 +458,15 @@
     "hero": {
       "eyebrow": "Simplement Sophistiqué",
       "title": "Partenariat Réussi",
-      "subtitle": "Rejoignez le réseau mondial de confiance de BioHealth Prodentia et contribuez à apporter la nutrition infantile Lactonic Gold, fabriquée en UE, aux familles sur 4 continents."
+      "subtitle": "Rejoignez le réseau mondial de confiance de BioHealth Prodentia et contribuez à apporter la nutrition infantile Lactonic Gold, fabriquée en UE, aux familles sur 4 continents.",
+      "badges": ["Distributeurs exclusifs", "Importateurs régionaux", "Partenaires d'agence", "Nouveaux marchés"]
     },
     "intro": {
       "eyebrow": "À Propos de BioHealth Prodentia",
       "heading": "Une Multinationale Canadienne Fondée sur la Science et la Confiance",
       "body": "BioHealth Prodentia (BHP) est une multinationale canadienne qui fournit des solutions de nutrition infantile et de soins de santé de haute qualité. Fondée en 2013 et basée à Toronto, Ontario, nous nous concentrons sur l'innovation, la technologie et les partenariats pour promouvoir le développement précoce et le bien-être. Nos produits Lactonic Gold sont fabriqués par Industrias Lácteas Asturianas S.A. (Reny Picot) à Navia, Espagne — en pleine conformité GMP/UE, avec 138 tests bactériologiques et organoleptiques par lot.",
-      "imageAlt": "Partenariat commercial BioHealth Prodentia"
+      "imageAlt": "Partenariat commercial BioHealth Prodentia",
+      "statLabels": ["Continents", "Pays", "Certifications", "Nutriments"]
     },
     "opportunities": {
       "eyebrow": "Comment Nous Collaborons",
@@ -368,7 +497,17 @@
       "openGmail": "Ouvrir dans Gmail",
       "openOutlook": "Ouvrir dans Outlook",
       "emailLabel": "Demandes de Partenariat",
-      "emailValue": "Info@lactonic.org"
+      "emailValue": "Info@lactonic.org",
+      "subjectLabel": "Objet",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Parlez-nous de votre organisation et du marché que vous représentez…",
+      "partnerTypes": ["Distributeurs exclusifs", "Importateurs régionaux", "Partenaires nouveaux marchés", "Partenaires d'agence"],
+      "subjects": {
+        "distribution": "Partenariat de distribution",
+        "newMarket": "Entrée sur un nouveau marché",
+        "agency": "Partenariat d'agence",
+        "general": "Renseignement général"
+      }
     }
   },
   "footer": {
