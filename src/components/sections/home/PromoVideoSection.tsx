@@ -51,15 +51,15 @@ export function PromoVideoSection() {
           animate={inView ? { opacity: 1, scale: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.2, ease: EASE }}
         >
-          <div className="aspect-video overflow-hidden rounded-2xl border border-white/15 bg-black/30 shadow-2xl">
-            <div className="flex h-full flex-col items-center justify-center gap-4">
-              <div className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/30 bg-white/10">
-                <svg className="ml-1 h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-              <p className="text-sm text-white/40">{t('placeholder')}</p>
-            </div>
+          <div className="aspect-video overflow-hidden rounded-2xl border border-white/15 bg-black shadow-2xl shadow-violet-950/60">
+            <video
+              className="h-full w-full object-cover"
+              controls
+              playsInline
+              preload="metadata"
+            >
+              <source src="/videos/from%20cow%20to%20can.mp4" type="video/mp4" />
+            </video>
           </div>
         </motion.div>
       </div>

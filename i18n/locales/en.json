@@ -6,6 +6,7 @@
     "certifications": "Certifications",
     "contact": "Contact",
     "partnership": "Partnership",
+    "childHealth": "Child Health",
     "quiz": "Find Your Product"
   },
   "home": {
@@ -86,35 +87,35 @@
     "years": "years",
     "lactonicGold1": {
       "name": "Lactonic Gold 1",
-      "description": "A premium starter infant formula based on cow's milk, enriched with DHA to support brain development from birth to 6 months."
+      "description": "A premium starter formula for babies from birth to 6 months, packed with over 40 carefully chosen nutrients to support brain development, a healthy immune system, and comfortable digestion."
     },
     "lactonicGold2": {
       "name": "Lactonic Gold 2",
-      "description": "A follow-on formula enriched with iron and essential nutrients to support your baby's continued growth from 6 to 12 months."
+      "description": "A follow-on formula for babies aged 6–12 months with over 40 key nutrients to support immunity, brain development, and healthy growth. Can also be mixed with cereals as your baby starts exploring new foods."
     },
     "lactolacGold3": {
       "name": "Lactolac Gold 3",
-      "description": "A growing-up formula fortified with calcium and key vitamins to support the development of active toddlers from 1 to 3 years."
+      "description": "A growing-up milk for toddlers aged 1–3 years with 40+ essential nutrients to support brain development, strong bones, and a healthy immune system at every active stage."
     },
     "easeToGo1": {
       "name": "Ease to Go 1",
-      "description": "An easy-to-prepare infant formula based on cow's milk, designed to meet the nutritional needs of babies from birth to 6 months."
+      "description": "A gentle starter formula for babies from birth to 6 months, specially designed to ease constipation and support comfortable digestion, while providing all the essential nutrients your baby needs."
     },
     "easeToGo2": {
       "name": "Ease to Go 2",
-      "description": "A convenient follow-on formula that supports healthy growth and development for babies from 6 to 12 months."
+      "description": "A follow-on formula for babies aged 6–12 months that helps relieve constipation and supports comfortable digestion, delivering balanced nutrition for healthy growth."
     },
     "easeToGo3": {
       "name": "Ease 2 Go 3",
-      "description": "A growing-up formula that is easy to prepare and provides balanced nutrition for toddlers from 1 to 3 years."
+      "description": "A growing-up formula for toddlers aged 1–2 years that promotes comfortable, regular digestion and helps ease constipation, while providing balanced nutrition for active development."
     },
     "lactonicAC": {
       "name": "Lactonic AC Gold",
-      "description": "An anti-colic formula specially designed to reduce gas and discomfort, helping your baby feed comfortably."
+      "description": "An anti-colic formula for babies with gas, bloating, and tummy discomfort. Uses gently processed proteins and a softer milk base to make every feed more comfortable, alongside key growth nutrients."
     },
     "lactonicAR": {
       "name": "Lactonic AR Gold",
-      "description": "A thickened anti-regurgitation formula that helps reduce spitting up and keeps your baby comfortable after feeding."
+      "description": "An anti-regurgitation formula for babies who frequently spit up after feeding. Its naturally thickened texture helps keep milk down, keeping your baby comfortable and well-nourished."
     },
     "lactonicHA1": {
       "name": "Lactonic HA Plus 1",
@@ -130,7 +131,7 @@
     },
     "lactonicLF": {
       "name": "Lactonic LF",
-      "description": "A lactose-free infant formula formulated for babies with lactose intolerance or galactosaemia, for use under medical supervision."
+      "description": "A lactose-free formula for babies who have difficulty digesting regular milk. Helps restore fluids and key minerals while providing essential vitamins and nutrients for healthy growth. Use under medical guidance."
     },
     "lactonic3Fruits": {
       "name": "3 Fruits",
@@ -196,7 +197,16 @@
       "lowSaturatedFats": "Low in saturated fats",
       "lowSalt": "Low salt",
       "proteinSource": "Protein source",
-      "steamedCooking": "Steamed cooking"
+      "steamedCooking": "Steamed cooking",
+      "ogsSystem": "Supports brain, immunity & gut health",
+      "fortyPlusNutrients": "40+ carefully chosen nutrients",
+      "mixableWithCereals": "Can be mixed with cereals",
+      "hydrolyzedWheyProtein": "Gently processed proteins for easier digestion",
+      "customizedLactose": "Specially formulated to reduce gas & colic",
+      "carobFlourThickener": "Naturally thickened to reduce spitting up",
+      "hydraNourishSystem": "Helps restore fluids and key minerals",
+      "easesConstipation": "Helps ease constipation",
+      "gentleOnDigestion": "Gentle on sensitive digestive systems"
     },
     "keyFeatures": "Key Features",
     "relatedProducts": "Related Products"
@@ -249,7 +259,7 @@
       "eyebrow": "How We Operate",
       "heading": "Strategic Pillars",
       "items": [
-        { "title": "Research & Development", "body": "Innovating specialty products for the Middle East through hi-tech and molecular research." },
+        { "title": "Research & Development", "body": "Innovating specialty products through hi-tech and molecular research." },
         { "title": "Human Capital", "body": "Continuous development programs for marketing and sales excellence." },
         { "title": "Production & QA", "body": "All products are made under strict QA, including GLP, GSP, and validated protocols." },
         { "title": "Distribution Expansion", "body": "Focused on expanding agency and distribution partnerships across new regions." },
@@ -453,12 +463,12 @@
   "partnership": {
     "meta": {
       "title": "Partner with BioHealth Prodentia",
-      "description": "Join BioHealth Prodentia's global network spanning 12 countries across 4 continents. Distribute EU-manufactured, Halal-certified Lactonic Gold infant formulas in your market."
+      "description": "Join BioHealth Prodentia's global network spanning 12 countries. Distribute EU-manufactured Lactonic Gold infant formulas in your market."
     },
     "hero": {
       "eyebrow": "Simply Sophisticated",
       "title": "Successful Partnership",
-      "subtitle": "Join BioHealth Prodentia's trusted global network and help bring EU-manufactured, scientifically formulated Lactonic Gold infant nutrition to families across 4 continents.",
+      "subtitle": "Join BioHealth Prodentia's trusted global network and help bring EU-manufactured, scientifically formulated Lactonic Gold infant nutrition to families worldwide.",
       "badges": ["Exclusive Distributors", "Regional Importers", "Agency Partners", "New Markets"]
     },
     "intro": {
@@ -494,7 +504,10 @@
       "hint": "Choose your email client — we'll pre-fill everything for you.",
       "openGmail": "Open in Gmail",
       "openOutlook": "Open in Outlook",
-      "emailLabel": "Partnership Inquiries",
+      "emailLabel": "Your Email",
+      "emailPlaceholder": "you@example.com",
+      "nameLabel": "Full Name",
+      "namePlaceholder": "Your full name",
       "emailValue": "Info@lactonic.org",
       "subjectLabel": "Subject",
       "messageLabel": "Message",
@@ -506,6 +519,161 @@
         "agency": "Agency Partnership",
         "general": "General Inquiry"
       }
+    }
+  },
+  "childHealth": {
+    "hero": {
+      "eyebrow": "For Parents",
+      "title": "Child Health & Development",
+      "subtitle": "Evidence-based tools to track growth, understand development milestones, and manage your child's vaccination schedule.",
+      "pills": ["📊 Growth Tracker", "🧠 Brain Milestones", "💉 Vaccination Tracker"]
+    },
+    "growth": {
+      "eyebrow": "WHO Standards",
+      "title": "Interactive Growth Tracker",
+      "subtitle": "Check your child's weight and length against WHO international reference values.",
+      "gender": "Gender",
+      "boy": "Boy",
+      "girl": "Girl",
+      "age": "Age",
+      "month": "month",
+      "months": "months",
+      "weight": "Weight (kg)",
+      "length": "Length / Height (cm)",
+      "optional": "— optional",
+      "check": "Check Growth",
+      "empty": "Fill in the form and click Check Growth to see results.",
+      "resultsTitle": "Growth Results",
+      "whoRef": "WHO Reference",
+      "source": "Source: WHO Child Growth Standards. Consult your paediatrician for clinical assessment.",
+      "low": "Low",
+      "normal": "Normal",
+      "high": "High",
+      "birthLabel": "Birth",
+      "twelveMonths": "12 mo",
+      "twentyFourMonths": "24 mo"
+    },
+    "milestones": {
+      "eyebrow": "Brain Science",
+      "title": "Baby Brain Development",
+      "subtitle": "Based on WHO/UNICEF International Recommendations",
+      "brainStage": "Brain Stage",
+      "keyDev": "Key Developments",
+      "parentRec": "Parent Recommendation",
+      "nutritionTip": "Nutrition Tip",
+      "nutritionBody": "Lactonic Gold infant formula provides 40+ nutrients including DHA, vitamins and minerals essential for cognitive development during this stage.",
+      "recs": [
+        { "icon": "🤱", "title": "Responsive Caregiving", "body": "Answer cues promptly." },
+        { "icon": "🥦", "title": "Optimal Nutrition", "body": "Breastfeeding first 6 months." },
+        { "icon": "🧸", "title": "Play-Based Learning", "body": "Encourage active exploration." },
+        { "icon": "📵", "title": "Limit Screen Time", "body": "Zero for <18–24 months." }
+      ],
+      "periods": [
+        {
+          "period": "0 – 6 Months",
+          "subtitle": "The Foundation",
+          "brainStage": "Synaptogenesis Begins",
+          "points": [
+            "Rapid sensory and motor development.",
+            "Synapses (connections) forming fast.",
+            "Importance of breastfeeding and responsiveness.",
+            "'Serve & Return' interactions are critical."
+          ],
+          "recTitle": "Responsive Caregiving",
+          "recBody": "Promptly answer cues and build trust."
+        },
+        {
+          "period": "7 – 12 Months",
+          "subtitle": "Exploration & Language",
+          "brainStage": "Accelerated Connectivity",
+          "points": [
+            "Memory and spatial awareness improve.",
+            "Understanding common words.",
+            "Developing object permanence.",
+            "'Pruning' (use-it-or-lose-it) is active."
+          ],
+          "recTitle": "Talk & Play",
+          "recBody": "Name objects, read aloud, and encourage exploration."
+        },
+        {
+          "period": "1 – 2 Years",
+          "subtitle": "Complexity & Self",
+          "brainStage": "Synaptic Density & Myelination",
+          "points": [
+            "Language explosion (vocabulary spurt).",
+            "Fine motor skills: drawing, building.",
+            "Emerging self-awareness.",
+            "Brain is twice as active as an adult's."
+          ],
+          "recTitle": "Optimal Nutrition",
+          "recBody": "Diverse foods after 6 months support brain growth."
+        },
+        {
+          "period": "2 – 3 Years",
+          "subtitle": "Executive Function",
+          "brainStage": "Refined Networks",
+          "points": [
+            "Developing empathy and impulse control.",
+            "Complex problem-solving.",
+            "Rich imaginary play and storytelling.",
+            "Executive functions strengthen (planning)."
+          ],
+          "recTitle": "Play-Based Learning",
+          "recBody": "Encourage exploration, limit screen time."
+        }
+      ]
+    },
+    "downloads": {
+      "eyebrow": "Free Resources",
+      "title": "Downloadable Health Charts",
+      "subtitle": "Use our interactive tools to track your child's growth and vaccination schedule — all built into this page.",
+      "btn": "View Interactive Tool",
+      "source": "Charts sourced from WHO Child Growth Standards and CDC. Always consult your healthcare provider.",
+      "items": [
+        {
+          "icon": "👧",
+          "title": "Girls Growth Chart",
+          "subtitle": "Birth to 24 months",
+          "desc": "WHO/CDC head circumference, weight-for-length percentiles for girls.",
+          "badge": "CDC · WHO"
+        },
+        {
+          "icon": "👦",
+          "title": "Boys Growth Chart",
+          "subtitle": "Birth to 24 months",
+          "desc": "WHO/CDC head circumference, weight-for-length percentiles for boys.",
+          "badge": "CDC · WHO"
+        },
+        {
+          "icon": "💉",
+          "title": "Full Vaccination Chart",
+          "subtitle": "Birth to 5–6 years",
+          "desc": "Complete childhood vaccination schedule with diseases, doses and administration sites.",
+          "badge": "WHO Schedule"
+        }
+      ]
+    },
+    "vaccination": {
+      "eyebrow": "Track & Protect",
+      "title": "Vaccination Schedule",
+      "subtitle": "Enter your child's age in months to see which vaccines are due now, already given, and coming up next.",
+      "ageInputLabel": "How old is your child?",
+      "months": "months",
+      "years": "years",
+      "newborn": "Newborn",
+      "noInput": "Enter your child's age above to view their personalised vaccination schedule.",
+      "statusDone": "Done",
+      "statusDue": "Due Now",
+      "statusUpcoming": "Upcoming",
+      "dueNowBanner": "vaccine(s) due at this age — visit your doctor",
+      "dueCountLabel": "due at this age",
+      "allClear": "No vaccines due right now",
+      "allDone": "🎉 All scheduled vaccines given!",
+      "nextVisitLabel": "Next visit",
+      "doneCountLabel": "vaccines already given",
+      "vaccinesCount": "vaccines",
+      "disclaimer": "Always consult your paediatrician before, during, and after vaccination. Schedule may vary by country.",
+      "ageLabels": ["At Birth", "6 Weeks", "10 Weeks", "14 Weeks", "9 Months", "16 – 24 Months", "5 – 6 Years"]
     }
   },
   "footer": {

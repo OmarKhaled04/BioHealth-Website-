@@ -13,7 +13,7 @@ const particles = [
   { size: 5, top: '35%', left: '72%', duration: 3.5, delay: 2 },
 ];
 
-const badges = ['FSSC 22000', 'ISO 9001', 'IFS Food', 'Halal Certified'];
+const badges = ['FSSC 22000', 'ISO 9001', 'IFS Food'];
 
 export function CertHero() {
   const t = useTranslations('certifications.hero');

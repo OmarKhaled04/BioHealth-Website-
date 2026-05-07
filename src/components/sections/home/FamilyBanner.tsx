@@ -8,7 +8,7 @@ import { Link } from '@/navigation';
 
 const EASE = [0, 0, 0.2, 1] as const;
 
-const STAT_VALUES = ['4+', '17', '100%', 'GMP'] as const;
+const STAT_VALUES = ['4+', '17', 'GMP'] as const;
 
 export function FamilyBanner() {
   const t = useTranslations('home.banner');
@@ -18,7 +18,6 @@ export function FamilyBanner() {
   const statLabels = [
     t('stats.markets'),
     t('stats.products'),
-    t('stats.halal'),
     t('stats.eu'),
   ] as const;
 

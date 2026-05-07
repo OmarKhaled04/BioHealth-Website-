@@ -122,7 +122,7 @@ export function CertAtAGlance() {
         </div>
 
         <div className="mt-8 flex flex-wrap gap-2 border-t border-white/15 pt-6">
-          {[t('badges.fssc'), t('badges.iso'), t('badges.ifs'), t('badges.halal')].map((label) => (
+          {[t('badges.fssc'), t('badges.iso'), t('badges.ifs')].map((label) => (
             <span
               key={label}
               className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-semibold text-white/80"

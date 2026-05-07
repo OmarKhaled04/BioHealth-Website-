@@ -18,8 +18,8 @@ export const products: Product[] = [
     descriptionKey: 'products.lactonicGold1.description',
     featureKeys: [
       'products.features.infantFormulaCowMilk',
-      'products.features.dhaEnriched',
-      'products.features.halalCertified',
+      'products.features.ogsSystem',
+      'products.features.fortyPlusNutrients',
     ],
   },
   {
@@ -36,8 +36,8 @@ export const products: Product[] = [
     descriptionKey: 'products.lactonicGold2.description',
     featureKeys: [
       'products.features.followOnFormulaCowMilk',
-      'products.features.ironEnriched',
-      'products.features.halalCertified',
+      'products.features.ogsSystem',
+      'products.features.mixableWithCereals',
     ],
   },
   {
@@ -54,8 +54,8 @@ export const products: Product[] = [
     descriptionKey: 'products.lactolacGold3.description',
     featureKeys: [
       'products.features.growingUpFormulaCowMilk',
-      'products.features.calciumEnriched',
-      'products.features.halalCertified',
+      'products.features.ogsSystem',
+      'products.features.fortyPlusNutrients',
     ],
   },
 
@@ -75,8 +75,8 @@ export const products: Product[] = [
     descriptionKey: 'products.easeToGo1.description',
     featureKeys: [
       'products.features.infantFormulaCowMilk',
+      'products.features.easesConstipation',
       'products.features.easyToPrepare',
-      'products.features.halalCertified',
     ],
   },
   {
@@ -93,8 +93,8 @@ export const products: Product[] = [
     descriptionKey: 'products.easeToGo2.description',
     featureKeys: [
       'products.features.followOnFormulaCowMilk',
+      'products.features.easesConstipation',
       'products.features.easyToPrepare',
-      'products.features.halalCertified',
     ],
   },
   {
@@ -104,15 +104,15 @@ export const products: Product[] = [
     category: 'formula',
     subCategory: 'ease-to-go',
     stage: 3,
-    ageRange: { min: 1, max: 3, unit: 'years' },
+    ageRange: { min: 1, max: 2, unit: 'years' },
     imagePath: '/images/testIMG/Lactonic_ease_to_go_3_saafbg.png',
     badgeKey: 'products.badges.growingUpFormula',
     nameKey: 'products.easeToGo3.name',
     descriptionKey: 'products.easeToGo3.description',
     featureKeys: [
       'products.features.growingUpFormulaCowMilk',
+      'products.features.easesConstipation',
       'products.features.easyToPrepare',
-      'products.features.halalCertified',
     ],
   },
 
@@ -132,8 +132,8 @@ export const products: Product[] = [
     descriptionKey: 'products.lactonicAC.description',
     featureKeys: [
       'products.features.antiColicFormula',
-      'products.features.reducesGas',
-      'products.features.availableStages',
+      'products.features.hydrolyzedWheyProtein',
+      'products.features.customizedLactose',
     ],
   },
   {
@@ -150,7 +150,7 @@ export const products: Product[] = [
     descriptionKey: 'products.lactonicAR.description',
     featureKeys: [
       'products.features.antiRegurgitationFormula',
-      'products.features.thickenedFormula',
+      'products.features.carobFlourThickener',
       'products.features.availableStages',
     ],
   },
@@ -222,8 +222,8 @@ export const products: Product[] = [
     descriptionKey: 'products.lactonicLF.description',
     featureKeys: [
       'products.features.lactoseFreeFormula',
-      'products.features.lactoseIntolerance',
-      'products.features.medicalPurposes',
+      'products.features.hydraNourishSystem',
+      'products.features.medicalSupervision',
     ],
   },
 

@@ -479,6 +479,34 @@ function FormSection() {
                   />
                 </motion.div>
 
+                {/* Name + Email — always visible */}
+                <motion.div
+                  variants={fadeUp} initial="hidden" whileInView="visible" viewport={VIEWPORT}
+                  transition={{ delay: 0.09 }}
+                  className="grid grid-cols-2 gap-4"
+                >
+                  <div>
+                    <label className="mb-2 block text-sm font-semibold text-violet-200">
+                      {t('form.nameLabel')}
+                    </label>
+                    <input
+                      type="text"
+                      placeholder={t('form.namePlaceholder')}
+                      className={inputCls}
+                    />
+                  </div>
+                  <div>
+                    <label className="mb-2 block text-sm font-semibold text-violet-200">
+                      {t('form.emailLabel')}
+                    </label>
+                    <input
+                      type="email"
+                      placeholder={t('form.emailPlaceholder')}
+                      className={inputCls}
+                    />
+                  </div>
+                </motion.div>
+
                 {/* Job-only fields: name + CV */}
                 <AnimatePresence>
                   {isJob && (

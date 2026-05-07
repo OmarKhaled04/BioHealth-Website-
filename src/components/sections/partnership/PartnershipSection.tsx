@@ -228,24 +228,6 @@ function IntroSection() {
           </motion.p>
         </motion.div>
 
-        {/* Key facts grid */}
-        <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={VIEWPORT}
-          className="grid grid-cols-2 gap-4 sm:grid-cols-4"
-        >
-          {(['4', '12', '5', '40+'] as const).map((value, i) => {
-            const label = (t.raw('intro.statLabels') as string[])[i];
-            return (
-            <motion.div
-              key={label}
-              variants={scaleUp}
-              className="rounded-xl bg-white p-5 text-center shadow-sm ring-1 ring-violet-100"
-            >
-              <p className="text-2xl font-extrabold text-violet-700">{value}</p>
-              <p className="mt-0.5 text-xs font-medium uppercase tracking-wide text-violet-500">{label}</p>
-            </motion.div>
-            );
-          })}
-        </motion.div>
       </div>
     </section>
   );
@@ -320,48 +302,12 @@ function CTASection() {
           </motion.p>
         </motion.div>
 
-        {/* Email card + form */}
-        <div className="grid gap-8 lg:grid-cols-5 lg:items-start">
+        {/* Form */}
+        <div className="mx-auto max-w-2xl">
 
-          {/* Email info */}
           <motion.div
-            variants={fadeLeft} initial="hidden" whileInView="visible" viewport={VIEWPORT}
-            className="lg:col-span-2"
-          >
-            <div className="rounded-2xl border border-white/15 bg-white/10 p-7 backdrop-blur-sm">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="relative flex h-2.5 w-2.5 shrink-0">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75" />
-                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-amber-400" />
-                </span>
-                <span className="text-xs font-semibold uppercase tracking-widest text-amber-300">
-                  {t('cta.emailLabel')}
-                </span>
-              </div>
-              <a
-                href="mailto:Info@lactonic.org"
-                className="text-lg font-bold text-white hover:text-violet-200 transition-colors"
-              >
-                {t('cta.emailValue')}
-              </a>
-              <p className="mt-4 text-sm leading-relaxed text-violet-200/60">
-                {t('cta.hint')}
-              </p>
-              <div className="mt-6 space-y-2 text-sm text-violet-200/70">
-                {(t.raw('cta.partnerTypes') as string[]).map(l => (
-                  <div key={l} className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400" />
-                    {l}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Form */}
-          <motion.div
-            variants={fadeRight} initial="hidden" whileInView="visible" viewport={VIEWPORT}
-            className="lg:col-span-3"
+            variants={fadeUp} initial="hidden" whileInView="visible" viewport={VIEWPORT}
+            className=""
           >
             <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/10 shadow-2xl backdrop-blur-sm">
               <div className="h-1 w-full bg-gradient-to-r from-amber-400 via-violet-400 to-purple-400" />
@@ -379,9 +325,31 @@ function CTASection() {
                   >
                     <option value="Distribution Partnership" className="bg-violet-900">{t('cta.subjects.distribution')}</option>
                     <option value="New Market Entry" className="bg-violet-900">{t('cta.subjects.newMarket')}</option>
-                    <option value="Agency Partnership" className="bg-violet-900">{t('cta.subjects.agency')}</option>
-                    <option value="General Inquiry" className="bg-violet-900">{t('cta.subjects.general')}</option>
+    
                   </select>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="mb-2 block text-sm font-semibold text-violet-200">
+                      Full Name
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Your full name"
+                      className={inputCls}
+                    />
+                  </div>
+                  <div>
+                    <label className="mb-2 block text-sm font-semibold text-violet-200">
+                      Your Email
+                    </label>
+                    <input
+                      type="email"
+                      placeholder="you@example.com"
+                      className={inputCls}
+                    />
+                  </div>
                 </div>
 
                 <div>

@@ -138,12 +138,11 @@ export function HeroSection() {
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.58, ease: EASE }}
-                className="mx-auto mt-14 grid max-w-xs grid-cols-3 divide-x divide-white/10 lg:mx-0"
+                className="mx-auto mt-14 grid max-w-xs grid-cols-2 divide-x divide-white/10 lg:mx-0"
               >
                 {[
-                  { value: '17',   label: t('stats.products')  },
-                  { value: '12',   label: t('stats.countries') },
-                  { value: '100%', label: t('stats.halal')     },
+                  { value: '17', label: t('stats.products')  },
+                  { value: '12', label: t('stats.countries') },
                 ].map(({ value, label }) => (
                   <div key={label} className="px-4 text-center first:pl-0 last:pr-0">
                     <p className="text-3xl font-extrabold text-white">{value}</p>

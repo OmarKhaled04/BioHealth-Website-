@@ -35,6 +35,7 @@ export function Navbar() {
     { href: '/about', label: t('about') },
     { href: '/products', label: t('products') },
     { href: '/certifications', label: t('certifications') },
+    { href: '/child-health', label: t('childHealth') },
     { href: '/contact', label: t('contact') },
     { href: '/partnership', label: t('partnership') },
   ];

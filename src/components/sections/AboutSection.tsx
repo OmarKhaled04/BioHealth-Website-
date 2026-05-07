@@ -28,7 +28,6 @@ const CERTS = [
   "FSSC 22000",
   "ISO 9001:2015",
   "IFS Certified",
-  "HALAL Assurance",
   "OGS Trademark",
   "GLP & GSP",
 ];
@@ -48,7 +47,7 @@ const PARTNER_META: PartnerMeta[] = [
   { flag: "🇵🇰", lat:  30.3753, lng:   69.3451 },
   { flag: "🇮🇶", lat:  33.2232, lng:   43.6793 },
 ];
-const VIDEO_CERTS = ["GMP / EU", "ISO 9001", "HALAL"];
+const VIDEO_CERTS = ["GMP / EU"];
 
 const EASE = [0, 0, 0.2, 1] as const;
 const SPRING = { type: "spring", stiffness: 260, damping: 28 } as const;
@@ -413,11 +412,6 @@ function VisionMission() {
               </div>
             </div>
           </div>
-          <div className="absolute bottom-0 left-0 rounded-xl border border-white/20 bg-violet-900/80 px-5 py-4 shadow-2xl backdrop-blur-sm">
-            <p className="text-xs text-violet-300">{t("partnerLabel")}</p>
-            <p className="mt-1 font-semibold text-white">{t("partnerName")}</p>
-            <p className="text-xs text-violet-300">{t("partnerSub")}</p>
-          </div>
         </motion.div>
       </div>
     </section>
@@ -477,59 +471,6 @@ function CoreValues() {
   );
 }
 
-function StrategicPillars() {
-  const t = useTranslations("about.pillars");
-  const items = t.raw("items") as AboutListItem[];
-
-  return (
-    <section className="relative overflow-hidden bg-white py-24">
-      <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-violet-200/50 blur-3xl" />
-
-      <div className="relative mx-auto max-w-4xl px-6">
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={VIEWPORT}
-          className="mb-14"
-        >
-          <div className="mb-3 flex items-center gap-3">
-            <span className="h-px w-8 bg-amber-500" />
-            <span className="text-xs font-semibold uppercase tracking-widest text-amber-500">
-              {t("eyebrow")}
-            </span>
-          </div>
-          <h2 className="text-4xl font-bold text-[#1a1040]">{t("heading")}</h2>
-        </motion.div>
-
-        <div className="space-y-0">
-          {items.map((item, i) => (
-            <motion.div
-              key={`${item.title}-${i}`}
-              variants={fadeLeft}
-              initial="hidden"
-              whileInView="visible"
-              viewport={VIEWPORT}
-              transition={{ delay: i * 0.1 }}
-              className="group flex items-start gap-6 border-b border-[#e5e7eb] py-7 last:border-0"
-            >
-              <span className="mt-1.5 flex h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[#7c3aed] ring-4 ring-[#7c3aed]/20 transition-all duration-300 group-hover:ring-[#7c3aed]/50" />
-              <span className="w-8 flex-shrink-0 text-sm font-bold text-[#7c3aed]">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <div>
-                <h3 className="font-semibold text-[#1a1040] transition-colors duration-200 group-hover:text-[#7c3aed]">
-                  {item.title}
-                </h3>
-                <p className="mt-1 text-sm leading-relaxed text-[#6b7280]">{item.body}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 // ─── Realistic Globe (react-globe.gl) ────────────────────────────────────────
 
@@ -597,7 +538,6 @@ function RealisticGlobe({ selectedIdx, pointsData }: { selectedIdx: number | nul
 
 function GlobalPresence() {
   const t = useTranslations("about.globalPresence");
-  const visionT = useTranslations("about.visionMission");
   const partners = t.raw("partners") as PartnerItem[];
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
 
@@ -721,46 +661,7 @@ function GlobalPresence() {
           </motion.div>
         </div>
 
-        {/* Quality Certifications */}
-        <div className="mt-16">
-          <motion.h3
-            initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-            viewport={VIEWPORT} transition={{ duration: 0.5, ease: EASE }}
-            className="mb-6 text-center text-xs font-bold uppercase tracking-widest text-white/60"
-          >
-            {t("certsLabel")}
-          </motion.h3>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-            {CERTS.map((cert, i) => (
-              <motion.div
-                key={cert}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={VIEWPORT}
-                transition={{ delay: i * 0.1, duration: 0.55, ease: [0.34, 1.56, 0.64, 1] }}
-                className="group flex flex-col items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-4 py-4 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-amber-400/40 hover:bg-white/20 hover:shadow-lg"
-              >
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-amber-400/20 text-sm font-bold text-amber-400 transition-colors duration-300 group-hover:bg-amber-400 group-hover:text-violet-900">
-                  ✓
-                </span>
-                <span className="text-center text-xs font-semibold leading-tight text-violet-100 transition-colors duration-300 group-hover:text-white">
-                  {cert}
-                </span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
 
-        {/* Manufactured by */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-          viewport={VIEWPORT} transition={{ duration: 0.6, delay: 0.3, ease: EASE }}
-          className="mt-8 rounded-xl border border-white/20 bg-white/10 p-5 text-center backdrop-blur-sm"
-        >
-          <p className="text-xs font-bold uppercase tracking-widest text-white/60">{t("manufacturedByLabel")}</p>
-          <p className="mt-2 font-semibold text-white">{visionT("partnerName")}</p>
-          <p className="text-sm text-violet-200">{t("manufacturerSub")}</p>
-        </motion.div>
 
       </div>
     </section>
@@ -839,7 +740,6 @@ export function AboutSection() {
       <StatsBand />
       <VisionMission />
       <CoreValues />
-      <StrategicPillars />
       <GlobalPresence />
       <ClosingCTA />
     </main>

@@ -6,6 +6,7 @@
     "certifications": "Certifications",
     "contact": "Contact",
     "partnership": "Partenariat",
+    "childHealth": "Santé Enfant",
     "quiz": "Trouver votre produit"
   },
   "home": {
@@ -86,35 +87,35 @@
     "years": "ans",
     "lactonicGold1": {
       "name": "Lactonic Gold 1",
-      "description": "Lait infantile premium à base de lait de vache, enrichi en DHA pour soutenir le développement cérébral, de la naissance à 6 mois."
+      "description": "Lait 1er âge premium de la naissance à 6 mois, riche en plus de 40 nutriments soigneusement choisis pour soutenir le développement cérébral, un système immunitaire sain et une digestion confortable."
     },
     "lactonicGold2": {
       "name": "Lactonic Gold 2",
-      "description": "Lait de suite enrichi en fer et en nutriments essentiels pour accompagner la croissance de votre bébé de 6 à 12 mois."
+      "description": "Lait de suite pour bébés de 6 à 12 mois avec plus de 40 nutriments essentiels pour soutenir l'immunité, le développement cérébral et une croissance saine. Peut être mélangé avec des céréales lors de la diversification."
     },
     "lactolacGold3": {
       "name": "Lactolac Gold 3",
-      "description": "Lait de croissance enrichi en calcium et en vitamines essentielles pour soutenir le développement des tout-petits actifs de 1 à 3 ans."
+      "description": "Lait de croissance pour tout-petits de 1 à 3 ans avec 40+ nutriments essentiels pour soutenir le développement cérébral, des os solides et un système immunitaire sain à chaque étape active."
     },
     "easeToGo1": {
       "name": "Ease to Go 1",
-      "description": "Lait infantile facile à préparer à base de lait de vache, conçu pour répondre aux besoins nutritionnels des nourrissons de la naissance à 6 mois."
+      "description": "Un lait infantile doux de la naissance à 6 mois, spécialement conçu pour soulager la constipation et soutenir une digestion confortable, tout en apportant tous les nutriments essentiels dont votre bébé a besoin."
     },
     "easeToGo2": {
       "name": "Ease to Go 2",
-      "description": "Lait de suite pratique soutenant une croissance saine des nourrissons de 6 à 12 mois."
+      "description": "Un lait de suite pour bébés de 6 à 12 mois qui aide à soulager la constipation et soutient une digestion confortable, en fournissant une nutrition équilibrée pour une croissance saine."
     },
     "easeToGo3": {
       "name": "Ease to Go 3",
-      "description": "Lait de croissance facile à préparer, offrant une nutrition équilibrée aux enfants de 1 à 3 ans."
+      "description": "Un lait de croissance pour tout-petits de 1 à 2 ans qui favorise une digestion régulière et confortable et aide à soulager la constipation, tout en apportant une nutrition équilibrée pour un développement actif."
     },
     "lactonicAC": {
       "name": "Lactonic AC Gold",
-      "description": "Lait anti-coliques spécialement formulé pour réduire les gaz et l'inconfort, aidant votre bébé à se nourrir confortablement."
+      "description": "Lait anti-coliques pour les bébés souffrant de gaz, ballonnements et inconforts digestifs. Utilise des protéines doucement traitées et une base laitière adaptée pour rendre chaque tétée plus confortable, avec les nutriments essentiels à la croissance."
     },
     "lactonicAR": {
       "name": "Lactonic AR Gold",
-      "description": "Lait épaissi anti-régurgitations qui aide à réduire les renvois et maintient votre bébé à l'aise après les tétées."
+      "description": "Lait anti-régurgitations pour les bébés qui recrachent fréquemment après les tétées. Sa texture naturellement épaissie aide le lait à rester dans l'estomac, gardant votre bébé confortable et bien nourri."
     },
     "lactonicHA1": {
       "name": "Lactonic HA Plus 1",
@@ -130,7 +131,7 @@
     },
     "lactonicLF": {
       "name": "Lactonic LF",
-      "description": "Lait sans lactose pour nourrissons souffrant d'intolérance au lactose ou de galactosémie, à utiliser sous supervision médicale."
+      "description": "Lait sans lactose pour les bébés ayant du mal à digérer le lait ordinaire. Aide à restaurer les liquides et minéraux essentiels tout en apportant vitamines et nutriments pour une croissance saine. À utiliser sous supervision médicale."
     },
     "lactonic3Fruits": {
       "name": "3 Fruits",
@@ -196,7 +197,16 @@
       "lowSaturatedFats": "Faible en graisses saturées",
       "lowSalt": "Faible en sel",
       "proteinSource": "Source de protéines",
-      "steamedCooking": "Cuisson à la vapeur"
+      "steamedCooking": "Cuisson à la vapeur",
+      "ogsSystem": "Soutient le cerveau, l'immunité et la santé digestive",
+      "fortyPlusNutrients": "40+ nutriments soigneusement choisis",
+      "mixableWithCereals": "Peut être mélangé avec des céréales",
+      "hydrolyzedWheyProtein": "Protéines doucement traitées pour une meilleure digestion",
+      "customizedLactose": "Spécialement formulé pour réduire gaz et coliques",
+      "carobFlourThickener": "Naturellement épaissi pour réduire les régurgitations",
+      "hydraNourishSystem": "Aide à restaurer les liquides et minéraux essentiels",
+      "easesConstipation": "Aide à soulager la constipation",
+      "gentleOnDigestion": "Doux pour les systèmes digestifs sensibles"
     },
     "keyFeatures": "Caractéristiques clés",
     "relatedProducts": "Produits associés"
@@ -453,12 +463,12 @@
   "partnership": {
     "meta": {
       "title": "Partenariat avec BioHealth Prodentia",
-      "description": "Rejoignez le réseau mondial de BioHealth Prodentia couvrant 12 pays sur 4 continents. Distribuez les formules Lactonic Gold fabriquées en UE et certifiées Halal sur votre marché."
+      "description": "Rejoignez le réseau mondial de BioHealth Prodentia couvrant 12 pays. Distribuez les formules Lactonic Gold fabriquées en UE sur votre marché."
     },
     "hero": {
       "eyebrow": "Simplement Sophistiqué",
       "title": "Partenariat Réussi",
-      "subtitle": "Rejoignez le réseau mondial de confiance de BioHealth Prodentia et contribuez à apporter la nutrition infantile Lactonic Gold, fabriquée en UE, aux familles sur 4 continents.",
+      "subtitle": "Rejoignez le réseau mondial de confiance de BioHealth Prodentia et contribuez à apporter la nutrition infantile Lactonic Gold, fabriquée en UE, aux familles partout dans le monde.",
       "badges": ["Distributeurs exclusifs", "Importateurs régionaux", "Partenaires d'agence", "Nouveaux marchés"]
     },
     "intro": {
@@ -496,7 +506,10 @@
       "hint": "Choisissez votre client e-mail — nous pré-remplirons tout pour vous.",
       "openGmail": "Ouvrir dans Gmail",
       "openOutlook": "Ouvrir dans Outlook",
-      "emailLabel": "Demandes de Partenariat",
+      "emailLabel": "Votre e-mail",
+      "emailPlaceholder": "vous@exemple.com",
+      "nameLabel": "Nom complet",
+      "namePlaceholder": "Votre nom complet",
       "emailValue": "Info@lactonic.org",
       "subjectLabel": "Objet",
       "messageLabel": "Message",
@@ -508,6 +521,161 @@
         "agency": "Partenariat d'agence",
         "general": "Renseignement général"
       }
+    }
+  },
+  "childHealth": {
+    "hero": {
+      "eyebrow": "Pour les Parents",
+      "title": "Santé & Développement de l'Enfant",
+      "subtitle": "Des outils basés sur les données probantes pour suivre la croissance, comprendre les étapes du développement et gérer le calendrier vaccinal de votre enfant.",
+      "pills": ["📊 Suivi de croissance", "🧠 Étapes cérébrales", "💉 Suivi vaccinal"]
+    },
+    "growth": {
+      "eyebrow": "Normes OMS",
+      "title": "Suivi de Croissance Interactif",
+      "subtitle": "Comparez le poids et la taille de votre enfant aux valeurs de référence internationales de l'OMS.",
+      "gender": "Sexe",
+      "boy": "Garçon",
+      "girl": "Fille",
+      "age": "Âge",
+      "month": "mois",
+      "months": "mois",
+      "weight": "Poids (kg)",
+      "length": "Taille (cm)",
+      "optional": "— facultatif",
+      "check": "Vérifier la croissance",
+      "empty": "Remplissez le formulaire et cliquez sur Vérifier la croissance pour voir les résultats.",
+      "resultsTitle": "Résultats de croissance",
+      "whoRef": "Référence OMS",
+      "source": "Source : Normes de croissance OMS. Consultez votre pédiatre pour une évaluation clinique.",
+      "low": "Faible",
+      "normal": "Normal",
+      "high": "Élevé",
+      "birthLabel": "Naissance",
+      "twelveMonths": "12 mo",
+      "twentyFourMonths": "24 mo"
+    },
+    "milestones": {
+      "eyebrow": "Science du Cerveau",
+      "title": "Développement du Cerveau du Nourrisson",
+      "subtitle": "Basé sur les recommandations internationales de l'OMS/UNICEF",
+      "brainStage": "Stade cérébral",
+      "keyDev": "Développements clés",
+      "parentRec": "Recommandation parentale",
+      "nutritionTip": "Conseil nutritionnel",
+      "nutritionBody": "La formule Lactonic Gold fournit plus de 40 nutriments dont le DHA, des vitamines et des minéraux essentiels au développement cognitif à ce stade.",
+      "recs": [
+        { "icon": "🤱", "title": "Soins responsifs", "body": "Répondez rapidement aux signaux." },
+        { "icon": "🥦", "title": "Nutrition optimale", "body": "Allaitement les 6 premiers mois." },
+        { "icon": "🧸", "title": "Apprentissage par le jeu", "body": "Encouragez l'exploration active." },
+        { "icon": "📵", "title": "Limiter les écrans", "body": "Zéro pour les moins de 18–24 mois." }
+      ],
+      "periods": [
+        {
+          "period": "0 – 6 Mois",
+          "subtitle": "Les fondements",
+          "brainStage": "Début de la Synaptogenèse",
+          "points": [
+            "Développement sensoriel et moteur rapide.",
+            "Les synapses (connexions) se forment rapidement.",
+            "Importance de l'allaitement et de la réactivité.",
+            "Les interactions 'Servir & Retourner' sont essentielles."
+          ],
+          "recTitle": "Soins réactifs",
+          "recBody": "Répondez rapidement aux signaux de votre bébé et construisez sa confiance."
+        },
+        {
+          "period": "7 – 12 Mois",
+          "subtitle": "Exploration & Langage",
+          "brainStage": "Connectivité Accélérée",
+          "points": [
+            "La mémoire et la conscience spatiale s'améliorent.",
+            "Compréhension des mots courants.",
+            "Développement de la permanence des objets.",
+            "L'élagage neuronal (utiliser ou perdre) est actif."
+          ],
+          "recTitle": "Parler & Jouer",
+          "recBody": "Nommez les objets, lisez à haute voix et encouragez l'exploration."
+        },
+        {
+          "period": "1 – 2 Ans",
+          "subtitle": "Complexité & Soi",
+          "brainStage": "Densité Synaptique & Myélinisation",
+          "points": [
+            "Explosion du langage et essor du vocabulaire.",
+            "Motricité fine : dessin, construction.",
+            "Émergence de la conscience de soi.",
+            "Le cerveau est deux fois plus actif que celui d'un adulte."
+          ],
+          "recTitle": "Nutrition optimale",
+          "recBody": "Des aliments diversifiés après 6 mois soutiennent la croissance du cerveau."
+        },
+        {
+          "period": "2 – 3 Ans",
+          "subtitle": "Fonctions exécutives",
+          "brainStage": "Réseaux affinés",
+          "points": [
+            "Développement de l'empathie et du contrôle des impulsions.",
+            "Résolution de problèmes complexes.",
+            "Jeux imaginaires riches et narration.",
+            "Les fonctions exécutives se renforcent (planification)."
+          ],
+          "recTitle": "Apprentissage par le jeu",
+          "recBody": "Encouragez l'exploration, limitez le temps d'écran."
+        }
+      ]
+    },
+    "downloads": {
+      "eyebrow": "Ressources gratuites",
+      "title": "Courbes de Santé Téléchargeables",
+      "subtitle": "Utilisez nos outils interactifs pour suivre la croissance et le calendrier vaccinal de votre enfant — tout est intégré dans cette page.",
+      "btn": "Voir l'outil interactif",
+      "source": "Courbes issues des Normes OMS et du CDC. Consultez toujours votre professionnel de santé.",
+      "items": [
+        {
+          "icon": "👧",
+          "title": "Courbe de croissance des filles",
+          "subtitle": "De la naissance à 24 mois",
+          "desc": "Périmètre crânien OMS/CDC, percentiles poids-taille pour les filles.",
+          "badge": "CDC · WHO"
+        },
+        {
+          "icon": "👦",
+          "title": "Courbe de croissance des garçons",
+          "subtitle": "De la naissance à 24 mois",
+          "desc": "Périmètre crânien OMS/CDC, percentiles poids-taille pour les garçons.",
+          "badge": "CDC · WHO"
+        },
+        {
+          "icon": "💉",
+          "title": "Calendrier vaccinal complet",
+          "subtitle": "De la naissance à 5–6 ans",
+          "desc": "Calendrier complet des vaccinations avec maladies, doses et sites d'administration.",
+          "badge": "WHO Schedule"
+        }
+      ]
+    },
+    "vaccination": {
+      "eyebrow": "Suivre & Protéger",
+      "title": "Calendrier vaccinal",
+      "subtitle": "Entrez l'âge de votre enfant en mois pour voir les vaccins à faire maintenant, déjà administrés et à venir.",
+      "ageInputLabel": "Quel âge a votre enfant ?",
+      "months": "mois",
+      "years": "ans",
+      "newborn": "Nouveau-né",
+      "noInput": "Entrez l'âge de votre enfant ci-dessus pour afficher son calendrier vaccinal personnalisé.",
+      "statusDone": "Effectué",
+      "statusDue": "À faire maintenant",
+      "statusUpcoming": "À venir",
+      "dueNowBanner": "vaccin(s) à administrer à cet âge — consultez votre médecin",
+      "dueCountLabel": "à administrer à cet âge",
+      "allClear": "Aucun vaccin dû pour l'instant",
+      "allDone": "🎉 Tous les vaccins prévus ont été administrés !",
+      "nextVisitLabel": "Prochain rendez-vous",
+      "doneCountLabel": "vaccins déjà administrés",
+      "vaccinesCount": "vaccins",
+      "disclaimer": "Consultez toujours votre pédiatre avant, pendant et après la vaccination. Le calendrier peut varier selon les pays.",
+      "ageLabels": ["À la naissance", "6 Semaines", "10 Semaines", "14 Semaines", "9 Mois", "16 – 24 Mois", "5 – 6 Ans"]
     }
   },
   "footer": {
