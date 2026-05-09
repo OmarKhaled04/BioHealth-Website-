@@ -63,7 +63,7 @@
       "titleHighlight": "Approuvée par les familles",
       "body": "De la naissance à la petite enfance, les formules Lactonic sont élaborées avec une précision moléculaire pour soutenir la croissance de votre enfant à chaque étape.",
       "stats": {
-        "markets": "Marchés mondiaux",
+        "markets": "Continents",
         "products": "Produits",
         "halal": "Certifié Halal",
         "eu": "Fabriqué dans l'UE"
@@ -119,15 +119,15 @@
     },
     "lactonicHA1": {
       "name": "Lactonic HA Plus 1",
-      "description": "Lait hypoallergénique pour nourrissons à risque allergique de la naissance à 6 mois, à utiliser sous supervision médicale."
+      "description": "Lait hypoallergénique pour nourrissons à risque allergique de la naissance à 6 mois, à utiliser sous supervision médicale, pour les bébés souffrant d'allergies aux protéines du lait de vache."
     },
     "lactonicHA2": {
       "name": "Lactonic HA Plus 2",
-      "description": "Lait de suite hypoallergénique pour nourrissons de 6 à 12 mois allergiques aux protéines de lait de vache, à utiliser sous supervision médicale."
+      "description": "Lait de suite hypoallergénique pour nourrissons de 6 à 12 mois allergiques aux protéines de lait de vache, à utiliser sous supervision médicale, pour les bébés souffrant d'allergies aux protéines du lait de vache."
     },
     "lactonicHA3": {
       "name": "Lactonic HA Plus 3",
-      "description": "Lait de croissance hypoallergénique pour enfants de 1 à 3 ans allergiques aux protéines de lait de vache, à utiliser sous supervision médicale."
+      "description": "Lait de croissance hypoallergénique pour enfants de 1 à 3 ans allergiques aux protéines de lait de vache, à utiliser sous supervision médicale, pour les bébés souffrant d'allergies aux protéines du lait de vache."
     },
     "lactonicLF": {
       "name": "Lactonic LF",
@@ -204,7 +204,9 @@
       "hydrolyzedWheyProtein": "Protéines doucement traitées pour une meilleure digestion",
       "customizedLactose": "Spécialement formulé pour réduire gaz et coliques",
       "carobFlourThickener": "Naturellement épaissi pour réduire les régurgitations",
+      "simpleModification": "Modification simple pour prévenir les complications graves",
       "hydraNourishSystem": "Aide à restaurer les liquides et minéraux essentiels",
+      "naturalTreatment": "Traitement naturel de la diarrhée pendant l'alimentation",
       "easesConstipation": "Aide à soulager la constipation",
       "gentleOnDigestion": "Doux pour les systèmes digestifs sensibles"
     },
@@ -385,6 +387,7 @@
       "subjectPlaceholder": "Sélectionnez un sujet",
       "subjects": {
         "general": "Renseignement général",
+        "apply": "Postuler à un emploi",
         "partnership": "Partenariat",
         "support": "Support technique",
         "other": "Autre"
