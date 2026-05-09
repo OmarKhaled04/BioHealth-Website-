@@ -151,7 +151,7 @@ export const products: Product[] = [
     featureKeys: [
       'products.features.antiRegurgitationFormula',
       'products.features.carobFlourThickener',
-      'products.features.availableStages',
+      'products.features.simpleModification',
     ],
   },
   {
@@ -223,7 +223,7 @@ export const products: Product[] = [
     featureKeys: [
       'products.features.lactoseFreeFormula',
       'products.features.hydraNourishSystem',
-      'products.features.medicalSupervision',
+      'products.features.naturalTreatment',
     ],
   },
 

@@ -467,7 +467,6 @@ function FormSection() {
                     <option value="" disabled className="bg-violet-900">{t('form.subjectPlaceholder')}</option>
                     <option value="General Inquiry"   className="bg-violet-900">{t('form.subjects.general')}</option>
                     <option value={JOB_VALUE}         className="bg-violet-900">{t('form.subjects.apply')}</option>
-                    <option value="Technical Support" className="bg-violet-900">{t('form.subjects.support')}</option>
                     <option value="Other"             className="bg-violet-900">{t('form.subjects.other')}</option>
                   </select>
                   <input
@@ -686,7 +685,6 @@ export function ContactSection() {
   return (
     <main style={{ fontFamily: 'var(--font-poppins), sans-serif' }}>
       <Hero />
-      <EmailBand />
       <FormSection />
       <CTA />
     </main>

@@ -25,16 +25,6 @@ export const certifications: Certification[] = [
 
   // ── Food Safety — Historical ─────────────────────────────────────────────────
   {
-    id: 'fssc-2025',
-    name: 'FSSC 22000 — Version 5.1',
-    issuer: 'DNV Business Assurance',
-    certNumber: '128539-2012-FSMS-IBE-RvA',
-    validUntil: '16 January 2025',
-    imageUrl: '/images/certificates/fssc-22000-2025.png',
-    pdfUrl:   '/images/certificates/fssc-22000-2025.png',
-    category: 'food-safety',
-  },
-  {
     id: 'fssc-2019',
     name: 'FSSC 22000 — Version 3',
     issuer: 'DNV GL Business Assurance',
@@ -88,16 +78,6 @@ export const certifications: Certification[] = [
     pdfUrl:   '/images/certificates/iso-9001-2015.png',
     category: 'quality',
   },
-  {
-    id: 'iso-9001-2008',
-    name: 'ISO 9001:2008',
-    issuer: 'DNV GL Business Assurance España',
-    certNumber: '205016-2016-AQ-IBE-ENAC',
-    validUntil: '15 September 2018',
-    imageUrl: '/images/certificates/iso-9001-2008.png',
-    pdfUrl:   '/images/certificates/iso-9001-2008.png',
-    category: 'quality',
-  },
 
   // ── Halal & Compliance — Current ─────────────────────────────────────────────
   {
@@ -120,17 +100,6 @@ export const certifications: Certification[] = [
     pdfUrl:   '/images/certificates/AMENDMENT%20PRONUBEN-page-01.png',
     category: 'halal',
   },
-  {
-    id: 'trademark',
-    name: 'Trademark Registration — Lactonic',
-    issuer: 'Oficina Española de Patentes y Marcas',
-    certNumber: 'Marca Nº 3.073.300',
-    validUntil: '—',
-    imageUrl: '/images/certificates/trademark.png',
-    pdfUrl:   '/images/certificates/trademark.png',
-    category: 'halal',
-  },
-
   // ── Halal & Compliance — Historical ──────────────────────────────────────────
   {
     id: 'halal-2022',

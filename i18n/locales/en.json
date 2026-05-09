@@ -63,7 +63,7 @@
       "titleHighlight": "Trusted by Families",
       "body": "From birth to toddlerhood, Lactonic formulas are crafted with molecular precision to support your child's growth at every stage.",
       "stats": {
-        "markets": "Global Markets",
+        "markets": "Continents",
         "products": "Products",
         "halal": "Halal Certified",
         "eu": "EU Manufactured"
@@ -119,15 +119,15 @@
     },
     "lactonicHA1": {
       "name": "Lactonic HA Plus 1",
-      "description": "A hypoallergenic infant formula for babies from birth to 6 months who are at risk of allergy, used under medical supervision."
+      "description": "A hypoallergenic infant formula for babies from birth to 6 months who are at risk of allergy, used under medical supervision, for babies suffering from cow's milk protein allergies."
     },
     "lactonicHA2": {
       "name": "Lactonic HA Plus 2",
-      "description": "A hypoallergenic follow-on formula for babies from 6 to 12 months with cow's milk protein sensitivity, used under medical supervision."
+      "description": "A hypoallergenic follow-on formula for babies from 6 to 12 months with cow's milk protein sensitivity, used under medical supervision, for babies suffering from cow's milk protein allergies."
     },
     "lactonicHA3": {
       "name": "Lactonic HA Plus 3",
-      "description": "A hypoallergenic growing-up formula for toddlers from 1 to 3 years with cow's milk protein sensitivity, used under medical supervision."
+      "description": "A hypoallergenic growing-up formula for toddlers from 1 to 3 years with cow's milk protein sensitivity, used under medical supervision, for babies suffering from cow's milk protein allergies."
     },
     "lactonicLF": {
       "name": "Lactonic LF",
@@ -204,7 +204,9 @@
       "hydrolyzedWheyProtein": "Gently processed proteins for easier digestion",
       "customizedLactose": "Specially formulated to reduce gas & colic",
       "carobFlourThickener": "Naturally thickened to reduce spitting up",
+      "simpleModification": "Simple modification to prevent serious complications",
       "hydraNourishSystem": "Helps restore fluids and key minerals",
+      "naturalTreatment": "Natural treatment for diarrhea during feeding",
       "easesConstipation": "Helps ease constipation",
       "gentleOnDigestion": "Gentle on sensitive digestive systems"
     },
@@ -385,7 +387,7 @@
       "subjectPlaceholder": "Select a subject",
       "subjects": {
         "general": "General Inquiry",
-        "apply": "Apply to Work",
+        "apply": "Apply for Job",
         "support": "Technical Support",
         "other": "Other"
       },

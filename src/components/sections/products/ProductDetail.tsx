@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
@@ -111,13 +111,20 @@ function RelatedCard({ product }: { product: Product }) {
 const CARD_W = 256; // 240px card + 16px gap
 const VISIBLE = 3;
 
-function RelatedCarousel({ related }: { related: Product[] }) {
-  const [page, setPage] = useState(0);
+function RelatedCarousel({
+  related,
+  currentIndexInCategory,
+}: {
+  related: Product[];
+  currentIndexInCategory: number;
+}) {
   const maxPage = Math.max(0, related.length - VISIBLE);
+  // Start the carousel so the first product AFTER the current one is visible
+  const [page, setPage] = useState(Math.min(currentIndexInCategory, maxPage));
   const t = useTranslations();
 
   return (
-    <section className="mt-24">
+    <section className="mt-16">
       {/* Section header */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -131,23 +138,27 @@ function RelatedCarousel({ related }: { related: Product[] }) {
           <h2 className="text-2xl font-bold text-white">{t('products.relatedProducts')}</h2>
         </div>
 
-        {/* Nav buttons */}
-        <div className="flex gap-2">
+        {/* Nav buttons — larger for easier clicking */}
+        <div className="flex gap-3">
           <button
             onClick={() => setPage((p) => Math.max(0, p - 1))}
             disabled={page === 0}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-sm transition-all duration-200 hover:bg-white/25 disabled:opacity-30 disabled:cursor-not-allowed"
+            className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-white/30 bg-white/15 text-white backdrop-blur-sm transition-all duration-200 hover:border-amber-400/60 hover:bg-white/30 hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100"
             aria-label="Previous"
           >
-            ←
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
           </button>
           <button
             onClick={() => setPage((p) => Math.min(maxPage, p + 1))}
             disabled={page >= maxPage}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-sm transition-all duration-200 hover:bg-white/25 disabled:opacity-30 disabled:cursor-not-allowed"
+            className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-white/30 bg-white/15 text-white backdrop-blur-sm transition-all duration-200 hover:border-amber-400/60 hover:bg-white/30 hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100"
             aria-label="Next"
           >
-            →
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
           </button>
         </div>
       </motion.div>
@@ -200,6 +211,7 @@ interface ProductDetailProps {
 
 export function ProductDetail({ product }: ProductDetailProps) {
   const t = useTranslations();
+
   const displayName = t(product.nameKey);
   const description = t(product.descriptionKey);
   const unitLabel = t(`products.${product.ageRange.unit}`);
@@ -207,9 +219,9 @@ export function ProductDetail({ product }: ProductDetailProps) {
     ? `${product.ageRange.min}–${product.ageRange.max} ${unitLabel}`
     : `${product.ageRange.min}+ ${unitLabel}`;
 
-  const related = products.filter(
-    (p) => p.category === product.category && p.id !== product.id
-  );
+  const categoryProducts = products.filter((p) => p.category === product.category);
+  const currentIndexInCategory = categoryProducts.findIndex((p) => p.id === product.id);
+  const related = categoryProducts.filter((p) => p.id !== product.id);
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-violet-700">
@@ -218,14 +230,14 @@ export function ProductDetail({ product }: ProductDetailProps) {
       {/* Radial glow */}
       <div className="pointer-events-none absolute left-1/2 top-1/3 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-500/30 blur-3xl" />
 
-      <div className="relative z-10 mx-auto max-w-6xl px-6 py-20">
+      <div className="relative z-10 mx-auto max-w-6xl px-6 py-6 lg:py-12">
 
         {/* Back button */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.4, ease: EASE }}
-          className="mb-12"
+          className="mb-4 lg:mb-8"
         >
           <Link
             href="/products"
@@ -236,7 +248,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
         </motion.div>
 
         {/* Hero grid */}
-        <div className="grid items-center gap-16 lg:grid-cols-2">
+        <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
 
           {/* Floating product image */}
           <motion.div
@@ -246,7 +258,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
             className="flex justify-center"
           >
             <div className="relative flex items-center justify-center">
-              <div className="absolute h-96 w-96 rounded-full bg-white/10 blur-2xl" />
+              <div className="absolute h-48 w-48 sm:h-72 sm:w-72 lg:h-96 lg:w-96 rounded-full bg-white/10 blur-2xl" />
               <motion.div
                 animate={{ y: [0, -14, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
@@ -257,7 +269,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
                   alt={displayName}
                   width={440}
                   height={560}
-                  className="h-auto max-h-[560px] w-auto max-w-[420px] object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.4)]"
+                  className="h-auto max-h-[200px] sm:max-h-[320px] lg:max-h-[480px] w-auto max-w-[180px] sm:max-w-[280px] lg:max-w-[400px] object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.4)]"
                   priority
                 />
               </motion.div>
@@ -267,18 +279,18 @@ export function ProductDetail({ product }: ProductDetailProps) {
           {/* Product info */}
           <motion.div variants={stagger} initial="hidden" animate="visible">
 
-            <motion.div variants={fadeUp} className="mb-4 flex items-center gap-3">
+            <motion.div variants={fadeUp} className="mb-3 flex items-center gap-3">
               <span className="h-px w-8 bg-amber-400" />
               <span className="text-xs font-semibold uppercase tracking-widest text-amber-300">
                 BioHealth Prodentia
               </span>
             </motion.div>
 
-            <motion.h1 variants={fadeUp} className="mb-3 text-4xl font-extrabold leading-tight text-white lg:text-5xl">
+            <motion.h1 variants={fadeUp} className="mb-2 text-3xl font-extrabold leading-tight text-white lg:text-4xl xl:text-5xl">
               {displayName}
             </motion.h1>
 
-            <motion.div variants={fadeUp} className="mb-6 flex flex-wrap gap-2">
+            <motion.div variants={fadeUp} className="mb-4 flex flex-wrap gap-2">
               <span className="rounded-full border border-amber-400/40 bg-amber-400/20 px-4 py-1.5 text-sm font-semibold text-amber-300">
                 {t(product.badgeKey)}
               </span>
@@ -292,15 +304,15 @@ export function ProductDetail({ product }: ProductDetailProps) {
               )}
             </motion.div>
 
-            <motion.p variants={fadeUp} className="mb-8 text-lg leading-relaxed text-violet-100">
+            <motion.p variants={fadeUp} className="mb-5 text-base lg:text-lg leading-relaxed text-violet-100">
               {description}
             </motion.p>
 
-            <motion.div variants={fadeUp} className="rounded-2xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm">
-              <p className="mb-4 text-xs font-bold uppercase tracking-widest text-white/60">
+            <motion.div variants={fadeUp} className="rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur-sm">
+              <p className="mb-3 text-xs font-bold uppercase tracking-widest text-white/60">
                 {t('products.keyFeatures')}
               </p>
-              <ul className="space-y-3">
+              <ul className="space-y-2.5">
                 {product.featureKeys.map((key, i) => (
                   <motion.li
                     key={i}
@@ -318,7 +330,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
               </ul>
             </motion.div>
 
-            <motion.div variants={fadeUp} className="mt-6">
+            <motion.div variants={fadeUp} className="mt-4">
               <span className="rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white/50">
                 {product.category === 'formula' ? t('products.filterFormula') : t('products.filterBabyFood')}
               </span>
@@ -327,7 +339,12 @@ export function ProductDetail({ product }: ProductDetailProps) {
         </div>
 
         {/* Related products carousel */}
-        {related.length > 0 && <RelatedCarousel related={related} />}
+        {related.length > 0 && (
+          <RelatedCarousel
+            related={related}
+            currentIndexInCategory={currentIndexInCategory}
+          />
+        )}
 
       </div>
     </main>
