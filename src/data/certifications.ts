@@ -44,17 +44,6 @@ export const certifications: Certification[] = [
     pdfUrl:   '/images/certificates/ifs-v7-2022.png',
     category: 'food-safety',
   },
-  {
-    id: 'ifs-v6',
-    name: 'IFS Food — Version 6',
-    issuer: 'DNV GL Business Assurance Italy',
-    certNumber: '185606-2015-AIFS-IBE-ACCREDIA',
-    validUntil: '2 September 2017',
-    imageUrl: '/images/certificates/ifs-v6-2016.png',
-    pdfUrl:   '/images/certificates/ifs-v6-2016.png',
-    category: 'food-safety',
-  },
-
   // ── Quality Management — Current ─────────────────────────────────────────────
   {
     id: 'iso-9001-2028',

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Product } from '@/types/product';
@@ -122,6 +122,8 @@ function RelatedCarousel({
   // Start the carousel so the first product AFTER the current one is visible
   const [page, setPage] = useState(Math.min(currentIndexInCategory, maxPage));
   const t = useTranslations();
+  const locale = useLocale();
+  const isRTL = locale === 'ar';
 
   return (
     <section className="mt-16">
@@ -147,7 +149,7 @@ function RelatedCarousel({
             aria-label="Previous"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
-              <path d="M15 18l-6-6 6-6" />
+              <path d={isRTL ? "M9 18l6-6-6-6" : "M15 18l-6-6 6-6"} />
             </svg>
           </button>
           <button
@@ -157,7 +159,7 @@ function RelatedCarousel({
             aria-label="Next"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
-              <path d="M9 18l6-6-6-6" />
+              <path d={isRTL ? "M15 18l-6-6 6-6" : "M9 18l6-6-6-6"} />
             </svg>
           </button>
         </div>
@@ -166,7 +168,7 @@ function RelatedCarousel({
       {/* Track */}
       <div className="overflow-hidden">
         <motion.div
-          animate={{ x: -page * CARD_W }}
+          animate={{ x: isRTL ? page * CARD_W : -page * CARD_W }}
           transition={{ type: 'spring', stiffness: 260, damping: 30 }}
           className="flex gap-4"
         >
