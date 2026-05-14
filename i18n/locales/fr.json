@@ -37,11 +37,11 @@
         },
         {
           "title": "Fabriqué selon GMP/UE",
-          "body": "Produit chez Reny Picot, Espagne — Industrias Lácteas Asturianas S.A. — sous des protocoles stricts de bonnes pratiques de fabrication."
+          "body": "Produit sous des protocoles stricts de bonnes pratiques de fabrication conformes aux normes de l'UE."
         },
         {
           "title": "Confiance mondiale",
-          "body": "Distribué au Canada, en Arabie Saoudite, en Égypte, au Koweït et en expansion — en partenariat avec des professionnels de santé dans chaque marché."
+          "body": "Portée par la qualité, la conformité et l'innovation, BHP Products continue de renforcer sa position en tant que partenaire de santé mondial de confiance."
         }
       ]
     },
@@ -165,7 +165,8 @@
       "glutenFree": "Sans gluten",
       "proteinSource": "Source de protéines",
       "noAddedSugar": "Sans sucre ajouté",
-      "plus6Months": "+6 mois"
+      "plus6Months": "+6 mois",
+      "antiConstipation": "Formule Anti-Constipation"
     },
     "features": {
       "infantFormulaCowMilk": "Lait infantile à base de lait de vache",
@@ -208,7 +209,25 @@
       "hydraNourishSystem": "Aide à restaurer les liquides et minéraux essentiels",
       "naturalTreatment": "Traitement naturel de la diarrhée pendant l'alimentation",
       "easesConstipation": "Aide à soulager la constipation",
-      "gentleOnDigestion": "Doux pour les systèmes digestifs sensibles"
+      "gentleOnDigestion": "Doux pour les systèmes digestifs sensibles",
+      "specializedCareConstipation": "Soin spécialisé pour la constipation avec une nutrition quotidienne complète.",
+      "gentleEffectiveConstipation": "Doux pour la digestion, efficace contre la constipation, complet en nutrition.",
+      "smoothDigestionBalanced": "Soutien d'une digestion fluide tout en maintenant une nutrition équilibrée.",
+      "completeHypoallergenicNutrition": "Nutrition Hypoallergénique Complète pour Chaque Étape de Croissance",
+      "trustedHypoallergenicCare": "Soins Hypoallergéniques Fiables dès la Première Tétée.",
+      "pediatricScienceGentle": "Là où la Science Pédiatrique Rencontre une Nutrition Douce",
+      "partiallyHydrolyzedProtein": "Protéines Partiellement Hydrolysées pour une Alimentation Quotidienne Douce.",
+      "glutenFreeSugarFreeLowFatLowSalt": "Sans gluten, sans sucre, faible en gras, faible en sel",
+      "realFruitsRealNutrition": "Vrais Fruits. Vraies Céréales. Vraie Nutrition.",
+      "tasteBabiesLove": "Le Goût que les Bébés Aiment, la Qualité que les Mères Font Confiance.",
+      "deliciousNutritionInternational": "Nutrition Délicieuse selon les Normes Internationales de Qualité.",
+      "completeCareEveryMeal": "Soin Complet à Chaque Repas.",
+      "trustedCareEveryMeal": "Soins de Confiance à Chaque Repas.",
+      "balancedEnergyExplorers": "Énergie Équilibrée pour les Petits Explorateurs Actifs.",
+      "healthyGrowthSmartNutrition": "Une Croissance Saine Commence par une Nutrition Intelligente.",
+      "supportingBrainBody": "Soutien du Cerveau, du Corps et du Développement Sain.",
+      "advancedNutritionStronger": "Nutrition Avancée pour des Débuts Plus Forts.",
+      "whereNutritionQualityMeet": "Là où le Goût, la Nutrition et la Qualité se Rencontrent."
     },
     "keyFeatures": "Caractéristiques clés",
     "relatedProducts": "Produits associés"
@@ -229,6 +248,7 @@
       "atAGlance": "En un coup d'œil",
       "nutrientsLabel": "Nutriments par formule",
       "marketsLabel": "Pays",
+      "continentsLabel": "Continents",
       "productLinesLabel": "Gammes Lactonic",
       "certificationsLabel": "Certifications internationales"
     },

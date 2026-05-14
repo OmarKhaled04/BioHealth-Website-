@@ -190,7 +190,7 @@ function Hero() {
               animate={{ width: 40 }}
               transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
             />
-            <span className="text-xs font-semibold uppercase tracking-widest text-amber-500">
+            <span className="text-sm font-semibold uppercase tracking-widest text-amber-500">
               BioHealth Prodentia - BHP
             </span>
           </motion.div>
@@ -275,9 +275,9 @@ function StatsBand() {
   const t = useTranslations("about.stats");
   const stats = [
     { value: 40, suffix: "+", label: t("nutrientsLabel") },
-    { value: 4, suffix: "", label: t("marketsLabel") },
+    { value: 4, suffix: "", label: t("continentsLabel") },
     { value: 8, suffix: "+", label: t("productLinesLabel") },
-    { value: 5, suffix: "", label: t("certificationsLabel") },
+    { value: 9, suffix: "", label: t("certificationsLabel") },
   ];
 
   return (

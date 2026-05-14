@@ -37,11 +37,11 @@
         },
         {
           "title": "GMP / EU Manufactured",
-          "body": "Produced at Reny Picot, Spain — Industrias Lácteas Asturianas S.A. — under strict EU-grade Good Manufacturing Practice protocols."
+          "body": "Produced under strict EU-grade Good Manufacturing Practice protocols."
         },
         {
           "title": "Globally Trusted",
-          "body": "Distributed across Canada, Saudi Arabia, Egypt, Kuwait and expanding — partnering with healthcare professionals in every market."
+          "body": "Driven by quality, compliance, and innovation, BHP Products continues to strengthen its position as a trusted global healthcare partner."
         }
       ]
     },
@@ -165,7 +165,8 @@
       "glutenFree": "Gluten Free",
       "proteinSource": "Protein Source",
       "noAddedSugar": "No Added Sugar",
-      "plus6Months": "+6 Months"
+      "plus6Months": "+6 Months",
+      "antiConstipation": "Anti-Constipation Formulae"
     },
     "features": {
       "infantFormulaCowMilk": "Infant formula based on cow's milk",
@@ -208,7 +209,25 @@
       "hydraNourishSystem": "Helps restore fluids and key minerals",
       "naturalTreatment": "Natural treatment for diarrhea during feeding",
       "easesConstipation": "Helps ease constipation",
-      "gentleOnDigestion": "Gentle on sensitive digestive systems"
+      "gentleOnDigestion": "Gentle on sensitive digestive systems",
+      "specializedCareConstipation": "Specialized care for constipation with complete everyday nutrition.",
+      "gentleEffectiveConstipation": "Gentle on digestion, effective on constipation, complete in nutrition.",
+      "smoothDigestionBalanced": "Supporting smooth digestion while maintaining balanced nutrition.",
+      "completeHypoallergenicNutrition": "Complete Hypoallergenic Nutrition for Every Stage of Growth",
+      "trustedHypoallergenicCare": "Trusted Hypoallergenic Care from the First Feed.",
+      "pediatricScienceGentle": "Where Pediatric Science Meets Gentle Nutrition",
+      "partiallyHydrolyzedProtein": "Partially Hydrolyzed Protein for gentle daily Feeding.",
+      "glutenFreeSugarFreeLowFatLowSalt": "Gluten Free, sugar free, low fat, low salt",
+      "realFruitsRealNutrition": "Real Fruits. Real Cereals. Real Nutrition.",
+      "tasteBabiesLove": "The Taste Babies Love, The Quality Mothers Trust.",
+      "deliciousNutritionInternational": "Delicious Nutrition with International Quality Standards.",
+      "completeCareEveryMeal": "Complete Care in Every Meal.",
+      "trustedCareEveryMeal": "Trusted Care in Every Meal.",
+      "balancedEnergyExplorers": "Balanced Energy for Active Little Explorers.",
+      "healthyGrowthSmartNutrition": "Healthy Growth Starts with Smart Nutrition.",
+      "supportingBrainBody": "Supporting Brain, Body, and Healthy Development.",
+      "advancedNutritionStronger": "Advanced Nutrition for Stronger Beginnings.",
+      "whereNutritionQualityMeet": "Where Taste, Nutrition, and Quality Meet."
     },
     "keyFeatures": "Key Features",
     "relatedProducts": "Related Products"
@@ -229,6 +248,7 @@
       "atAGlance": "At a glance",
       "nutrientsLabel": "Nutrients Per Formula",
       "marketsLabel": "Countries",
+      "continentsLabel": "Continents",
       "productLinesLabel": "Lactonic Product Lines",
       "certificationsLabel": "International Certifications"
     },

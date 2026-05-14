@@ -70,13 +70,13 @@ export const products: Product[] = [
     stage: 1,
     ageRange: { min: 0, max: 6, unit: 'months' },
     imagePath: '/images/testIMG/Lactonic_ease_to_go_1_saafbg.png',
-    badgeKey: 'products.badges.starterFormula',
+    badgeKey: 'products.badges.antiConstipation',
     nameKey: 'products.easeToGo1.name',
     descriptionKey: 'products.easeToGo1.description',
     featureKeys: [
       'products.features.infantFormulaCowMilk',
       'products.features.easesConstipation',
-      'products.features.easyToPrepare',
+      'products.features.specializedCareConstipation',
     ],
   },
   {
@@ -88,13 +88,13 @@ export const products: Product[] = [
     stage: 2,
     ageRange: { min: 6, max: 12, unit: 'months' },
     imagePath: '/images/testIMG/Lactonic_ease_to_go_2_saafbg.png',
-    badgeKey: 'products.badges.followOnFormula',
+    badgeKey: 'products.badges.antiConstipation',
     nameKey: 'products.easeToGo2.name',
     descriptionKey: 'products.easeToGo2.description',
     featureKeys: [
       'products.features.followOnFormulaCowMilk',
       'products.features.easesConstipation',
-      'products.features.easyToPrepare',
+      'products.features.gentleEffectiveConstipation',
     ],
   },
   {
@@ -106,13 +106,13 @@ export const products: Product[] = [
     stage: 3,
     ageRange: { min: 1, max: 2, unit: 'years' },
     imagePath: '/images/testIMG/Lactonic_ease_to_go_3_saafbg.png',
-    badgeKey: 'products.badges.growingUpFormula',
+    badgeKey: 'products.badges.antiConstipation',
     nameKey: 'products.easeToGo3.name',
     descriptionKey: 'products.easeToGo3.description',
     featureKeys: [
       'products.features.growingUpFormulaCowMilk',
       'products.features.easesConstipation',
-      'products.features.easyToPrepare',
+      'products.features.smoothDigestionBalanced',
     ],
   },
 
@@ -168,8 +168,8 @@ export const products: Product[] = [
     descriptionKey: 'products.lactonicHA1.description',
     featureKeys: [
       'products.features.hypoallergenicFormula',
-      'products.features.locustBeanGum',
-      'products.features.medicalSupervision',
+      'products.features.completeHypoallergenicNutrition',
+      'products.features.trustedHypoallergenicCare',
     ],
   },
   {
@@ -186,8 +186,8 @@ export const products: Product[] = [
     descriptionKey: 'products.lactonicHA2.description',
     featureKeys: [
       'products.features.hypoallergenicFollowOn',
-      'products.features.locustBeanGum',
-      'products.features.medicalSupervision',
+      'products.features.completeHypoallergenicNutrition',
+      'products.features.pediatricScienceGentle',
     ],
   },
   {
@@ -204,8 +204,8 @@ export const products: Product[] = [
     descriptionKey: 'products.lactonicHA3.description',
     featureKeys: [
       'products.features.hypoallergenicGrowingUp',
-      'products.features.locustBeanGum',
-      'products.features.medicalSupervision',
+      'products.features.completeHypoallergenicNutrition',
+      'products.features.partiallyHydrolyzedProtein',
     ],
   },
   {
@@ -243,11 +243,9 @@ export const products: Product[] = [
     descriptionKey: 'products.lactonic3Fruits.description',
     netWeight: '130g',
     featureKeys: [
-      'products.features.glutenFree',
-      'products.features.vitaminC',
-      'products.features.noAddedSugar',
-      'products.features.containsFibres',
-      'products.features.halalCertified',
+      'products.features.glutenFreeSugarFreeLowFatLowSalt',
+      'products.features.realFruitsRealNutrition',
+      'products.features.tasteBabiesLove',
     ],
   },
   {
@@ -264,9 +262,9 @@ export const products: Product[] = [
     descriptionKey: 'products.lactonic4FruitsCookie.description',
     netWeight: '130g',
     featureKeys: [
-      'products.features.containsFibres',
-      'products.features.vitaminC',
-      'products.features.halalCertified',
+      'products.features.glutenFreeSugarFreeLowFatLowSalt',
+      'products.features.deliciousNutritionInternational',
+      'products.features.completeCareEveryMeal',
     ],
   },
   {
@@ -283,13 +281,9 @@ export const products: Product[] = [
     descriptionKey: 'products.lactonicBabyKabsah.description',
     netWeight: '200g',
     featureKeys: [
-      'products.features.lowFat',
-      'products.features.lowSaturatedFats',
-      'products.features.lowSalt',
-      'products.features.proteinSource',
-      'products.features.steamedCooking',
-      'products.features.glutenFree',
-      'products.features.halalCertified',
+      'products.features.glutenFreeSugarFreeLowFatLowSalt',
+      'products.features.trustedCareEveryMeal',
+      'products.features.balancedEnergyExplorers',
     ],
   },
   {
@@ -306,10 +300,9 @@ export const products: Product[] = [
     descriptionKey: 'products.lactonicFruitCereals.description',
     netWeight: '130g',
     featureKeys: [
-      'products.features.glutenFree',
-      'products.features.vitaminC',
-      'products.features.noAddedSugar',
-      'products.features.halalCertified',
+      'products.features.glutenFreeSugarFreeLowFatLowSalt',
+      'products.features.healthyGrowthSmartNutrition',
+      'products.features.supportingBrainBody',
     ],
   },
   {
@@ -325,12 +318,9 @@ export const products: Product[] = [
     nameKey: 'products.lactonicVegetableBeef.name',
     descriptionKey: 'products.lactonicVegetableBeef.description',
     featureKeys: [
-      'products.features.lowFat',
-      'products.features.lowSaturatedFats',
-      'products.features.lowSalt',
-      'products.features.proteinSource',
-      'products.features.glutenFree',
-      'products.features.halalCertified',
+      'products.features.glutenFreeSugarFreeLowFatLowSalt',
+      'products.features.advancedNutritionStronger',
+      'products.features.whereNutritionQualityMeet',
     ],
   },
 ];

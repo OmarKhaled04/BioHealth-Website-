@@ -37,11 +37,11 @@
         },
         {
           "title": "مُصنَّع وفق معايير GMP/EU",
-          "body": "مُنتَج في Reny Picot، إسبانيا — Industrias Lácteas Asturianas S.A. — وفق بروتوكولات ممارسات التصنيع الجيد الأوروبية."
+          "body": "مُنتَج وفق بروتوكولات ممارسات التصنيع الجيد الأوروبية الصارمة."
         },
         {
           "title": "موثوق عالمياً",
-          "body": "موزَّع في كندا والسعودية ومصر والكويت وما زال يتوسع — بالشراكة مع متخصصي الرعاية الصحية في كل سوق."
+          "body": "مدفوعاً بالجودة والامتثال والابتكار، تواصل BHP Products تعزيز مكانتها شريكاً صحياً عالمياً موثوقاً."
         }
       ]
     },
@@ -165,7 +165,8 @@
       "glutenFree": "خالي من الغلوتين",
       "proteinSource": "مصدر بروتين",
       "noAddedSugar": "بدون سكر مضاف",
-      "plus6Months": "+6 أشهر"
+      "plus6Months": "+6 أشهر",
+      "antiConstipation": "تركيبة مضادة للإمساك"
     },
     "features": {
       "infantFormulaCowMilk": "تركيبة للرضع مشتقة من حليب البقر",
@@ -208,7 +209,25 @@
       "hydraNourishSystem": "يساعد على استعادة السوائل والمعادن الأساسية",
       "naturalTreatment": "علاج طبيعي للإسهال أثناء الرضاعة",
       "easesConstipation": "يساعد على تخفيف الإمساك",
-      "gentleOnDigestion": "لطيف على الجهاز الهضمي الحساس"
+      "gentleOnDigestion": "لطيف على الجهاز الهضمي الحساس",
+      "specializedCareConstipation": "رعاية متخصصة للإمساك مع تغذية يومية متكاملة.",
+      "gentleEffectiveConstipation": "لطيف على الجهاز الهضمي، فعّال ضد الإمساك، متكامل في التغذية.",
+      "smoothDigestionBalanced": "دعم هضم سلس مع الحفاظ على تغذية متوازنة.",
+      "completeHypoallergenicNutrition": "تغذية مضادة للحساسية متكاملة لكل مرحلة نمو",
+      "trustedHypoallergenicCare": "رعاية موثوقة مضادة للحساسية من أول رضعة.",
+      "pediatricScienceGentle": "حيث يلتقي العلم الطبي بالتغذية اللطيفة",
+      "partiallyHydrolyzedProtein": "بروتين مهضوم جزئياً للرضاعة اليومية اللطيفة.",
+      "glutenFreeSugarFreeLowFatLowSalt": "خالٍ من الغلوتين، خالٍ من السكر، قليل الدهون، قليل الملح",
+      "realFruitsRealNutrition": "فواكه حقيقية. حبوب حقيقية. تغذية حقيقية.",
+      "tasteBabiesLove": "الطعم الذي يحبه الأطفال، الجودة التي تثق بها الأمهات.",
+      "deliciousNutritionInternational": "تغذية لذيذة وفق معايير جودة دولية.",
+      "completeCareEveryMeal": "رعاية متكاملة في كل وجبة.",
+      "trustedCareEveryMeal": "رعاية موثوقة في كل وجبة.",
+      "balancedEnergyExplorers": "طاقة متوازنة للمستكشفين الصغار النشيطين.",
+      "healthyGrowthSmartNutrition": "نمو صحي يبدأ بتغذية ذكية.",
+      "supportingBrainBody": "دعم الدماغ والجسم والنمو الصحي.",
+      "advancedNutritionStronger": "تغذية متقدمة لبدايات أقوى.",
+      "whereNutritionQualityMeet": "حيث يلتقي الطعم والتغذية والجودة."
     },
     "keyFeatures": "المميزات الرئيسية",
     "relatedProducts": "منتجات ذات صلة"
@@ -229,6 +248,7 @@
       "atAGlance": "نظرة عامة",
       "nutrientsLabel": "عناصر غذائية لكل تركيبة",
       "marketsLabel": "دولة",
+      "continentsLabel": "قارات",
       "productLinesLabel": "خطوط منتجات لاكتونيك",
       "certificationsLabel": "شهادات دولية"
     },
