@@ -283,7 +283,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
             <motion.div variants={fadeUp} className="mb-3 flex items-center gap-3">
               <span className="h-px w-8 bg-amber-400" />
-              <span className="text-xs font-semibold uppercase tracking-widest text-amber-300">
+              <span className="text-base font-semibold uppercase tracking-widest text-amber-300">
                 BioHealth Prodentia
               </span>
             </motion.div>

@@ -93,7 +93,7 @@ export function ProductCatalog() {
                     initial={{ width: 0 }} animate={{ width: 40 }}
                     transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
                   />
-                  <span className="text-xs font-semibold uppercase tracking-widest text-amber-300">
+                  <span className="text-base font-semibold uppercase tracking-widest text-amber-300">
                     BioHealth Prodentia
                   </span>
                   <motion.span

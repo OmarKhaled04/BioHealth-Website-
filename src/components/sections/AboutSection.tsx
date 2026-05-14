@@ -24,13 +24,6 @@ type PartnerItem = {
   note: string;
 };
 
-const CERTS = [
-  "FSSC 22000",
-  "ISO 9001:2015",
-  "IFS Certified",
-  "OGS Trademark",
-  "GLP & GSP",
-];
 // Per-country metadata (order matches i18n partners array)
 type PartnerMeta = { flag: string; lat: number; lng: number; hq?: true };
 const PARTNER_META: PartnerMeta[] = [
@@ -190,7 +183,7 @@ function Hero() {
               animate={{ width: 40 }}
               transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
             />
-            <span className="text-sm font-semibold uppercase tracking-widest text-amber-500">
+            <span className="text-base font-semibold uppercase tracking-widest text-amber-500">
               BioHealth Prodentia - BHP
             </span>
           </motion.div>
@@ -266,44 +259,6 @@ function Hero() {
           </div>
           <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-white/10 to-transparent" />
         </motion.div>
-      </motion.div>
-    </section>
-  );
-}
-
-function StatsBand() {
-  const t = useTranslations("about.stats");
-  const stats = [
-    { value: 40, suffix: "+", label: t("nutrientsLabel") },
-    { value: 4, suffix: "", label: t("continentsLabel") },
-    { value: 8, suffix: "+", label: t("productLinesLabel") },
-    { value: 9, suffix: "", label: t("certificationsLabel") },
-  ];
-
-  return (
-    <section className="bg-slate-900 py-20">
-      <motion.div
-        variants={stagger}
-        initial="hidden"
-        whileInView="visible"
-        viewport={VIEWPORT}
-        className="mx-auto grid max-w-5xl grid-cols-2 gap-10 px-6 lg:grid-cols-4"
-      >
-        {stats.map((stat, i) => (
-          <motion.div key={stat.label} variants={fadeUp} className="text-center">
-            <p className="text-5xl font-extrabold text-white">
-              <AnimatedCounter target={stat.value} suffix={stat.suffix} />
-            </p>
-            <motion.div
-              className="mx-auto mt-3 h-0.5 bg-violet-500"
-              initial={{ width: 0 }}
-              whileInView={{ width: 40 }}
-              viewport={VIEWPORT}
-              transition={{ duration: 0.6, delay: i * 0.12, ease: EASE }}
-            />
-            <p className="mt-3 text-sm text-slate-400">{stat.label}</p>
-          </motion.div>
-        ))}
       </motion.div>
     </section>
   );
@@ -737,7 +692,6 @@ export function AboutSection() {
   return (
     <main style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
       <Hero />
-      <StatsBand />
       <VisionMission />
       <CoreValues />
       <GlobalPresence />

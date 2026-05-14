@@ -647,7 +647,7 @@ function CTA() {
             viewport={VIEWPORT}
             transition={{ duration: 0.7, ease: EASE }}
           />
-          <span className="text-xs font-semibold uppercase tracking-widest text-amber-300">
+          <span className="text-base font-semibold uppercase tracking-widest text-amber-300">
             BioHealth Prodentia
           </span>
           <motion.span
