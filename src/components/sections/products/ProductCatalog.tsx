@@ -162,7 +162,7 @@ export function ProductCatalog() {
                   className="mx-auto mt-14 grid max-w-xs grid-cols-2 divide-x divide-white/10 lg:mx-0"
                 >
                   {[
-                    { value: '17', label: t('home.hero.stats.products')  },
+                    { value: '26', label: t('home.hero.stats.products')  },
                     { value: '12', label: t('home.hero.stats.countries') },
                   ].map(({ value, label }) => (
                     <div key={label} className="px-4 text-center first:pl-0 last:pr-0">

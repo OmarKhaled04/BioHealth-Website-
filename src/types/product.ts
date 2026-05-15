@@ -4,8 +4,8 @@ export interface Product {
   id: string;
   slug: string;
   name?: string;
-  category: 'formula' | 'baby-food';
-  subCategory: 'standard' | 'ease-to-go' | 'specialized' | 'puree' | 'meal';
+  category: 'formula' | 'baby-food' | 'cereals' | 'maternal' | 'gummy';
+  subCategory: 'standard' | 'ease-to-go' | 'specialized' | 'puree' | 'meal' | 'cereal' | 'maternal' | 'gummy-vitamin';
   stage: number | null;
   ageRange: {
     min: number;

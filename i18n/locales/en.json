@@ -81,6 +81,9 @@
     "filterAll": "All",
     "filterFormula": "Formula",
     "filterBabyFood": "Baby Food",
+    "filterCereals": "Cereals",
+    "filterMaternal": "Maternal",
+    "filterGummy": "Gummy Vitamins",
     "viewDetails": "View Details",
     "itemCount": "{count, plural, one {# product} other {# products}}",
     "months": "months",
@@ -153,6 +156,42 @@
       "name": "Vegetables with Beef",
       "description": "A nutritious steamed meal combining tender beef with fresh vegetables, gluten-free and low in fat, for babies from 6 months."
     },
+    "fiveCerealsHoneyMilk": {
+      "name": "5 Cereals + Honey + Milk",
+      "description": "A warm, nourishing blend of 5 cereals with real honey and milk to support your baby's daily growth. Packed with 12 vitamins, Iron, Calcium, and Zinc. Made with clean, non-GMO ingredients. From 12 months."
+    },
+    "milkWithRice": {
+      "name": "Milk with Rice",
+      "description": "Your baby's perfect first cereal — a gentle, creamy blend of rice and milk that's easy to digest. Packed with 12 vitamins, Iron, Calcium, and Zinc. Made in Europe to high safety standards. From 4 months."
+    },
+    "milkWheat": {
+      "name": "Milk + Wheat",
+      "description": "A filling wheat and milk cereal packed with energy for your baby's active days. Easy to digest and enriched with vitamins, Iron, and Zinc. Made in Europe with non-GMO ingredients. From 6 months."
+    },
+    "lactomom": {
+      "name": "Lactomom",
+      "description": "A complete formula to support you through pregnancy and breastfeeding. Gives you energy, supports your baby's brain and eye development, and keeps you healthy — with Iron, Folic Acid, DHA, Calcium, Vitamin D, Choline, and Taurine all in one."
+    },
+    "lactonicGranules": {
+      "name": "Lactonic Granules",
+      "description": "A natural herbal supplement for breastfeeding mothers. Helps your body produce more milk, supports your health while nursing, and eases tummy discomfort for both you and your baby."
+    },
+    "lactonicRabbit": {
+      "name": "Lactonic Rabbit — Calcium + Vit D",
+      "description": "A yummy calcium gummy that helps build strong bones and healthy teeth. With Vitamin D3 to help the body absorb calcium better. For children from 2 years."
+    },
+    "lactonicOcean": {
+      "name": "Lactonic Ocean — Omega 3",
+      "description": "An Omega-3 gummy with DHA and EPA to help your child think clearly, stay focused, and see well. Made from pure, high-quality fish oil. For children from 2 years."
+    },
+    "lactonicBear": {
+      "name": "Lactonic Bear — Multivitamins",
+      "description": "A daily multivitamin gummy to fill nutrition gaps and help your child grow and stay full of energy. Vitamins release gradually so the body absorbs them properly. For children from 2 years."
+    },
+    "lactonicLion": {
+      "name": "Lactonic Lion — Vit C + Zinc",
+      "description": "A Vitamin C and Zinc gummy to boost your child's immune system and help them stay healthy. Fast-absorbing and gentle on the stomach. For children from 2 years."
+    },
     "badges": {
       "closestToBreastMilk": "Closest to Breast Milk",
       "followOnFormula": "Follow-on Formula",
@@ -166,7 +205,13 @@
       "proteinSource": "Protein Source",
       "noAddedSugar": "No Added Sugar",
       "plus6Months": "+6 Months",
-      "antiConstipation": "Anti-Constipation Formulae"
+      "antiConstipation": "Anti-Constipation Formulae",
+      "cerealNourishment": "Lactonic Cereals",
+      "maternalFormula": "Maternal Nutrition",
+      "gummyCalcium": "Calcium + Vitamin D",
+      "gummyOmega3": "Omega 3 DHA·EPA",
+      "gummyMultivitamin": "Multivitamins",
+      "gummyVitaminC": "Vitamin C + Zinc"
     },
     "features": {
       "infantFormulaCowMilk": "Infant formula based on cow's milk",
@@ -227,7 +272,33 @@
       "healthyGrowthSmartNutrition": "Healthy Growth Starts with Smart Nutrition.",
       "supportingBrainBody": "Supporting Brain, Body, and Healthy Development.",
       "advancedNutritionStronger": "Advanced Nutrition for Stronger Beginnings.",
-      "whereNutritionQualityMeet": "Where Taste, Nutrition, and Quality Meet."
+      "whereNutritionQualityMeet": "Where Taste, Nutrition, and Quality Meet.",
+      "hydrolyzedCerealsEasyDigestion": "Gentle on your baby's tummy and easy to digest",
+      "twelveVitaminsHighMineral": "12 vitamins plus Iron, Calcium, and Zinc for healthy growth",
+      "buildingBonesCognition": "Calcium and Iodide to build strong bones and a healthy brain",
+      "europeanHACCPStandards": "Made in Europe with non-GMO ingredients to the highest safety standards",
+      "sustainedEnergyCore": "High-energy wheat — 428 kcal per 100g — to fuel your baby's active days",
+      "hydrolyzedStrength": "Easy to digest so your baby gets the full benefit of every nutrient",
+      "pharmaceuticalGradePurity": "Made under strict European safety standards with non-GMO ingredients",
+      "boostEnergyPregnancy": "Gives you energy and strength throughout pregnancy and breastfeeding",
+      "ironForRedBloodCells": "Supports healthy blood and helps prevent iron deficiency",
+      "folicAcidDhaBrainDev": "Folic Acid and DHA to support your baby's brain, eyes, and nervous system",
+      "choline250mgTaurine40mg": "Choline and Taurine for extra support for your baby's brain and eyesight",
+      "triggersMilkProduction": "Helps your body produce more breast milk",
+      "balancesBreastfeedingHormones": "Natural plant extracts to support a steady, reliable milk supply",
+      "improvesDigestiveComfort": "Eases bloating and tummy discomfort for both mum and baby",
+      "boneGrowthDentalHealth": "Builds strong bones and healthy teeth in growing children",
+      "micronizedNutrientTechnology": "Calcium that dissolves quickly and absorbs easily",
+      "synergisticD3Matrix": "Vitamin D3 helps the body take in more calcium for stronger bones",
+      "cognitiveHealthBrainFocus": "Omega-3 to support your child's brain, focus, and eyesight",
+      "pureStreamMolecularDistillation": "Pure, high-quality fish oil with no harmful substances",
+      "coldPressStability": "Specially sealed to keep the Omega-3 fresh and working",
+      "dailyWellnessNutritionalGaps": "Fills the vitamin gaps in your child's daily diet",
+      "multiPhaseReleaseSystem": "Vitamins release gradually for all-day absorption",
+      "bioActiveFormulation": "Vitamins in their most effective, ready-to-use form",
+      "immunityAntioxidantSupport": "Vitamin C and Zinc together to strengthen the immune system",
+      "ionicZincDelivery": "Fast-absorbing Zinc for quick and effective immune support",
+      "bufferedVitaminCComplex": "High-strength Vitamin C that's gentle on your child's stomach"
     },
     "keyFeatures": "Key Features",
     "relatedProducts": "Related Products"
@@ -442,9 +513,15 @@
       "description": "Answer a few quick questions and we'll recommend the ideal BioHealth product for your baby."
     },
     "eyebrow": "Product Finder",
-    "title": "Find the Perfect Product for Your Baby",
-    "subtitle": "Answer 4 quick questions and we'll match your baby with the ideal formula or food.",
-    "stepOf": "Question {current} of {total}",
+    "title": "Find the Perfect Product",
+    "subtitle": "Answer a few quick questions and we'll recommend the ideal product for you or your baby.",
+    "stepOf": "Question {current}",
+    "q0": {
+      "question": "Who is this product for?",
+      "opt1": { "label": "My baby (0–3 years)", "sub": "Infant formula, baby food & cereals" },
+      "opt2": { "label": "My child (vitamins)", "sub": "Gummy vitamins & supplements (2y+)" },
+      "opt3": { "label": "Myself", "sub": "Expecting or breastfeeding mother" }
+    },
     "q1": {
       "question": "How old is your little one?",
       "opt1": { "label": "0 – 6 months", "sub": "Newborn & early infancy" },
@@ -454,7 +531,20 @@
     "q2": {
       "question": "What are you looking for?",
       "opt1": { "label": "Infant Formula", "sub": "Complete nutrition in every scoop" },
-      "opt2": { "label": "Baby Food",      "sub": "Wholesome meals & purees", "sub0": "Gentle fruit purees (4m+)" }
+      "opt2": { "label": "Baby Food",      "sub": "Wholesome meals & purees", "sub0": "Gentle fruit purees (4m+)" },
+      "opt3": { "label": "Cereals",        "sub": "Nutritious cereal-based meals" }
+    },
+    "q6": {
+      "question": "What does your child need most?",
+      "opt1": { "label": "Bone & dental health",     "sub": "Calcium and Vitamin D support" },
+      "opt2": { "label": "Brain & eye development",  "sub": "Omega-3 DHA and EPA" },
+      "opt3": { "label": "Daily wellness",            "sub": "Complete multivitamin support" },
+      "opt4": { "label": "Immunity support",          "sub": "Vitamin C and Zinc" }
+    },
+    "q7": {
+      "question": "What best describes your situation?",
+      "opt1": { "label": "Expecting / Pregnant",    "sub": "Prenatal nutrition & fetal support" },
+      "opt2": { "label": "Breastfeeding",            "sub": "Increase milk production & supply" }
     },
     "q3": {
       "question": "Does your baby have any special feeding needs?",

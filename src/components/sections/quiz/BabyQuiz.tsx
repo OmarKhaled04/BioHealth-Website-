@@ -12,19 +12,25 @@ const EASE = [0, 0, 0.2, 1] as const;
 
 // ─── Types ─────────────────────────────────────────────────────────────────────
 
+type Who = 'baby' | 'child' | 'mother';
 type Age = '0-6m' | '6-12m' | '1-3y';
-type Category = 'formula' | 'baby-food';
+type Category = 'formula' | 'baby-food' | 'cereals';
 type SpecialNeeds = 'none' | 'colic' | 'regurgitation' | 'allergy' | 'lactose';
 type Preference = 'premium' | 'easy';
 type FoodType = 'fruity' | 'savory' | 'mixed';
-type Step = 'age' | 'category' | 'special-needs' | 'preference' | 'food-type' | 'result';
+type GummyNeed = 'bone' | 'brain' | 'wellness' | 'immunity';
+type MaternalSituation = 'pregnant' | 'breastfeeding';
+type Step = 'who' | 'age' | 'category' | 'special-needs' | 'preference' | 'food-type' | 'gummy-need' | 'maternal-situation' | 'result';
 
 interface QuizState {
+  who?: Who;
   age?: Age;
   category?: Category;
   specialNeeds?: SpecialNeeds;
   preference?: Preference;
   foodType?: FoodType;
+  gummyNeed?: GummyNeed;
+  maternalSituation?: MaternalSituation;
 }
 
 interface OptionDef {
@@ -37,8 +43,29 @@ interface OptionDef {
 // ─── Product recommendation logic ──────────────────────────────────────────────
 
 function getProductSlug(s: QuizState): string {
-  const { age, category, specialNeeds, preference, foodType } = s;
+  const { who, age, category, specialNeeds, preference, foodType, gummyNeed, maternalSituation } = s;
 
+  // Maternal path
+  if (who === 'mother') {
+    return maternalSituation === 'pregnant' ? 'lactomom' : 'lactonic-granules';
+  }
+
+  // Gummy/vitamins path
+  if (who === 'child') {
+    if (gummyNeed === 'bone')     return 'lactonic-rabbit';
+    if (gummyNeed === 'brain')    return 'lactonic-ocean';
+    if (gummyNeed === 'immunity') return 'lactonic-lion';
+    return 'lactonic-bear'; // wellness
+  }
+
+  // Baby path — cereals
+  if (category === 'cereals') {
+    if (age === '1-3y')  return '5-cereals-honey-milk';
+    if (age === '6-12m') return 'milk-wheat';
+    return 'milk-with-rice'; // 0-6m
+  }
+
+  // Baby path — baby-food
   if (category === 'baby-food') {
     if (age === '0-6m') return 'lactonic-3-fruits';
     if (foodType === 'fruity') return 'lactonic-4-fruits-cookie';
@@ -46,10 +73,10 @@ function getProductSlug(s: QuizState): string {
     return 'lactonic-fruit-cereals';
   }
 
-  // formula
-  if (specialNeeds === 'colic') return 'lactonic-ac-gold';
+  // Baby path — formula
+  if (specialNeeds === 'colic')         return 'lactonic-ac-gold';
   if (specialNeeds === 'regurgitation') return 'lactonic-ar-gold';
-  if (specialNeeds === 'lactose') return 'lactonic-lf';
+  if (specialNeeds === 'lactose')       return 'lactonic-lf';
 
   if (age === '0-6m') {
     if (specialNeeds === 'allergy') return 'lactonic-ha-1';
@@ -368,7 +395,7 @@ export function BabyQuiz() {
   const t = useTranslations('quiz');
   const tGlobal = useTranslations();
 
-  const [step, setStep] = useState<Step>('age');
+  const [step, setStep] = useState<Step>('who');
   const [dir, setDir] = useState(1);
   const [state, setState] = useState<QuizState>({});
   const [history, setHistory] = useState<Step[]>([]);
@@ -392,11 +419,11 @@ export function BabyQuiz() {
     setDir(-1);
     setState({});
     setHistory([]);
-    setStep('age');
+    setStep('who');
   }
 
   // Progress 0–100
-  const TOTAL_STEPS = 4;
+  const TOTAL_STEPS = 5;
   const progress = step === 'result' ? 100 : Math.min(Math.round((history.length / TOTAL_STEPS) * 100), 95);
 
   // Resolve result product
@@ -404,10 +431,8 @@ export function BabyQuiz() {
   const resultProduct = resultSlug ? products.find((p) => p.slug === resultSlug) ?? null : null;
   const isMedical = resultSlug ? MEDICAL_SLUGS.has(resultSlug) : false;
 
-  // Step counter label
-  const ORDERED_STEPS: Step[] = ['age', 'category', 'special-needs', 'preference', 'food-type'];
-  const stepNumber = ORDERED_STEPS.indexOf(step) + 1;
-  const stepTotal = ORDERED_STEPS.length;
+  // Step counter
+  const stepNumber = history.length + 1;
 
   return (
     <main className="relative min-h-[calc(100vh-64px)] overflow-hidden bg-violet-700">
@@ -461,7 +486,7 @@ export function BabyQuiz() {
           <ProgressBar value={progress} />
           {step !== 'result' && (
             <p className="mt-1.5 text-right text-xs text-violet-400">
-              {t('stepOf', { current: stepNumber, total: stepTotal })}
+              {t('stepOf', { current: stepNumber })}
             </p>
           )}
         </motion.div>
@@ -482,6 +507,23 @@ export function BabyQuiz() {
               {/* Inner shimmer */}
               <div className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-br from-white/5 to-transparent" />
 
+              {/* ── Step: who ── */}
+              {step === 'who' && (
+                <StepContent
+                  question={t('q0.question')}
+                  options={[
+                    { value: 'baby',   label: t('q0.opt1.label'), sub: t('q0.opt1.sub'), icon: '🍼' },
+                    { value: 'child',  label: t('q0.opt2.label'), sub: t('q0.opt2.sub'), icon: '🐻' },
+                    { value: 'mother', label: t('q0.opt3.label'), sub: t('q0.opt3.sub'), icon: '🤱' },
+                  ]}
+                  onSelect={(v) => {
+                    if (v === 'baby')   advance('age', { who: 'baby' });
+                    else if (v === 'child')  advance('gummy-need', { who: 'child' });
+                    else advance('maternal-situation', { who: 'mother' });
+                  }}
+                />
+              )}
+
               {/* ── Step: age ── */}
               {step === 'age' && (
                 <StepContent
@@ -492,6 +534,7 @@ export function BabyQuiz() {
                     { value: '1-3y',  label: t('q1.opt3.label'), sub: t('q1.opt3.sub'), icon: '🌟' },
                   ]}
                   onSelect={(v) => advance('category', { age: v as Age })}
+                  onBack={goBack}
                 />
               )}
 
@@ -500,12 +543,15 @@ export function BabyQuiz() {
                 <StepContent
                   question={t('q2.question')}
                   options={[
-                    { value: 'formula',    label: t('q2.opt1.label'), sub: t('q2.opt1.sub'), icon: '🍼' },
-                    { value: 'baby-food',  label: t('q2.opt2.label'), sub: state.age === '0-6m' ? t('q2.opt2.sub0') : t('q2.opt2.sub'), icon: '🥄' },
+                    { value: 'formula',   label: t('q2.opt1.label'), sub: t('q2.opt1.sub'), icon: '🍼' },
+                    { value: 'baby-food', label: t('q2.opt2.label'), sub: state.age === '0-6m' ? t('q2.opt2.sub0') : t('q2.opt2.sub'), icon: '🥄' },
+                    { value: 'cereals',   label: t('q2.opt3.label'), sub: t('q2.opt3.sub'), icon: '🌾' },
                   ]}
                   onSelect={(v) => {
                     if (v === 'formula') {
                       advance('special-needs', { category: 'formula' });
+                    } else if (v === 'cereals') {
+                      advance('result', { category: 'cereals' });
                     } else if (state.age === '0-6m') {
                       advance('result', { category: 'baby-food' });
                     } else {
@@ -561,6 +607,34 @@ export function BabyQuiz() {
                     { value: 'mixed',  label: t('q5.opt3.label'), sub: t('q5.opt3.sub'), icon: '🌾' },
                   ]}
                   onSelect={(v) => advance('result', { foodType: v as FoodType })}
+                  onBack={goBack}
+                />
+              )}
+
+              {/* ── Step: gummy-need ── */}
+              {step === 'gummy-need' && (
+                <StepContent
+                  question={t('q6.question')}
+                  options={[
+                    { value: 'bone',      label: t('q6.opt1.label'), sub: t('q6.opt1.sub'), icon: '🦴' },
+                    { value: 'brain',     label: t('q6.opt2.label'), sub: t('q6.opt2.sub'), icon: '🧠' },
+                    { value: 'wellness',  label: t('q6.opt3.label'), sub: t('q6.opt3.sub'), icon: '🌟' },
+                    { value: 'immunity',  label: t('q6.opt4.label'), sub: t('q6.opt4.sub'), icon: '🛡️' },
+                  ]}
+                  onSelect={(v) => advance('result', { gummyNeed: v as GummyNeed })}
+                  onBack={goBack}
+                />
+              )}
+
+              {/* ── Step: maternal-situation ── */}
+              {step === 'maternal-situation' && (
+                <StepContent
+                  question={t('q7.question')}
+                  options={[
+                    { value: 'pregnant',     label: t('q7.opt1.label'), sub: t('q7.opt1.sub'), icon: '🤰' },
+                    { value: 'breastfeeding', label: t('q7.opt2.label'), sub: t('q7.opt2.sub'), icon: '🤱' },
+                  ]}
+                  onSelect={(v) => advance('result', { maternalSituation: v as MaternalSituation })}
                   onBack={goBack}
                 />
               )}

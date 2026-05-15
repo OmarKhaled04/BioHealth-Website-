@@ -81,6 +81,9 @@
     "filterAll": "Tous",
     "filterFormula": "Lait infantile",
     "filterBabyFood": "Alimentation bébé",
+    "filterCereals": "Céréales",
+    "filterMaternal": "Produits maternels",
+    "filterGummy": "Vitamines gummies",
     "viewDetails": "Voir les détails",
     "itemCount": "{count, plural, one {# produit} other {# produits}}",
     "months": "mois",
@@ -153,6 +156,42 @@
       "name": "Légumes et bœuf",
       "description": "Repas cuit à la vapeur alliant du bœuf tendre et des légumes frais, sans gluten et pauvre en graisses, pour les bébés dès 6 mois."
     },
+    "fiveCerealsHoneyMilk": {
+      "name": "5 Céréales + Miel + Lait",
+      "description": "Un mélange chaud et nourrissant de 5 céréales avec du vrai miel et du lait pour soutenir la croissance de votre bébé. Apporte 12 vitamines, du Fer, du Calcium et du Zinc. À base d'ingrédients non-OGM. Dès 12 mois."
+    },
+    "milkWithRice": {
+      "name": "Lait au riz",
+      "description": "La première céréale idéale de votre bébé — un mélange doux et crémeux de riz et de lait, facile à digérer. Riche en 12 vitamines, Fer, Calcium et Zinc. Fabriqué en Europe selon les normes de sécurité les plus élevées. Dès 4 mois."
+    },
+    "milkWheat": {
+      "name": "Lait + Blé",
+      "description": "Une céréale de blé et lait nourrissante pour donner à votre bébé l'énergie dont il a besoin pour ses journées actives. Facile à digérer et enrichie en vitamines, Fer et Zinc. Fabriquée en Europe avec des ingrédients non-OGM. Dès 6 mois."
+    },
+    "lactomom": {
+      "name": "Lactomom",
+      "description": "Une formule complète pour vous accompagner pendant la grossesse et l'allaitement. Vous donne de l'énergie, soutient le développement du cerveau et des yeux de votre bébé, et prend soin de votre santé — avec Fer, Acide Folique, DHA, Calcium, Vitamine D, Choline et Taurine en une seule formule."
+    },
+    "lactonicGranules": {
+      "name": "Lactonic Granules",
+      "description": "Un complément à base de plantes pour les mamans qui allaitent. Aide votre corps à produire plus de lait, soutient votre santé pendant l'allaitement et soulage les inconforts digestifs pour vous et votre bébé."
+    },
+    "lactonicRabbit": {
+      "name": "Lactonic Rabbit — Calcium + Vit D",
+      "description": "Un délicieux gummy au calcium pour aider à construire des os solides et des dents saines. Avec Vitamine D3 pour aider le corps à mieux absorber le calcium. Pour les enfants dès 2 ans."
+    },
+    "lactonicOcean": {
+      "name": "Lactonic Ocean — Oméga 3",
+      "description": "Un gummy Oméga-3 avec DHA et EPA pour aider votre enfant à bien réfléchir, rester concentré et voir clairement. Fait d'huile de poisson pure et de haute qualité. Pour les enfants dès 2 ans."
+    },
+    "lactonicBear": {
+      "name": "Lactonic Bear — Multivitamines",
+      "description": "Un gummy multivitamines quotidien pour combler les manques nutritionnels et aider votre enfant à grandir et rester plein d'énergie. Les vitamines se libèrent progressivement pour une meilleure absorption. Pour les enfants dès 2 ans."
+    },
+    "lactonicLion": {
+      "name": "Lactonic Lion — Vit C + Zinc",
+      "description": "Un gummy Vitamine C et Zinc pour renforcer le système immunitaire de votre enfant et l'aider à rester en bonne santé. Absorption rapide et doux pour l'estomac. Pour les enfants dès 2 ans."
+    },
     "badges": {
       "closestToBreastMilk": "Plus proche du lait maternel",
       "followOnFormula": "Lait de suite",
@@ -166,7 +205,13 @@
       "proteinSource": "Source de protéines",
       "noAddedSugar": "Sans sucre ajouté",
       "plus6Months": "+6 mois",
-      "antiConstipation": "Formule Anti-Constipation"
+      "antiConstipation": "Formule Anti-Constipation",
+      "cerealNourishment": "Céréales Lactonic",
+      "maternalFormula": "Nutrition maternelle",
+      "gummyCalcium": "Calcium + Vitamine D",
+      "gummyOmega3": "Oméga 3 DHA·EPA",
+      "gummyMultivitamin": "Multivitamines",
+      "gummyVitaminC": "Vitamine C + Zinc"
     },
     "features": {
       "infantFormulaCowMilk": "Lait infantile à base de lait de vache",
@@ -227,7 +272,33 @@
       "healthyGrowthSmartNutrition": "Une Croissance Saine Commence par une Nutrition Intelligente.",
       "supportingBrainBody": "Soutien du Cerveau, du Corps et du Développement Sain.",
       "advancedNutritionStronger": "Nutrition Avancée pour des Débuts Plus Forts.",
-      "whereNutritionQualityMeet": "Là où le Goût, la Nutrition et la Qualité se Rencontrent."
+      "whereNutritionQualityMeet": "Là où le Goût, la Nutrition et la Qualité se Rencontrent.",
+      "hydrolyzedCerealsEasyDigestion": "Doux pour l'estomac de votre bébé et facile à digérer",
+      "twelveVitaminsHighMineral": "12 vitamines, Fer, Calcium et Zinc pour une croissance saine",
+      "buildingBonesCognition": "Calcium et Iodure pour des os solides et un cerveau en bonne santé",
+      "europeanHACCPStandards": "Fabriqué en Europe avec des ingrédients non-OGM selon les normes de sécurité les plus strictes",
+      "sustainedEnergyCore": "Blé riche en énergie — 428 kcal/100g — pour alimenter les journées actives de votre bébé",
+      "hydrolyzedStrength": "Facile à digérer pour que votre bébé profite pleinement de chaque nutriment",
+      "pharmaceuticalGradePurity": "Fabriqué selon des normes de sécurité européennes strictes avec des ingrédients non-OGM",
+      "boostEnergyPregnancy": "Vous donne de l'énergie et de la force tout au long de la grossesse et de l'allaitement",
+      "ironForRedBloodCells": "Soutient un sang sain et aide à prévenir la carence en fer",
+      "folicAcidDhaBrainDev": "Acide Folique et DHA pour soutenir le cerveau, les yeux et le système nerveux de votre bébé",
+      "choline250mgTaurine40mg": "Choline et Taurine pour un soutien supplémentaire du cerveau et de la vision de votre bébé",
+      "triggersMilkProduction": "Aide votre corps à produire plus de lait maternel",
+      "balancesBreastfeedingHormones": "Extraits de plantes naturelles pour un approvisionnement en lait régulier et fiable",
+      "improvesDigestiveComfort": "Soulage les ballonnements et l'inconfort digestif pour la mère et le bébé",
+      "boneGrowthDentalHealth": "Construit des os solides et des dents saines pour les enfants en pleine croissance",
+      "micronizedNutrientTechnology": "Calcium qui se dissout rapidement et s'absorbe facilement",
+      "synergisticD3Matrix": "La Vitamine D3 aide le corps à absorber plus de calcium pour des os plus solides",
+      "cognitiveHealthBrainFocus": "Oméga-3 pour soutenir le cerveau, la concentration et la vision de votre enfant",
+      "pureStreamMolecularDistillation": "Huile de poisson pure et de haute qualité sans substances nocives",
+      "coldPressStability": "Spécialement scellé pour garder l'Oméga-3 frais et efficace",
+      "dailyWellnessNutritionalGaps": "Comble les manques nutritionnels dans l'alimentation quotidienne de votre enfant",
+      "multiPhaseReleaseSystem": "Les vitamines se libèrent progressivement pour une absorption tout au long de la journée",
+      "bioActiveFormulation": "Vitamines dans leur forme la plus efficace, prêtes à l'emploi",
+      "immunityAntioxidantSupport": "Vitamine C et Zinc ensemble pour renforcer le système immunitaire",
+      "ionicZincDelivery": "Zinc à absorption rapide pour un soutien immunitaire rapide et efficace",
+      "bufferedVitaminCComplex": "Vitamine C haute puissance, douce pour l'estomac de votre enfant"
     },
     "keyFeatures": "Caractéristiques clés",
     "relatedProducts": "Produits associés"
@@ -443,9 +514,15 @@
       "description": "Répondez à quelques questions rapides et nous vous recommanderons le produit BioHealth idéal."
     },
     "eyebrow": "Conseiller produit",
-    "title": "Trouvez le produit idéal pour votre bébé",
-    "subtitle": "Répondez à 4 questions rapides et nous trouverons la formule ou l'aliment parfait pour votre bébé.",
-    "stepOf": "Question {current} sur {total}",
+    "title": "Trouvez le produit idéal",
+    "subtitle": "Répondez à quelques questions et nous vous recommanderons le produit idéal pour vous ou votre bébé.",
+    "stepOf": "Question {current}",
+    "q0": {
+      "question": "Pour qui est ce produit ?",
+      "opt1": { "label": "Mon bébé (0–3 ans)",        "sub": "Lait infantile, alimentation bébé & céréales" },
+      "opt2": { "label": "Mon enfant (vitamines)",     "sub": "Vitamines gummies & suppléments (2 ans+)" },
+      "opt3": { "label": "Moi-même",                   "sub": "Femme enceinte ou allaitante" }
+    },
     "q1": {
       "question": "Quel âge a votre enfant ?",
       "opt1": { "label": "0 – 6 mois",  "sub": "Nouveau-né & petite enfance" },
@@ -454,8 +531,21 @@
     },
     "q2": {
       "question": "Que recherchez-vous ?",
-      "opt1": { "label": "Lait infantile", "sub": "Nutrition complète à chaque biberon" },
-      "opt2": { "label": "Alimentation bébé", "sub": "Repas sains & purées", "sub0": "Purées de fruits douces (4m+)" }
+      "opt1": { "label": "Lait infantile",      "sub": "Nutrition complète à chaque biberon" },
+      "opt2": { "label": "Alimentation bébé",   "sub": "Repas sains & purées", "sub0": "Purées de fruits douces (4m+)" },
+      "opt3": { "label": "Céréales",             "sub": "Repas à base de céréales nutritives" }
+    },
+    "q6": {
+      "question": "Qu'est-ce dont votre enfant a le plus besoin ?",
+      "opt1": { "label": "Santé des os et des dents",      "sub": "Soutien en Calcium et Vitamine D" },
+      "opt2": { "label": "Développement cérébral et visuel","sub": "Oméga-3 DHA et EPA" },
+      "opt3": { "label": "Bien-être quotidien",             "sub": "Soutien multivitamines complet" },
+      "opt4": { "label": "Soutien immunitaire",             "sub": "Vitamine C et Zinc" }
+    },
+    "q7": {
+      "question": "Quelle situation vous décrit le mieux ?",
+      "opt1": { "label": "Enceinte / En attente",    "sub": "Nutrition prénatale & soutien fœtal" },
+      "opt2": { "label": "Allaitement",               "sub": "Augmenter la production et l'offre de lait" }
     },
     "q3": {
       "question": "Votre bébé a-t-il des besoins alimentaires particuliers ?",

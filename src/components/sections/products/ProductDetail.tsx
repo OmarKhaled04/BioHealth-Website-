@@ -334,7 +334,13 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
             <motion.div variants={fadeUp} className="mt-4">
               <span className="rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white/50">
-                {product.category === 'formula' ? t('products.filterFormula') : t('products.filterBabyFood')}
+                {({
+                  'formula':  t('products.filterFormula'),
+                  'baby-food': t('products.filterBabyFood'),
+                  'cereals':  t('products.filterCereals'),
+                  'maternal': t('products.filterMaternal'),
+                  'gummy':    t('products.filterGummy'),
+                } as Record<string, string>)[product.category] ?? product.category}
               </span>
             </motion.div>
           </motion.div>

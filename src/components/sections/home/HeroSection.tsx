@@ -72,7 +72,7 @@ export function HeroSection() {
                   initial={{ width: 0 }} animate={{ width: 40 }}
                   transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
                 />
-                <span className="text-xs font-semibold uppercase tracking-widest text-amber-300">
+                <span className="text-base font-semibold uppercase tracking-widest text-amber-300">
                   {t('eyebrow')}
                 </span>
                 <motion.span
@@ -141,7 +141,7 @@ export function HeroSection() {
                 className="mx-auto mt-14 grid max-w-xs grid-cols-2 divide-x divide-white/10 lg:mx-0"
               >
                 {[
-                  { value: '17', label: t('stats.products')  },
+                  { value: '26', label: t('stats.products')  },
                   { value: '12', label: t('stats.countries') },
                 ].map(({ value, label }) => (
                   <div key={label} className="px-4 text-center first:pl-0 last:pr-0">
