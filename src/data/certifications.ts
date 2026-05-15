@@ -1,15 +1,15 @@
 import type { Certification, CertCategory } from '@/types/certification';
 
 export const certifications: Certification[] = [
-  // ── Food Safety — Current ────────────────────────────────────────────────────
+  // ── Food Safety ──────────────────────────────────────────────────────────────
   {
     id: 'fssc-2028',
     name: 'FSSC 22000',
     issuer: 'DNV Business Assurance Italy',
     certNumber: 'C620718',
     validUntil: '16 January 2028',
-    imageUrl: '/images/certificates/FSSC_22000_Food-ENG-C620718-10-20250821(16.01.28).png',
-    pdfUrl:   '/images/certificates/FSSC_22000_Food-ENG-C620718-10-20250821(16.01.28).png',
+    imageUrl: '/images/certificates/fssc-22000-current.png',
+    pdfUrl:   '/images/certificates/fssc-22000-current.png',
     category: 'food-safety',
   },
   {
@@ -18,20 +18,8 @@ export const certifications: Certification[] = [
     issuer: 'DNV Business Assurance Italy',
     certNumber: '185606-2015-AIFS-IBE-ACCREDIA',
     validUntil: '15 December 2026',
-    imageUrl: '/images/certificates/IFS%20185606-2015-AIFS-IBE-ACCREDIA(15.12.26).png',
-    pdfUrl:   '/images/certificates/IFS%20185606-2015-AIFS-IBE-ACCREDIA(15.12.26).png',
-    category: 'food-safety',
-  },
-
-  // ── Food Safety — Historical ─────────────────────────────────────────────────
-  {
-    id: 'fssc-2019',
-    name: 'FSSC 22000 — Version 3',
-    issuer: 'DNV GL Business Assurance',
-    certNumber: '128539-2012-FSMS-IBE-RvA',
-    validUntil: '17 January 2019',
-    imageUrl: '/images/certificates/fssc-22000-2019.png',
-    pdfUrl:   '/images/certificates/fssc-22000-2019.png',
+    imageUrl: '/images/certificates/ifs-v8-current.png',
+    pdfUrl:   '/images/certificates/ifs-v8-current.png',
     category: 'food-safety',
   },
   {
@@ -44,60 +32,68 @@ export const certifications: Certification[] = [
     pdfUrl:   '/images/certificates/ifs-v7-2022.png',
     category: 'food-safety',
   },
-  // ── Quality Management — Current ─────────────────────────────────────────────
+
+  // ── Quality Management ────────────────────────────────────────────────────────
   {
     id: 'iso-9001-2028',
     name: 'ISO 9001:2015',
     issuer: 'DNV Business Assurance',
     certNumber: 'C747680',
     validUntil: '30 November 2028',
-    imageUrl: '/images/certificates/ISO_9001-ENG-C747680-6-20251203(30.11.28).png',
-    pdfUrl:   '/images/certificates/ISO_9001-ENG-C747680-6-20251203(30.11.28).png',
+    imageUrl: '/images/certificates/iso-9001-current.png',
+    pdfUrl:   '/images/certificates/iso-9001-current.png',
     category: 'quality',
   },
-
-  // ── Quality Management — Historical ──────────────────────────────────────────
   {
-    id: 'iso-9001-2022',
-    name: 'ISO 9001:2015',
-    issuer: 'DNV GL Business Assurance España',
-    certNumber: '205016-2016-AQ-IBE-ENAC',
-    validUntil: '30 November 2022',
-    imageUrl: '/images/certificates/iso-9001-2015.png',
-    pdfUrl:   '/images/certificates/iso-9001-2015.png',
+    id: 'cert-excelencia',
+    name: 'UNE 15896:2015 — Certificate of Excellence',
+    issuer: 'Bureau Veritas Certification',
+    certNumber: 'ES079235-1',
+    validUntil: '5 March 2020',
+    imageUrl: '/images/certificates/cert-excelencia.png',
+    pdfUrl:   '/images/certificates/cert-excelencia.png',
     category: 'quality',
   },
 
-  // ── Halal & Compliance — Current ─────────────────────────────────────────────
+  // ── Halal & Compliance ────────────────────────────────────────────────────────
   {
     id: 'halal-certifica-2029',
     name: 'Halal Certificate',
     issuer: 'Instituto Halal — EGCH',
-    certNumber: 'IH-0400.2025.C10.S0',
+    certNumber: 'IH-400/1.8/O/3',
     validUntil: '3 January 2029',
-    imageUrl: '/images/certificates/Halal%20Certificate.png',
-    pdfUrl:   '/images/certificates/Halal%20Certificate.png',
+    imageUrl: '/images/certificates/halal-current.png',
+    pdfUrl:   '/images/certificates/halal-current.png',
     category: 'halal',
   },
   {
     id: 'halal-annex-2029',
     name: 'Halal — Annex of Certified Products',
     issuer: 'Instituto Halal — EGCH',
-    certNumber: 'IH-0400.2025.C10.S0',
+    certNumber: 'IH-400/1.8/O/3',
     validUntil: '3 January 2029',
-    imageUrl: '/images/certificates/AMENDMENT%20PRONUBEN-page-01.png',
-    pdfUrl:   '/images/certificates/AMENDMENT%20PRONUBEN-page-01.png',
+    imageUrl: '/images/certificates/halal-annex-current.png',
+    pdfUrl:   '/images/certificates/halal-annex-current.png',
     category: 'halal',
   },
-  // ── Halal & Compliance — Historical ──────────────────────────────────────────
   {
-    id: 'halal-2022',
-    name: 'Halal Assurance Certificate',
-    issuer: 'Instituto Halal — EGCH',
-    certNumber: 'IH-400.2021.R07.04',
-    validUntil: '3 January 2022',
-    imageUrl: '/images/certificates/halal.png',
-    pdfUrl:   '/images/certificates/halal.png',
+    id: 'ogs-trademark',
+    name: 'OGS Trade Mark Registration',
+    issuer: 'Oficina Española de Patentes y Marcas',
+    certNumber: 'Marca No. 3.073.300',
+    validUntil: '1 August 2024',
+    imageUrl: '/images/certificates/ogs-trademark.png',
+    pdfUrl:   '/images/certificates/ogs-trademark.png',
+    category: 'halal',
+  },
+  {
+    id: 'pharm-canada-halal',
+    name: 'Pharm Canada Halal Certificate',
+    issuer: 'ISNA Halal Certification Agency',
+    certNumber: 'HCA 2016 – 065',
+    validUntil: '30 October 2017',
+    imageUrl: '/images/certificates/pharm-canada-halal.png',
+    pdfUrl:   '/images/certificates/pharm-canada-halal.png',
     category: 'halal',
   },
 ];
