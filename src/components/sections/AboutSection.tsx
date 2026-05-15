@@ -156,7 +156,7 @@ function Hero() {
     { value: 40, suffix: "+", label: statsT("nutrientsLabel") },
     { value: 12, suffix: "", label: statsT("marketsLabel") },
     { value: 10, suffix: "+", label: statsT("productLinesLabel") },
-    { value: 9, suffix: "", label: statsT("certificationsLabel") },
+    { value: 8, suffix: "", label: statsT("certificationsLabel") },
   ];
 
   function onMove(e: React.MouseEvent<HTMLDivElement>) {

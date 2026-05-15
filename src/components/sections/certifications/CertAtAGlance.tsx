@@ -65,7 +65,7 @@ export function CertAtAGlance() {
   const cardY = useSpring(useTransform(mouseY, [-1, 1], [-9, 9]), { stiffness: 120, damping: 20 });
 
   const stats = [
-    { value: 9, suffix: '', label: t('stats.totalCertifications') },
+    { value: 8, suffix: '', label: t('stats.totalCertifications') },
     { value: 2002, suffix: '', label: t('stats.certifiedSince') },
     { value: 3, suffix: '+', label: t('stats.internationalStandards') },
     { value: 100, suffix: '%', label: t('stats.auditPassRate') },

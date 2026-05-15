@@ -14,22 +14,12 @@ export const certifications: Certification[] = [
   },
   {
     id: 'ifs-v8-2026',
-    name: 'IFS Food — Version 8',
+    name: 'IFS Food',
     issuer: 'DNV Business Assurance Italy',
     certNumber: '185606-2015-AIFS-IBE-ACCREDIA',
     validUntil: '15 December 2026',
     imageUrl: '/images/certificates/ifs-v8-current.png',
     pdfUrl:   '/images/certificates/ifs-v8-current.png',
-    category: 'food-safety',
-  },
-  {
-    id: 'ifs-v7',
-    name: 'IFS Food — Version 7',
-    issuer: 'DNV Business Assurance Italy',
-    certNumber: '185606-2015-AIFS-IBE-ACCREDIA',
-    validUntil: '15 December 2022',
-    imageUrl: '/images/certificates/ifs-v7-2022.png',
-    pdfUrl:   '/images/certificates/ifs-v7-2022.png',
     category: 'food-safety',
   },
 

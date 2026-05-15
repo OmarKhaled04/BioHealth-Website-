@@ -32,12 +32,12 @@ export function Navbar() {
   }, [isOpen]);
 
   const navLinks = [
-    { href: '/about', label: t('about') },
     { href: '/products', label: t('products') },
-    { href: '/certifications', label: t('certifications') },
     { href: '/child-health', label: t('childHealth') },
-    { href: '/contact', label: t('contact') },
+    { href: '/certifications', label: t('certifications') },
     { href: '/partnership', label: t('partnership') },
+    { href: '/contact', label: t('contact') },
+    { href: '/about', label: t('about') },
   ];
 
   return (
@@ -78,7 +78,7 @@ export function Navbar() {
                 href="/quiz"
                 className="inline-flex items-center gap-1.5 rounded-full bg-violet-700 px-4 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-violet-800"
               >
-                <span>✨</span>
+                <span className="text-base">✨</span>
                 {t('quiz')}
               </Link>
             </li>
