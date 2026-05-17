@@ -302,7 +302,9 @@ function ResultScreen({
             alt={displayName}
             width={260}
             height={260}
-            className="mx-auto object-contain drop-shadow-2xl"
+            className={`mx-auto h-[260px] w-[260px] object-contain drop-shadow-2xl ${
+              product.slug === 'lactonic-granules' ? 'scale-150' : ''
+            }`}
           />
         </motion.div>
         <div className="absolute inset-0 -z-10 rounded-full bg-white/10 blur-2xl" />
