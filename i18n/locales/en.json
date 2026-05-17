@@ -158,39 +158,39 @@
     },
     "fiveCerealsHoneyMilk": {
       "name": "5 Cereals + Honey + Milk",
-      "description": "A warm, nourishing blend of 5 cereals with real honey and milk to support your baby's daily growth. Packed with 12 vitamins, Iron, Calcium, and Zinc. Made with clean, non-GMO ingredients. From 12 months."
+      "description": "A nutritious baby cereal made with five hydrolyzed cereals, milk, and natural honey to support healthy growth and easy digestion. Enriched with essential vitamins and minerals, it helps strengthen immunity, support bone development, and provide balanced daily nutrition."
     },
     "milkWithRice": {
       "name": "Milk with Rice",
-      "description": "Your baby's perfect first cereal — a gentle, creamy blend of rice and milk that's easy to digest. Packed with 12 vitamins, Iron, Calcium, and Zinc. Made in Europe to high safety standards. From 4 months."
+      "description": "A gentle rice-and-milk cereal specially designed for babies' first feeding stages. Its hydrolyzed formula supports smooth digestion while providing essential nutrients for healthy growth and development."
     },
     "milkWheat": {
       "name": "Milk + Wheat",
-      "description": "A filling wheat and milk cereal packed with energy for your baby's active days. Easy to digest and enriched with vitamins, Iron, and Zinc. Made in Europe with non-GMO ingredients. From 6 months."
+      "description": "A wholesome wheat and milk cereal formulated to provide sustained energy and support active growth in infants. Hydrolyzed grains ensure easy digestion and efficient nutrient absorption."
     },
     "lactomom": {
       "name": "Lactomom",
-      "description": "A complete formula to support you through pregnancy and breastfeeding. Gives you energy, supports your baby's brain and eye development, and keeps you healthy — with Iron, Folic Acid, DHA, Calcium, Vitamin D, Choline, and Taurine all in one."
+      "description": "Lactomom is a complete maternal nutrition formula designed to support mothers during pregnancy and breastfeeding. It provides essential nutrients that help boost energy, support recovery, and contribute to healthy baby development."
     },
     "lactonicGranules": {
       "name": "Lactonic Granules",
-      "description": "A natural herbal supplement for breastfeeding mothers. Helps your body produce more milk, supports your health while nursing, and eases tummy discomfort for both you and your baby."
+      "description": "Lactonic Granules is a natural lactation support formula that helps stimulate healthy milk production while supporting maternal wellness and digestive comfort for both mother and baby."
     },
     "lactonicRabbit": {
-      "name": "Lactonic Rabbit — Calcium + Vit D",
-      "description": "A yummy calcium gummy that helps build strong bones and healthy teeth. With Vitamin D3 to help the body absorb calcium better. For children from 2 years."
+      "name": "Lactonic Rabbit — Calcium + Vitamin D",
+      "description": "A tasty gummy supplement that supports healthy bone and dental development with highly absorbable calcium and Vitamin D3."
     },
     "lactonicOcean": {
       "name": "Lactonic Ocean — Omega 3",
-      "description": "An Omega-3 gummy with DHA and EPA to help your child think clearly, stay focused, and see well. Made from pure, high-quality fish oil. For children from 2 years."
+      "description": "A premium Omega-3 gummy designed to support brain function, focus, and visual development in children."
     },
     "lactonicBear": {
       "name": "Lactonic Bear — Multivitamins",
-      "description": "A daily multivitamin gummy to fill nutrition gaps and help your child grow and stay full of energy. Vitamins release gradually so the body absorbs them properly. For children from 2 years."
+      "description": "A complete multivitamin gummy that helps support children's daily wellness, healthy growth, and energy levels."
     },
     "lactonicLion": {
-      "name": "Lactonic Lion — Vit C + Zinc",
-      "description": "A Vitamin C and Zinc gummy to boost your child's immune system and help them stay healthy. Fast-absorbing and gentle on the stomach. For children from 2 years."
+      "name": "Lactonic Lion — Vitamin C + Zinc",
+      "description": "An immunity-support gummy formulated with Vitamin C and Zinc to help strengthen the immune system and provide antioxidant protection."
     },
     "badges": {
       "closestToBreastMilk": "Closest to Breast Milk",
@@ -273,32 +273,32 @@
       "supportingBrainBody": "Supporting Brain, Body, and Healthy Development.",
       "advancedNutritionStronger": "Advanced Nutrition for Stronger Beginnings.",
       "whereNutritionQualityMeet": "Where Taste, Nutrition, and Quality Meet.",
-      "hydrolyzedCerealsEasyDigestion": "Gentle on your baby's tummy and easy to digest",
-      "twelveVitaminsHighMineral": "12 vitamins plus Iron, Calcium, and Zinc for healthy growth",
-      "buildingBonesCognition": "Calcium and Iodide to build strong bones and a healthy brain",
-      "europeanHACCPStandards": "Made in Europe with non-GMO ingredients to the highest safety standards",
-      "sustainedEnergyCore": "High-energy wheat — 428 kcal per 100g — to fuel your baby's active days",
-      "hydrolyzedStrength": "Easy to digest so your baby gets the full benefit of every nutrient",
-      "pharmaceuticalGradePurity": "Made under strict European safety standards with non-GMO ingredients",
-      "boostEnergyPregnancy": "Gives you energy and strength throughout pregnancy and breastfeeding",
+      "hydrolyzedCerealsEasyDigestion": "Hydrolyzed cereal blend for easy digestion and nutrient absorption",
+      "twelveVitaminsHighMineral": "Enriched with 12 vitamins, Iron, Calcium, and Zinc",
+      "buildingBonesCognition": "Made under strict European quality standards",
+      "europeanHACCPStandards": "Made with premium European rice and milk",
+      "sustainedEnergyCore": "Provides sustained energy for active growth",
+      "hydrolyzedStrength": "Hydrolyzed wheat for smooth digestion",
+      "pharmaceuticalGradePurity": "Enriched with vitamins, Iron, and Zinc",
+      "boostEnergyPregnancy": "Supports maternal energy and recovery",
       "ironForRedBloodCells": "Supports healthy blood and helps prevent iron deficiency",
-      "folicAcidDhaBrainDev": "Folic Acid and DHA to support your baby's brain, eyes, and nervous system",
-      "choline250mgTaurine40mg": "Choline and Taurine for extra support for your baby's brain and eyesight",
-      "triggersMilkProduction": "Helps your body produce more breast milk",
-      "balancesBreastfeedingHormones": "Natural plant extracts to support a steady, reliable milk supply",
-      "improvesDigestiveComfort": "Eases bloating and tummy discomfort for both mum and baby",
-      "boneGrowthDentalHealth": "Builds strong bones and healthy teeth in growing children",
-      "micronizedNutrientTechnology": "Calcium that dissolves quickly and absorbs easily",
-      "synergisticD3Matrix": "Vitamin D3 helps the body take in more calcium for stronger bones",
-      "cognitiveHealthBrainFocus": "Omega-3 to support your child's brain, focus, and eyesight",
-      "pureStreamMolecularDistillation": "Pure, high-quality fish oil with no harmful substances",
-      "coldPressStability": "Specially sealed to keep the Omega-3 fresh and working",
-      "dailyWellnessNutritionalGaps": "Fills the vitamin gaps in your child's daily diet",
-      "multiPhaseReleaseSystem": "Vitamins release gradually for all-day absorption",
-      "bioActiveFormulation": "Vitamins in their most effective, ready-to-use form",
-      "immunityAntioxidantSupport": "Vitamin C and Zinc together to strengthen the immune system",
-      "ionicZincDelivery": "Fast-absorbing Zinc for quick and effective immune support",
-      "bufferedVitaminCComplex": "High-strength Vitamin C that's gentle on your child's stomach"
+      "folicAcidDhaBrainDev": "Contains DHA and folic acid for baby development",
+      "choline250mgTaurine40mg": "Balanced nutrition for mother and child",
+      "triggersMilkProduction": "Helps stimulate and maintain milk production",
+      "balancesBreastfeedingHormones": "Supports maternal health and nutrition",
+      "improvesDigestiveComfort": "Improves digestive comfort and immunity",
+      "boneGrowthDentalHealth": "Supports strong bones and teeth",
+      "micronizedNutrientTechnology": "Enhanced calcium absorption technology",
+      "synergisticD3Matrix": "Enriched with Vitamin D3 for bone support",
+      "cognitiveHealthBrainFocus": "Supports cognitive and visual health",
+      "pureStreamMolecularDistillation": "Purified high-quality Omega-3 formula",
+      "coldPressStability": "Maintains DHA and EPA stability",
+      "dailyWellnessNutritionalGaps": "Supports daily nutrition and energy",
+      "multiPhaseReleaseSystem": "Multi-phase vitamin release system",
+      "bioActiveFormulation": "Bio-active vitamins for better absorption",
+      "immunityAntioxidantSupport": "Supports immune system health",
+      "ionicZincDelivery": "Enhanced Zinc absorption formula",
+      "bufferedVitaminCComplex": "Gentle buffered Vitamin C system"
     },
     "keyFeatures": "Key Features",
     "relatedProducts": "Related Products"

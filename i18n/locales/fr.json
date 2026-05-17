@@ -158,39 +158,39 @@
     },
     "fiveCerealsHoneyMilk": {
       "name": "5 Céréales + Miel + Lait",
-      "description": "Un mélange chaud et nourrissant de 5 céréales avec du vrai miel et du lait pour soutenir la croissance de votre bébé. Apporte 12 vitamines, du Fer, du Calcium et du Zinc. À base d'ingrédients non-OGM. Dès 12 mois."
+      "description": "Une céréale nutritive pour bébé composée de cinq céréales hydrolysées, de lait et de miel naturel pour soutenir une croissance saine et faciliter la digestion. Enrichie en vitamines et minéraux essentiels, elle aide à renforcer l'immunité, soutenir le développement osseux et fournir une nutrition quotidienne équilibrée."
     },
     "milkWithRice": {
       "name": "Lait au riz",
-      "description": "La première céréale idéale de votre bébé — un mélange doux et crémeux de riz et de lait, facile à digérer. Riche en 12 vitamines, Fer, Calcium et Zinc. Fabriqué en Europe selon les normes de sécurité les plus élevées. Dès 4 mois."
+      "description": "Une céréale douce au riz et au lait spécialement conçue pour les premières étapes d'alimentation des bébés. Sa formule hydrolysée favorise une digestion douce tout en apportant les nutriments essentiels pour une croissance et un développement sains."
     },
     "milkWheat": {
       "name": "Lait + Blé",
-      "description": "Une céréale de blé et lait nourrissante pour donner à votre bébé l'énergie dont il a besoin pour ses journées actives. Facile à digérer et enrichie en vitamines, Fer et Zinc. Fabriquée en Europe avec des ingrédients non-OGM. Dès 6 mois."
+      "description": "Une céréale complète au blé et au lait formulée pour fournir une énergie durable et soutenir la croissance active des nourrissons. Les grains hydrolysés assurent une digestion facile et une absorption efficace des nutriments."
     },
     "lactomom": {
       "name": "Lactomom",
-      "description": "Une formule complète pour vous accompagner pendant la grossesse et l'allaitement. Vous donne de l'énergie, soutient le développement du cerveau et des yeux de votre bébé, et prend soin de votre santé — avec Fer, Acide Folique, DHA, Calcium, Vitamine D, Choline et Taurine en une seule formule."
+      "description": "Lactomom est une formule nutritionnelle maternelle complète conçue pour soutenir les mères pendant la grossesse et l'allaitement. Elle fournit des nutriments essentiels qui aident à stimuler l'énergie, soutenir la récupération et contribuer au développement sain du bébé."
     },
     "lactonicGranules": {
       "name": "Lactonic Granules",
-      "description": "Un complément à base de plantes pour les mamans qui allaitent. Aide votre corps à produire plus de lait, soutient votre santé pendant l'allaitement et soulage les inconforts digestifs pour vous et votre bébé."
+      "description": "Lactonic Granules est une formule naturelle de soutien à la lactation qui aide à stimuler une production saine de lait maternel tout en soutenant le bien-être maternel et le confort digestif pour la mère et le bébé."
     },
     "lactonicRabbit": {
-      "name": "Lactonic Rabbit — Calcium + Vit D",
-      "description": "Un délicieux gummy au calcium pour aider à construire des os solides et des dents saines. Avec Vitamine D3 pour aider le corps à mieux absorber le calcium. Pour les enfants dès 2 ans."
+      "name": "Lactonic Rabbit — Calcium + Vitamine D",
+      "description": "Un délicieux gummy qui soutient le développement osseux et dentaire avec du calcium hautement absorbable et de la Vitamine D3."
     },
     "lactonicOcean": {
       "name": "Lactonic Ocean — Oméga 3",
-      "description": "Un gummy Oméga-3 avec DHA et EPA pour aider votre enfant à bien réfléchir, rester concentré et voir clairement. Fait d'huile de poisson pure et de haute qualité. Pour les enfants dès 2 ans."
+      "description": "Un gummy Oméga-3 premium conçu pour soutenir les fonctions cérébrales, la concentration et le développement visuel chez les enfants."
     },
     "lactonicBear": {
       "name": "Lactonic Bear — Multivitamines",
-      "description": "Un gummy multivitamines quotidien pour combler les manques nutritionnels et aider votre enfant à grandir et rester plein d'énergie. Les vitamines se libèrent progressivement pour une meilleure absorption. Pour les enfants dès 2 ans."
+      "description": "Un gummy multivitaminé complet qui aide à soutenir le bien-être quotidien des enfants, leur croissance saine et leurs niveaux d'énergie."
     },
     "lactonicLion": {
-      "name": "Lactonic Lion — Vit C + Zinc",
-      "description": "Un gummy Vitamine C et Zinc pour renforcer le système immunitaire de votre enfant et l'aider à rester en bonne santé. Absorption rapide et doux pour l'estomac. Pour les enfants dès 2 ans."
+      "name": "Lactonic Lion — Vitamine C + Zinc",
+      "description": "Un gummy de soutien immunitaire formulé avec de la Vitamine C et du Zinc pour aider à renforcer le système immunitaire et fournir une protection antioxydante."
     },
     "badges": {
       "closestToBreastMilk": "Plus proche du lait maternel",
@@ -273,32 +273,32 @@
       "supportingBrainBody": "Soutien du Cerveau, du Corps et du Développement Sain.",
       "advancedNutritionStronger": "Nutrition Avancée pour des Débuts Plus Forts.",
       "whereNutritionQualityMeet": "Là où le Goût, la Nutrition et la Qualité se Rencontrent.",
-      "hydrolyzedCerealsEasyDigestion": "Doux pour l'estomac de votre bébé et facile à digérer",
-      "twelveVitaminsHighMineral": "12 vitamines, Fer, Calcium et Zinc pour une croissance saine",
-      "buildingBonesCognition": "Calcium et Iodure pour des os solides et un cerveau en bonne santé",
-      "europeanHACCPStandards": "Fabriqué en Europe avec des ingrédients non-OGM selon les normes de sécurité les plus strictes",
-      "sustainedEnergyCore": "Blé riche en énergie — 428 kcal/100g — pour alimenter les journées actives de votre bébé",
-      "hydrolyzedStrength": "Facile à digérer pour que votre bébé profite pleinement de chaque nutriment",
-      "pharmaceuticalGradePurity": "Fabriqué selon des normes de sécurité européennes strictes avec des ingrédients non-OGM",
-      "boostEnergyPregnancy": "Vous donne de l'énergie et de la force tout au long de la grossesse et de l'allaitement",
+      "hydrolyzedCerealsEasyDigestion": "Mélange de céréales hydrolysées pour une digestion facile et l'absorption des nutriments",
+      "twelveVitaminsHighMineral": "Enrichi en 12 vitamines, Fer, Calcium et Zinc",
+      "buildingBonesCognition": "Fabriqué selon des normes de qualité européennes strictes",
+      "europeanHACCPStandards": "Fabriqué avec du riz et du lait européens de qualité supérieure",
+      "sustainedEnergyCore": "Fournit une énergie durable pour une croissance active",
+      "hydrolyzedStrength": "Blé hydrolysé pour une digestion douce",
+      "pharmaceuticalGradePurity": "Enrichi en vitamines, Fer et Zinc",
+      "boostEnergyPregnancy": "Soutient l'énergie maternelle et la récupération",
       "ironForRedBloodCells": "Soutient un sang sain et aide à prévenir la carence en fer",
-      "folicAcidDhaBrainDev": "Acide Folique et DHA pour soutenir le cerveau, les yeux et le système nerveux de votre bébé",
-      "choline250mgTaurine40mg": "Choline et Taurine pour un soutien supplémentaire du cerveau et de la vision de votre bébé",
-      "triggersMilkProduction": "Aide votre corps à produire plus de lait maternel",
-      "balancesBreastfeedingHormones": "Extraits de plantes naturelles pour un approvisionnement en lait régulier et fiable",
-      "improvesDigestiveComfort": "Soulage les ballonnements et l'inconfort digestif pour la mère et le bébé",
-      "boneGrowthDentalHealth": "Construit des os solides et des dents saines pour les enfants en pleine croissance",
-      "micronizedNutrientTechnology": "Calcium qui se dissout rapidement et s'absorbe facilement",
-      "synergisticD3Matrix": "La Vitamine D3 aide le corps à absorber plus de calcium pour des os plus solides",
-      "cognitiveHealthBrainFocus": "Oméga-3 pour soutenir le cerveau, la concentration et la vision de votre enfant",
-      "pureStreamMolecularDistillation": "Huile de poisson pure et de haute qualité sans substances nocives",
-      "coldPressStability": "Spécialement scellé pour garder l'Oméga-3 frais et efficace",
-      "dailyWellnessNutritionalGaps": "Comble les manques nutritionnels dans l'alimentation quotidienne de votre enfant",
-      "multiPhaseReleaseSystem": "Les vitamines se libèrent progressivement pour une absorption tout au long de la journée",
-      "bioActiveFormulation": "Vitamines dans leur forme la plus efficace, prêtes à l'emploi",
-      "immunityAntioxidantSupport": "Vitamine C et Zinc ensemble pour renforcer le système immunitaire",
-      "ionicZincDelivery": "Zinc à absorption rapide pour un soutien immunitaire rapide et efficace",
-      "bufferedVitaminCComplex": "Vitamine C haute puissance, douce pour l'estomac de votre enfant"
+      "folicAcidDhaBrainDev": "Contient DHA et acide folique pour le développement du bébé",
+      "choline250mgTaurine40mg": "Nutrition équilibrée pour la mère et l'enfant",
+      "triggersMilkProduction": "Aide à stimuler et maintenir la production de lait",
+      "balancesBreastfeedingHormones": "Soutient la santé et la nutrition maternelles",
+      "improvesDigestiveComfort": "Améliore le confort digestif et l'immunité",
+      "boneGrowthDentalHealth": "Soutient la solidité des os et des dents",
+      "micronizedNutrientTechnology": "Technologie améliorée d'absorption du calcium",
+      "synergisticD3Matrix": "Enrichi en Vitamine D3 pour la santé osseuse",
+      "cognitiveHealthBrainFocus": "Soutient la santé cognitive et visuelle",
+      "pureStreamMolecularDistillation": "Formule Oméga-3 purifiée de haute qualité",
+      "coldPressStability": "Maintient la stabilité du DHA et de l'EPA",
+      "dailyWellnessNutritionalGaps": "Soutient la nutrition quotidienne et l'énergie",
+      "multiPhaseReleaseSystem": "Système de libération multiphase des vitamines",
+      "bioActiveFormulation": "Vitamines bio-actives pour une meilleure absorption",
+      "immunityAntioxidantSupport": "Soutient la santé du système immunitaire",
+      "ionicZincDelivery": "Formule améliorée d'absorption du Zinc",
+      "bufferedVitaminCComplex": "Système de Vitamine C doux et tamponné"
     },
     "keyFeatures": "Caractéristiques clés",
     "relatedProducts": "Produits associés"

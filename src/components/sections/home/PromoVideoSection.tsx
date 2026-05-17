@@ -58,7 +58,7 @@ export function PromoVideoSection() {
               playsInline
               preload="metadata"
             >
-              <source src="/videos/from%20cow%20to%20can.mp4" type="video/mp4" />
+              <source src="/videos/from%20cow%20to%20can12.mp4" type="video/mp4" />
             </video>
           </div>
         </motion.div>

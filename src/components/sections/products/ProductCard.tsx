@@ -41,9 +41,11 @@ export function ProductCard({ product }: ProductCardProps) {
             <Image
               src={product.imagePath}
               alt={displayName}
-              width={200}
-              height={240}
-              className="h-full w-auto max-h-52 object-contain drop-shadow-2xl"
+              width={220}
+              height={220}
+              className={`h-52 w-52 object-contain drop-shadow-2xl ${
+                product.slug === 'lactonic-granules' ? 'scale-150' : ''
+              }`}
             />
           </motion.div>
           {/* Glow under image */}
