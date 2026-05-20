@@ -58,8 +58,13 @@ export function PromoVideoSection() {
               muted
               playsInline
               preload="metadata"
+             
+              onVolumeChange={(e) => {
+                const v = e.currentTarget;
+                if (!v.muted) v.muted = true;
+              }}
             >
-              <source src="/videos/from%20cow%20to%20can123.mp4" type="video/mp4" />
+              <source src="/videos/from%20cow%20to%20can4.mp4" type="video/mp4" />
             </video>
           </div>
         </motion.div>
