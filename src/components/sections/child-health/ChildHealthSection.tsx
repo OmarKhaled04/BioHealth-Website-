@@ -567,7 +567,7 @@ function GrowthResultBar({ label, value, unit, ref_, status }: {
 // ══════════════════════════════════════════════════════════════════════════════
 // SECTION 3: BRAIN DEVELOPMENT MILESTONES
 // ══════════════════════════════════════════════════════════════════════════════
-type MilestonePeriod = { period: string; subtitle: string; brainStage: string; points: string[]; recTitle: string; recBody: string; };
+type MilestonePeriod = { period: string; subtitle: string; brainStage: string; points: string[]; recTitle: string; recBody: string; nutritionBody: string; };
 
 function DevelopmentMilestones() {
   const t = useTranslations('childHealth');
@@ -663,7 +663,7 @@ function DevelopmentMilestones() {
                         </div>
                         <div className="mt-6 rounded-xl border border-white/10 bg-white/10 p-4">
                           <p className="text-xs font-semibold text-amber-300">{t('milestones.nutritionTip')}</p>
-                          <p className="mt-1 text-xs text-white/70">{t('milestones.nutritionBody')}</p>
+                          <p className="mt-1 text-xs text-white/70">{m.nutritionBody}</p>
                         </div>
                       </div>
                     </div>

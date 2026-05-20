@@ -16,6 +16,7 @@
       "subtitle": "Scientifically formulated baby nutrition trusted by parents worldwide.",
       "cta": "Explore Products",
       "learnMore": "Learn More",
+      "certifications": "Certifications",
       "stats": {
         "products": "Products",
         "countries": "Countries",
@@ -53,8 +54,8 @@
     },
     "promo": {
       "eyebrow": "Our Story",
-      "title": "See How We Care",
-      "description": "Watch our story and learn about our commitment to quality.",
+      "title": "How We Care",
+      "description": "Our story and learn about our commitment to quality.",
       "placeholder": "Video coming soon"
     },
     "banner": {
@@ -298,7 +299,12 @@
       "bioActiveFormulation": "Bio-active vitamins for better absorption",
       "immunityAntioxidantSupport": "Supports immune system health",
       "ionicZincDelivery": "Enhanced Zinc absorption formula",
-      "bufferedVitaminCComplex": "Gentle buffered Vitamin C system"
+      "bufferedVitaminCComplex": "Gentle buffered Vitamin C system",
+      "gold2ExplorationGrowth": "Supporting healthy growth during exploration stages",
+      "lactolac3DhaActive": "Advanced DHA nutrition for active toddlers.",
+      "lactolac3ImmuneSupport": "Balanced nutrition for healthy immune support.",
+      "ha2AllergyProtection": "Nourishing while protecting from allergic symptoms, urticaria, and eczema.",
+      "ha3ToddlerWellness": "Balanced hypoallergenic nutrition for toddler wellness."
     },
     "keyFeatures": "Key Features",
     "relatedProducts": "Related Products"
@@ -312,7 +318,7 @@
       "line1": "Leap to the",
       "line2": "Future of",
       "line3": "Infant Nutrition",
-      "body": "A Canadian multinational delivering scientifically advanced infant nutrition and healthcare solutions. We combine molecular innovation with GMP/EU-compliant manufacturing to set new standards in neonatal care.",
+      "body": "A Canadian multinational delivering scientifically advanced infant nutrition and healthcare solutions. All Lactonic products are manufactured through globally certified production facilities under full GMP/EU compliance, supported by rigorous bacteriological and organoleptic quality testing standards.",
       "badge": "Simply Sophisticated"
     },
     "stats": {
@@ -586,7 +592,7 @@
     "intro": {
       "eyebrow": "About BioHealth Prodentia",
       "heading": "A Canadian Multinational Built on Science & Trust",
-      "body": "BioHealth Prodentia (BHP) is a Canadian multinational company delivering high-quality infant nutrition and healthcare solutions. Founded in 2013 and headquartered in Toronto, Ontario, we focus on innovation, technology, and partnerships to promote early-stage development and wellness. Our Lactonic Gold products are manufactured by Industrias Lácteas Asturianas S.A. (Reny Picot) in Navia, Spain — under full GMP/EU compliance, with 138 Bacteriological and Organoleptic Tests per batch.",
+      "body": "A Canadian Multinational Built on Science & Trust. BioHealth Prodentia (BHP) is a Canadian multinational company delivering high-quality infant nutrition and healthcare solutions.",
       "imageAlt": "BioHealth Prodentia business partnership",
       "statLabels": ["Continents", "Countries", "Certifications", "Nutrients"]
     },
@@ -594,19 +600,18 @@
       "eyebrow": "Distribution Model",
       "heading": "How We Work with Partners",
       "items": [
-        { "title": "Exclusive Distribution", "body": "BHP operates through exclusive regional distributors with defined territorial scope, roles, and commercialization responsibilities — following the proven model of Dallah Pharma (Saudi Arabia), Seucal Pharma (Egypt), and Boushahri Group (Kuwait)." },
-        { "title": "New Market Entry", "body": "Pioneer Lactonic Gold in our active pipeline markets: Jordan, UAE, Pakistan, Mexico, and China. BHP provides regulatory dossiers, product registration support, warehousing and logistics capability confirmation, and proven commercial frameworks." },
-        { "title": "Agency Partnership", "body": "As part of our Distribution Expansion strategic pillar, BHP actively seeks agency partners to deepen market penetration across MENA, Africa, and Latin America — the primary growth corridors for our 2026–2029 roadmap." }
+        { "title": "Exclusive Distribution", "body": "BHP operates through exclusive regional distribution partnerships with clearly defined territorial rights, commercialization responsibilities, and strategic market development aligned with proven industry business models." },
+        { "title": "Agency Partnership", "body": "As part of our 2025–2030 market expansion roadmap, BHP seeks strategic agency partners to serve local communities, strengthen market presence, and create sustainable mutual growth opportunities." }
       ]
     },
     "why": {
       "eyebrow": "What to Expect from BHP",
       "heading": "What Partners Receive",
       "items": [
-        { "icon": "📦", "title": "Diverse Product Portfolio", "body": "12 specialized infant formula products covering 0–36 months, powered by the latest EU manufacturing technologies with 40+ nutrients including DHA — manufactured by Reny Picot in Navia, Asturias, Spain." },
+        { "icon": "📦", "title": "Diverse Product Portfolio", "body": "Delivering market excellence through a diversified portfolio of more than 10 strategic product lines and more than 26 innovative products addressing evolving healthcare and industry needs." },
         { "icon": "📋", "title": "Efficient Regulatory Affairs", "body": "A dedicated regulatory affairs lead oversees product registration, labeling compliance, and market authorization in every active country. Full regulatory dossiers and technical datasheets are available upon request." },
         { "icon": "📣", "title": "Skilled Marketing Team", "body": "Our marketing team drives effective planning, promotion, and distribution — supplemented by a partner network of 200+ field personnel across MENA and a dedicated Sales & Marketing department." },
-        { "icon": "🤝", "title": "Strong Industry Relationships", "body": "BHP maintains strong relationships with principals, key clients, and institutional stakeholders — built on an active commercial track record since 2018 across Saudi Arabia, Kuwait, Canada, and Egypt." }
+        { "icon": "🤝", "title": "Strong Industry Relationships", "body": "Leveraging strong partnerships across the industry to enhance operational excellence, expand market reach, support innovation, and deliver long-term commercial success." }
       ]
     },
     "cta": {
@@ -692,7 +697,8 @@
             "'Serve & Return' interactions are critical."
           ],
           "recTitle": "Responsive Caregiving",
-          "recBody": "Promptly answer cues and build trust."
+          "recBody": "Promptly answer cues and build trust.",
+          "nutritionBody": "Lactonic Gold 1 is enriched with DHA, essential vitamins, and balanced mineral nutrients to support healthy brain development, cognitive growth, and early learning performance in infants."
         },
         {
           "period": "7 – 12 Months",
@@ -705,7 +711,8 @@
             "'Pruning' (use-it-or-lose-it) is active."
           ],
           "recTitle": "Talk & Play",
-          "recBody": "Name objects, read aloud, and encourage exploration."
+          "recBody": "Name objects, read aloud, and encourage exploration.",
+          "nutritionBody": "Lactonic Gold 2 alongside the Lactonic fortified cereal range supports balanced nutrition, healthy growth, and babies' natural exploring and learning development."
         },
         {
           "period": "1 – 2 Years",
@@ -718,7 +725,8 @@
             "Brain is twice as active as an adult's."
           ],
           "recTitle": "Optimal Nutrition",
-          "recBody": "Diverse foods after 6 months support brain growth."
+          "recBody": "Diverse foods after 6 months support brain growth.",
+          "nutritionBody": "Balanced nutrition during ages 1–2 supports rapid brain growth, immunity, learning, and healthy development. Lactolac 3, cereals, and Lactonic Gummies help provide essential nutrients for active growing children."
         },
         {
           "period": "2 – 3 Years",
@@ -731,7 +739,8 @@
             "Executive functions strengthen (planning)."
           ],
           "recTitle": "Play-Based Learning",
-          "recBody": "Encourage exploration, limit screen time."
+          "recBody": "Encourage exploration, limit screen time.",
+          "nutritionBody": "Ages 2–3 are critical for brain connections, learning, and emotional development. Lactolac 3 and Lactonic Gummies support cognitive development, energy, and healthy daily growth."
         }
       ]
     },

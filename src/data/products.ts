@@ -36,7 +36,7 @@ export const products: Product[] = [
     descriptionKey: 'products.lactonicGold2.description',
     featureKeys: [
       'products.features.followOnFormulaCowMilk',
-      'products.features.ogsSystem',
+      'products.features.gold2ExplorationGrowth',
       'products.features.mixableWithCereals',
     ],
   },
@@ -54,8 +54,8 @@ export const products: Product[] = [
     descriptionKey: 'products.lactolacGold3.description',
     featureKeys: [
       'products.features.growingUpFormulaCowMilk',
-      'products.features.ogsSystem',
-      'products.features.fortyPlusNutrients',
+      'products.features.lactolac3DhaActive',
+      'products.features.lactolac3ImmuneSupport',
     ],
   },
 
@@ -186,7 +186,7 @@ export const products: Product[] = [
     descriptionKey: 'products.lactonicHA2.description',
     featureKeys: [
       'products.features.hypoallergenicFollowOn',
-      'products.features.completeHypoallergenicNutrition',
+      'products.features.ha2AllergyProtection',
       'products.features.pediatricScienceGentle',
     ],
   },
@@ -204,7 +204,7 @@ export const products: Product[] = [
     descriptionKey: 'products.lactonicHA3.description',
     featureKeys: [
       'products.features.hypoallergenicGrowingUp',
-      'products.features.completeHypoallergenicNutrition',
+      'products.features.ha3ToddlerWellness',
       'products.features.partiallyHydrolyzedProtein',
     ],
   },

@@ -32,12 +32,11 @@ export function Navbar() {
   }, [isOpen]);
 
   const navLinks = [
-    { href: '/products', label: t('products') },
-    { href: '/child-health', label: t('childHealth') },
-    { href: '/certifications', label: t('certifications') },
-    { href: '/partnership', label: t('partnership') },
-    { href: '/contact', label: t('contact') },
     { href: '/about', label: t('about') },
+    { href: '/products', label: t('products') },
+    { href: '/partnership', label: t('partnership') },
+    { href: '/child-health', label: t('childHealth') },
+    { href: '/contact', label: t('contact') },
   ];
 
   return (

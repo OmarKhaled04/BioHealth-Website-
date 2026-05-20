@@ -15,6 +15,7 @@
       "title": "Une nutrition pure pour votre tout-petit",
       "subtitle": "Une alimentation fondée sur la science pour les bébés, approuvée par les parents du monde entier.",
       "cta": "Découvrir les produits",
+      "certifications": "Certifications",
       "learnMore": "En savoir plus",
       "stats": {
         "products": "Produits",
@@ -298,7 +299,12 @@
       "bioActiveFormulation": "Vitamines bio-actives pour une meilleure absorption",
       "immunityAntioxidantSupport": "Soutient la santé du système immunitaire",
       "ionicZincDelivery": "Formule améliorée d'absorption du Zinc",
-      "bufferedVitaminCComplex": "Système de Vitamine C doux et tamponné"
+      "bufferedVitaminCComplex": "Système de Vitamine C doux et tamponné",
+      "gold2ExplorationGrowth": "Soutient une croissance saine pendant les étapes d'exploration.",
+      "lactolac3DhaActive": "Nutrition avancée au DHA pour les tout-petits actifs.",
+      "lactolac3ImmuneSupport": "Nutrition équilibrée pour un soutien immunitaire sain.",
+      "ha2AllergyProtection": "Nourrir tout en protégeant contre les symptômes allergiques, l'urticaire et l'eczéma.",
+      "ha3ToddlerWellness": "Nutrition hypoallergénique équilibrée pour le bien-être du tout-petit."
     },
     "keyFeatures": "Caractéristiques clés",
     "relatedProducts": "Produits associés"
@@ -312,7 +318,7 @@
       "line1": "Un bond vers",
       "line2": "l'avenir de la",
       "line3": "nutrition infantile",
-      "body": "Une multinationale canadienne qui fournit des solutions de nutrition infantile et de soins de santé scientifiquement avancées. Nous combinons l'innovation moléculaire avec une fabrication conforme aux normes GMP/UE pour établir de nouveaux standards en soins néonatals.",
+      "body": "Une multinationale canadienne qui fournit des solutions de nutrition infantile et de soins de santé scientifiquement avancées. Tous les produits Lactonic sont fabriqués dans des installations de production certifiées au niveau mondial, en pleine conformité GMP/UE, soutenues par des normes rigoureuses de tests de qualité bactériologiques et organoleptiques.",
       "badge": "Simplement sophistiqué"
     },
     "stats": {
@@ -587,29 +593,26 @@
     "intro": {
       "eyebrow": "À Propos de BioHealth Prodentia",
       "heading": "Une Multinationale Canadienne Fondée sur la Science et la Confiance",
-      "body": "BioHealth Prodentia (BHP) est une multinationale canadienne qui fournit des solutions de nutrition infantile et de soins de santé de haute qualité. Fondée en 2013 et basée à Toronto, Ontario, nous nous concentrons sur l'innovation, la technologie et les partenariats pour promouvoir le développement précoce et le bien-être. Nos produits Lactonic Gold sont fabriqués par Industrias Lácteas Asturianas S.A. (Reny Picot) à Navia, Espagne — en pleine conformité GMP/UE, avec 138 tests bactériologiques et organoleptiques par lot.",
+      "body": "Une multinationale canadienne fondée sur la science et la confiance. BioHealth Prodentia (BHP) est une multinationale canadienne qui fournit des solutions de nutrition infantile et de soins de santé de haute qualité. Nos produits Lactonic Gold sont fabriqués par Industrias Lácteas Asturianas S.A. (Reny Picot) à Navia, Espagne — en pleine conformité GMP/UE, avec 138 tests bactériologiques et organoleptiques par lot.",
       "imageAlt": "Partenariat commercial BioHealth Prodentia",
       "statLabels": ["Continents", "Pays", "Certifications", "Nutriments"]
     },
     "opportunities": {
-      "eyebrow": "Comment Nous Collaborons",
-      "heading": "Opportunités de Partenariat",
+      "eyebrow": "Modèle de Distribution",
+      "heading": "Comment Nous Travaillons avec nos Partenaires",
       "items": [
-        { "title": "Distribution Exclusive", "body": "Devenez distributeur régional exclusif de la gamme Lactonic Gold. Nous avons déjà des partenaires éprouvés — Dallah Pharma (Arabie Saoudite), Seucal Pharma (Égypte) et Boushahri Group (Koweït) — et nous nous développons vers la Jordanie, les EAU, le Pakistan, le Mexique et la Chine." },
-        { "title": "Pharmacies & Détaillants", "body": "Proposez les formules Lactonic Gold dans votre pharmacie ou point de vente. Notre gamme de 12 produits couvre chaque étape de croissance de 0 à 36 mois, soutenue par 5 certifications internationales dont FSSC 22000, ISO 9001 et le certificat Halal." },
-        { "title": "Cliniques & Professionnels de Santé", "body": "Recommandez nos formules cliniquement validées — enrichies de 40+ nutriments dont le DHA — à vos patients en toute confiance. Les produits sont fabriqués sous protocoles GLP/GSP avec 138 tests bactériologiques et organoleptiques." },
-        { "title": "Import Régional & Entrée sur le Marché", "body": "Représentez BioHealth Prodentia en tant qu'importateur agréé dans votre pays. Nous fournissons des dossiers réglementaires complets, un support d'étiquetage et d'autorisation de mise sur le marché. Délai : 90–120 jours de la commande à la livraison." },
-        { "title": "Co-branding & Croissance Stratégique", "body": "Explorez des coentreprises et des partenariats d'entrée stratégique. Notre feuille de route 2026–2029 cible une croissance de 40% du volume — avec les nouveaux produits Lactonic Gold COMFORT et PLUS DHA+ — créant des opportunités exceptionnelles." }
+        { "title": "Distribution Exclusive", "body": "BHP opère à travers des partenariats de distribution régionale exclusifs avec des droits territoriaux clairement définis, des responsabilités de commercialisation et un développement stratégique du marché aligné sur des modèles d'affaires éprouvés." },
+        { "title": "Partenariat d'Agence", "body": "Dans le cadre de notre feuille de route d'expansion 2025–2030, BHP recherche des partenaires stratégiques d'agence pour servir les communautés locales, renforcer la présence sur le marché et créer des opportunités de croissance mutuelle durables." }
       ]
     },
     "why": {
-      "eyebrow": "Notre Promesse aux Partenaires",
-      "heading": "Pourquoi Choisir BioHealth Prodentia",
+      "eyebrow": "Ce que BHP Apporte",
+      "heading": "Ce que les Partenaires Reçoivent",
       "items": [
-        { "icon": "🏆", "title": "5 Certifications Internationales", "body": "FSSC 22000, ISO 9001:2015, IFS Food v7 (Score : 99.15%), Certificat Halal et Marque OGS — des certifications qui ouvrent des portes sur les marchés réglementés de MENA, d'Afrique et au-delà." },
-        { "icon": "🌍", "title": "4 Continents, 12 Pays", "body": "Actif au Canada, en Arabie Saoudite, en Égypte, au Koweït et plus — avec des marchés en développement au Moyen-Orient, en Afrique, en Asie et en Amérique latine. Le marché mondial est valorisé à 80 milliards USD+ et devrait dépasser 110 milliards d'ici 2030." },
-        { "icon": "🔬", "title": "Excellence de Fabrication Européenne", "body": "Tous les produits Lactonic Gold sont fabriqués par Reny Picot à Navia, Asturies, Espagne — enrichis de 40+ nutriments dont le DHA, vitamines et minéraux pour le développement cérébral et le soutien immunitaire." },
-        { "icon": "🤝", "title": "Accompagnement Complet", "body": "Nous fournissons des dossiers réglementaires, des supports marketing et le soutien de 200+ agents de terrain dans toute la région MENA — complétés par des équipes dédiées aux Affaires Réglementaires, QA, Ventes & Marketing et Opérations." }
+        { "icon": "📦", "title": "Portefeuille de Produits Diversifié", "body": "Offrir l'excellence du marché grâce à un portefeuille diversifié de plus de 10 lignes de produits stratégiques et plus de 26 produits innovants répondant aux besoins évolutifs de la santé et de l'industrie." },
+        { "icon": "📋", "title": "Affaires Réglementaires Efficaces", "body": "Un responsable dédié aux affaires réglementaires supervise l'enregistrement des produits, la conformité d'étiquetage et l'autorisation de mise sur le marché dans chaque pays actif. Les dossiers réglementaires complets et les fiches techniques sont disponibles sur demande." },
+        { "icon": "📣", "title": "Équipe Marketing Qualifiée", "body": "Notre équipe marketing mène la planification, la promotion et la distribution efficaces — complétée par un réseau partenaire de 200+ agents de terrain dans la région MENA et un département dédié Ventes & Marketing." },
+        { "icon": "🤝", "title": "Relations Industrielles Solides", "body": "Tirer parti de partenariats solides à travers l'industrie pour renforcer l'excellence opérationnelle, élargir la portée du marché, soutenir l'innovation et offrir un succès commercial à long terme." }
       ]
     },
     "cta": {
@@ -695,7 +698,8 @@
             "Les interactions 'Servir & Retourner' sont essentielles."
           ],
           "recTitle": "Soins réactifs",
-          "recBody": "Répondez rapidement aux signaux de votre bébé et construisez sa confiance."
+          "recBody": "Répondez rapidement aux signaux de votre bébé et construisez sa confiance.",
+          "nutritionBody": "Lactonic Gold 1 est enrichi en DHA, en vitamines essentielles et en minéraux équilibrés pour soutenir un développement cérébral sain, la croissance cognitive et les performances d'apprentissage précoce chez les nourrissons."
         },
         {
           "period": "7 – 12 Mois",
@@ -708,7 +712,8 @@
             "L'élagage neuronal (utiliser ou perdre) est actif."
           ],
           "recTitle": "Parler & Jouer",
-          "recBody": "Nommez les objets, lisez à haute voix et encouragez l'exploration."
+          "recBody": "Nommez les objets, lisez à haute voix et encouragez l'exploration.",
+          "nutritionBody": "Lactonic Gold 2, accompagné de la gamme de céréales enrichies Lactonic, soutient une nutrition équilibrée, une croissance saine et le développement naturel d'exploration et d'apprentissage des bébés."
         },
         {
           "period": "1 – 2 Ans",
@@ -721,7 +726,8 @@
             "Le cerveau est deux fois plus actif que celui d'un adulte."
           ],
           "recTitle": "Nutrition optimale",
-          "recBody": "Des aliments diversifiés après 6 mois soutiennent la croissance du cerveau."
+          "recBody": "Des aliments diversifiés après 6 mois soutiennent la croissance du cerveau.",
+          "nutritionBody": "Une nutrition équilibrée entre 1 et 2 ans soutient la croissance rapide du cerveau, l'immunité, l'apprentissage et un développement sain. Lactolac 3, les céréales et les Gummies Lactonic apportent les nutriments essentiels aux enfants actifs en pleine croissance."
         },
         {
           "period": "2 – 3 Ans",
@@ -734,7 +740,8 @@
             "Les fonctions exécutives se renforcent (planification)."
           ],
           "recTitle": "Apprentissage par le jeu",
-          "recBody": "Encouragez l'exploration, limitez le temps d'écran."
+          "recBody": "Encouragez l'exploration, limitez le temps d'écran.",
+          "nutritionBody": "Les âges de 2 à 3 ans sont essentiels pour les connexions cérébrales, l'apprentissage et le développement émotionnel. Lactolac 3 et les Gummies Lactonic soutiennent le développement cognitif, l'énergie et une croissance quotidienne saine."
         }
       ]
     },

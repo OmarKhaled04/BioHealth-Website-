@@ -436,7 +436,7 @@ function OpportunitiesSection() {
           </motion.h2>
         </motion.div>
 
-        <div className="grid gap-6 sm:grid-cols-3">
+        <div className="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2">
           {items.map((item, i) => (
             <motion.div
               key={item.title}

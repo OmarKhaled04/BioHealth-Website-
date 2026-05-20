@@ -55,10 +55,11 @@ export function PromoVideoSection() {
             <video
               className="h-full w-full object-cover"
               controls
+              muted
               playsInline
               preload="metadata"
             >
-              <source src="/videos/from%20cow%20to%20can12.mp4" type="video/mp4" />
+              <source src="/videos/from%20cow%20to%20can123.mp4" type="video/mp4" />
             </video>
           </div>
         </motion.div>

@@ -131,6 +131,17 @@ export function HeroSection() {
                     {t('learnMore')}
                   </Link>
                 </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
+                  transition={{ type: 'spring', stiffness: 300, damping: 18 }}
+                >
+                  <Link
+                    href="/certifications"
+                    className="inline-block rounded-full border border-amber-300/40 bg-amber-400/10 px-8 py-3.5 text-sm font-bold text-amber-200 backdrop-blur-sm transition-colors hover:bg-amber-400/20 hover:text-amber-100"
+                  >
+                    {t('certifications')} →
+                  </Link>
+                </motion.div>
               </motion.div>
 
               {/* Stats row */}
